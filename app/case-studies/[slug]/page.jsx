@@ -94,14 +94,14 @@ const CaseStudy = () => {
 
       {/* Section 2 */}
       <div className="mt-24 md:mt-44 px-5 md:px-0 md:max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row bg-white shadow-[2px_2px_22px_0px_#0000002E] my-10 overflow-hidden">
+        <div className="flex md:h-[250px] flex-col relative top-[-30] lg:flex-row bg-white shadow-[2px_2px_22px_0px_#0000002E] my-10 overflow-hidden">
           <img
             src={caseStudyData.img}
             alt="Case Study"
             className="object-cover"
           />
 
-          <div className="p-5 lg:p-8">
+          <div className="p-5 lg:py-4">
             <h1 className="text-[22px] lg:text-[24px] font-light">
               {caseStudyData.title}
             </h1>
@@ -119,7 +119,7 @@ const CaseStudy = () => {
 
       {/* Highlight */}
       <div className="bg-[#F8F8F8] px-3 md:px-0 -mt-[120px] h-[235px] flex items-center justify-center">
-        <p className="text-[20px] sm:text-[26px] font-light text-center text-[#BD2F2C]">
+        <p className="text-[20px] pt-12 leading-[22px] md:leading-[34px] sm:text-[26px] font-light text-center md:p-[65px] md:max-w-7xl text-[#BD2F2C]">
           {(() => {
             try {
               return JSON.parse(caseStudyData.extra_stuff || "{}")?.line || "";
