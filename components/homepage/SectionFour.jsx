@@ -10,15 +10,6 @@ const SectionFour = () => {
     <div className="mb-2 md:mb-0 mt-10 md:mt-10 sm:pt-4 sm:px-0 px-6">
       <div className="container max-w-6xl px-0 mx-auto items-center justify-center">
         <Swiper
-          // modules={[Pagination, Autoplay]}
-          // spaceBetween={30}
-          // slidesPerView={1}
-          // pagination={{ clickable: true, el: ".section-four-pagination" }}
-          // breakpoints={{
-          //   640: { slidesPerView: 1 },
-          //   768: { slidesPerView: 2 },
-          //   1024: { slidesPerView: 3 },
-          // }}
           modules={[Pagination, Autoplay]}
           spaceBetween={30}
           slidesPerView={1}
@@ -28,17 +19,14 @@ const SectionFour = () => {
             el: ".section-four-pagination"
           }}
           breakpoints={{
-            // Mobile: Show 1, Move 1
             640: {
               slidesPerView: 1,
               slidesPerGroup: 1
             },
-            // Tablet: Show 2, Move 2 (Dot 1 = 1-2, Dot 2 = 3-4)
             768: {
               slidesPerView: 2,
               slidesPerGroup: 2
             },
-            // Desktop: Show 3, Move 3 (Dot 1 = 1-2-3, Dot 2 = 4-5-6)
             1024: {
               slidesPerView: 3,
               slidesPerGroup: 3

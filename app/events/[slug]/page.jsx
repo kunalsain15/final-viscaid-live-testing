@@ -1,11 +1,14 @@
-
-
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import axios from "axios";
 import { useParams } from "next/navigation";
 import CommonForm from "@/components/CommonFormEvents/CommonForm";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const page = () => {
   const [event, setEvent] = useState(null);
@@ -53,9 +56,9 @@ const page = () => {
               />
             </div>
             <div className="w-[60%] h-full p-4 pt-[40px] flex flex-col gap-4 relative z-20 ps-[70px]">
-              <div className="w-[240px]">
+              <div className="w-[100%]">
                 <div className="h-[180px] w-full relative">
-                  <div className="absolute aling_evt_text left-0 top-0 h-full w-full  flex justify-center items-center flex-col">
+                  <div className="absolute aling_evt_text left-0 top-0 h-full w-full flex justify-center items-start flex-col">
                     <img
                       src={pageData?.logo}
                       className="max-w-full max-h-full object-contain"
@@ -72,7 +75,7 @@ const page = () => {
                   </h1>
                 </div>
 
-                <div className="mt-8 mb-3 aling_evt_text flex gap-10">
+                <div className="mt-8 md:mt-2 mb-3 aling_evt_text flex gap-10">
                   <div className="flex gap-2 min-w-[100px] items-center">
                     <img
                       className="h-[20px]"
@@ -467,12 +470,10 @@ const page = () => {
               <h2 className="text-xl md:text-[29px] lg:text-[38px] my-8 sm:my-8 pt-6 text-center font-light">
                 Our Forecasting Specialists at the Event
               </h2>
-
-              {/* <div className="flex border items-start overflow-x-auto no-scrollbar pb-6 px-5 sm:px-0 mb-8 sm:mb-10 gap-10 md:gap-5 max-w-6xl mx-auto"> */}
-              <div className="flex items-start overflow-x-auto pb-6 md:pb-0 px-5 sm:px-0 mb-8 sm:mb-10 gap-10 md:gap-5 max-w-6xl mx-auto 
-    /* Custom Scrollbar Classes */
-    custom-scrollbar">
-                {pageData?.forecasting_specialists?.map((person) => (
+              {/* <div className="flex items-start overflow-x-auto pb-6 md:pb-0 px-5 sm:px-0 mb-8 sm:mb-10 gap-10 md:gap-5 max-w-6xl mx-auto custom-scrollbar */}
+              {/* flex items-start pb-6 md:pb-0 px-5 sm:px-0 mb-8 sm:mb-10 gap-10 md:gap-5 max-w-6xl mx-auto */}
+              <div className="max-w-6xl mx-auto">
+                {/* {pageData?.forecasting_specialists?.map((person) => (
                   <React.Fragment key={person.id}>
                     {person?.image && person.fullName && (
                       <div className="flex-none w-[280px] md:w-[275px] 2xl:w-[370px]">
@@ -543,7 +544,129 @@ const page = () => {
                       </div>
                     )}
                   </React.Fragment>
-                ))}
+                ))} */}
+
+                <Swiper
+                  // modules={[Pagination, Autoplay]}
+                  // spaceBetween={20}
+                  // slidesPerView={1}
+                  // slidesPerGroup={1}
+                  // pagination={{
+                  //   clickable: true,
+                  //   el: ".forecasting-pagination"  
+                  // }}
+                  modules={[Pagination, Autoplay]}
+                  spaceBetween={30}
+                  slidesPerView={1}
+                  slidesPerGroup={1}
+                  pagination={{
+                    clickable: true,
+                    el: ".section-four-pagination"
+                  }}
+                  breakpoints={{
+                    640: {
+                      slidesPerView: 1,
+                      slidesPerGroup: 1
+                    },
+                    768: {
+                      slidesPerView: 2,
+                      slidesPerGroup: 2
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                      slidesPerGroup: 3
+                    },
+                  }}
+                  className="pb-12 md:pb-16 forecasting-swiper"
+                >
+
+                  {pageData?.forecasting_specialists?.map((person) => {
+                    if (!person?.image || !person.fullName) return null;
+
+                    const hasLink = !!person?.slug;
+
+                    const CardContent = (
+                      <>
+                        <div className="relative w-full h-[260px] 2xl:h-[280px] group overflow-hidden shadow-sm">
+                          <img
+                            src={person.image}
+                            alt={person.fullName}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          />
+                          <div className={`absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100 flex flex-col justify-between p-5 text-white
+            ${hasLink
+                              ? 'bg-[#BD302BB3]'
+                              : 'bg-gradient-to-b from-[#BD3028]/70 via-[#BD3028]/40 to-[#BD3028]/20'}`}
+                          >
+                            <p className="text-[14px] leading-5 line-clamp-6">
+                              {person?.introduction}
+                            </p>
+                            {person?.click && (
+                              <span className="mt-3 text-[14px] font-light">
+                                {person.click}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+
+                        <div className="mt-3 text-center px-2">
+                          <h2 className="text-[#BD302B] group-hover:text-[#e91815] font-roboto text-[18px] md:text-[19px] transition-colors">
+                            {person.fullName}
+                          </h2>
+                          <p className="text-black font-light text-[14px] mt-1">
+                            {person.designation}
+                          </p>
+                        </div>
+                      </>
+                    );
+
+                    return (
+                      <SwiperSlide key={person.id}>
+                        {hasLink ? (
+                          <Link
+                            href={`/leadership/${person.slug}`}
+                            className="block h-full"
+                          >
+                            <div className="h-full md:mb-3 md:pb-3 flex flex-col bg-white  overflow-hidden hover:shadow-[0_8px_25px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+                              {CardContent}
+                            </div>
+                          </Link>
+                        ) : (
+                          <div className="h-full md:mb-3 md:pb-3 flex flex-col bg-white  overflow-hidden hover:shadow-[0_8px_25px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+                            {CardContent}
+                          </div>
+                        )}
+                      </SwiperSlide>
+                    );
+                  })}
+                </Swiper>
+
+      <div className="section-four-pagination"></div>
+
+      <style jsx>{`
+        .section-four-pagination {
+          position: relative !important;
+          margin-top: 30px !important;
+          margin-bottom: 30px !important;
+          display: flex !important;
+          justify-content: center !important;
+          gap: 6px !important;
+        }
+
+        .section-four-pagination .swiper-pagination-bullet {
+          background: #333 !important;
+          opacity: 0.7 !important;
+          height: 10px !important;
+          width: 10px !important;
+        }
+
+        /* Mobile fix – dots aur arrows overlap na karein */
+        @media (max-width: 640px) {
+          .section-four-pagination {
+            margin-top: 30px !important;
+          }
+        }
+      `}</style>
               </div>
             </div>
           )}
