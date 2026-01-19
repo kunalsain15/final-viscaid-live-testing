@@ -1,0 +1,28 @@
+import CaseStudyDetailsPageCardsRendere from "../resuseable/CaseStudyDetailsPageCardsRendere";
+
+const Challenge = ({ challenges = "[]" }) => {
+  return (
+    <div className=" md:max-w-[85%] 2xl:max-w-[1400px] mx-auto pt-8 md:pt-10 pb-0">
+      <div className=" w-full">
+        {/* header  */}
+        <div className="flex flex-col justify-center items-center">
+          <img
+            src="../caseStudiesAssets/detailsImages/Caution-2.png"
+            className="h-[55px]"
+            alt=""
+          />
+          <h3 className="text-center text-[38px] mt-5 font-light">
+            CHALLENGES
+          </h3>
+        </div>
+        <div className="grid grid-cols-1 md:px-0 px-3 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 md:pt-20">
+          {challenges?.map((data, index) => (
+            <CaseStudyDetailsPageCardsRendere key={index} data={data} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Challenge;

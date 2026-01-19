@@ -1,0 +1,3655 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;900&display=swap");
+
+@import "tailwindcss";
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.headevents {
+  font-family: 'Roboto', sans-serif;
+}
+
+.head {
+  font-family: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.RolesandResponsibilities {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+.mainBg {
+  color: #fff;
+  background-color: #bd302b;
+  cursor: pointer;
+}
+
+.mainColor {
+  color: #bd302b;
+}
+
+.mainBg:hover {
+  background-color: #a70d08;
+}
+
+.dflex {
+  display: flex !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #bd302b !important;
+  opacity: 1;
+}
+
+.elementor-hidden {
+  display: none;
+}
+
+.dropdown-menu {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.mobile-menu {
+  max-height: 500px;
+  /* Adjust this value based on your content height */
+}
+
+.navlinksClass {
+  font-size: 11px !important;
+}
+
+/********hamburger***********/
+.hamburger {
+  display: none;
+}
+
+.logonavbar {
+  display: block;
+}
+
+.contactusdesktop {
+  display: none;
+}
+
+@media screen and (min-width: 1401px) {
+  .contactus {
+    display: none;
+  }
+
+  .contactusdesktop {
+    display: block;
+  }
+}
+
+@media (max-width: 1023px) {
+  .eventsrepsonsivelg {
+    display: none !important;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .desktophead {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/*************  aniamte slow  *************/
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
+
+/************desktop menu navbar*********/
+
+/* .navbarmain {
+  padding-left: 2px;
+  padding-right: 2px;
+} */
+
+@media (min-width: 500px) and (max-width: 1280px) {
+  .navbarmain {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 3500px) {
+  /* .navbarmain {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  } */
+}
+
+.logonavbar {
+  height: 35px;
+}
+
+@media (min-width: 1300px) and (max-width: 3250px) {
+  .logonavbar {
+    height: 70px !important;
+    width: 180px;
+    padding-left: 6px;
+    padding-right: 2px;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1299px) {
+  .logonavbar {
+    height: 72px !important;
+    width: 233px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1280px) {
+  .logonavbar {
+    height: 77px !important;
+    width: 233px;
+  }
+}
+
+/* Default hidden */
+.eventsrepsonsivelg,
+.eventsrepsonsive {
+  display: none;
+}
+
+.contactus {
+  display: none;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1400px) {
+  .contactus {
+    display: block;
+    margin-left: 9px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 32500px) {
+  .eventsrepsonsive {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 3280px) and (min-width: 1025px) {
+  .topnavbar {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .desktopmenu {
+    gap: 20px;
+  }
+
+  .navbartext {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1062px) and (min-width: 1024px) {
+  .topnavbar {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .desktopmenu {
+    gap: 16px;
+  }
+
+  .navbartext {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 280px) {
+  .topnavbar {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .contactus {
+    display: none !important;
+  }
+
+  .navbartext {
+    font-size: 16px;
+  }
+
+  .desktopmenu {
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1025px) {
+  .desktopmenu {
+    gap: 1rem !important;
+  }
+
+  .contactus {
+    margin-left: 18px;
+  }
+
+  .desktopmenu a {
+    font-size: 16px;
+  }
+
+  nav button {
+    padding: 0.25rem 0.5rem !important;
+    /* Contact Us button compact */
+    font-size: 14px !important;
+  }
+
+  /* animation: spin-slow 2s linear infinite; */
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .contactus {
+    margin-left: 24px;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-1 {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* .fade-in-2 {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: 0.8s;
+} */
+
+.fade-in-3 {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.leadershiptext {
+  padding: 20px;
+  margin-left: 4px;
+}
+
+@media (min-width: 1281px) {
+  .leadershiptext {
+    max-width: 85%;
+    padding-left: 120px;
+    margin-top: 30px;
+  }
+}
+
+.forecastingwebinar {
+  padding-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 35px;
+}
+
+@media (min-width: 768px) {
+  .forecastingwebinar {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .forecastingwebinar {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: 1281px) {
+  .forecastingwebinar {
+    padding-left: 80px;
+  }
+}
+
+/************evens************/
+
+@media screen and (max-width: 5060px) and (min-width: 3001px) {
+  .logoeventsize {
+    margin-left: 340px !important;
+  }
+}
+
+@media screen and (max-width: 3000px) and (min-width: 2041px) {
+  .logoeventsize {
+    margin-left: 240px !important;
+  }
+}
+
+@media screen and (max-width: 2040px) and (min-width: 1661px) {
+  .logoeventsize {
+    margin-left: 114px !important;
+  }
+}
+
+@media screen and (max-width: 1660px) and (min-width: 1281px) {
+  .logoeventsize {
+    margin-left: 64px !important;
+  }
+}
+
+@media screen and (max-width: 4211px) and (min-width: 1281px) {
+  .leaderhsipsection {
+    display: grid;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .leaderhsipcommonbanner {
+    height: 480px !important;
+  }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 780px) {
+  .leaderhsipsection {
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+  }
+}
+
+@media screen and (max-width: 430px) and (min-width: 280px) {
+  .navbarsight {
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 568px) {
+  .eventsbanner {
+    margin-left: 30px !important;
+  }
+}
+
+.eventsbanner {
+  margin-left: 0px;
+}
+
+.leaderhsipcommonbanner {
+  height: 400px;
+}
+
+.leadershiptext {
+  margin-top: 30px;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 100px auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* /* Default: show as flex */
+.headevents {
+  display: flex;
+}
+
+/* Hide for 640px–1279px */
+@media (min-width: 640px) and (max-width: 1277px) {
+  .headevents {
+    display: none;
+  }
+}
+
+/* Show again for >=1280px */
+@media (min-width: 1278px) {
+  .headevents {
+    display: flex;
+  }
+}
+
+.unpakingwebinar {
+  padding: 1.5rem;
+  margin-top: 10px;
+}
+
+@media (min-width: 541px) and (max-width: 1280px) {
+  .unpakingwebinar {
+    padding: 1.5rem;
+    margin-top: 40px;
+  }
+
+  .stragety {
+    margin-left: 22px;
+  }
+
+  .banner1293casestudy {
+    padding-left: 20px;
+    height: 67%;
+  }
+}
+
+@media (min-width: 1281px) {
+  .unpakingwebinar {
+    padding: 80px;
+    margin-top: 0px;
+  }
+
+  .strategiesdeveloping {
+    margin-top: 0px;
+  }
+
+  .stragety {
+    margin-left: 72px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .unpakingwebinar {
+    padding: 80px !important;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 2021px) and (max-width: 2049px) {
+  .headerevents {
+    margin-left: 195px;
+  }
+}
+
+@media (min-width: 1971px) and (max-width: 2010px) {
+  .headerevents {
+    margin-left: 190px;
+  }
+}
+
+@media (min-width: 1922px) and (max-width: 1970px) {
+  .headerevents {
+    margin-left: 180px;
+  }
+}
+
+@media (min-width: 1921px) and (max-width: 1841px) {
+  .headerevents {
+    margin-left: 180px;
+  }
+}
+
+@media (min-width: 1840px) and (max-width: 1930px) {
+  .headerevents {
+    margin-left: 140px;
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 1839px) {
+  .headerevents {
+    margin-left: 70px;
+  }
+}
+
+@media (min-width: 1787px) and (max-width: 1799px) {
+  .headerevents {
+    margin-left: 70px;
+  }
+}
+
+@media (min-width: 1752px) and (max-width: 1787px) {
+  .headerevents {
+    margin-left: 60px;
+  }
+}
+
+@media (min-width: 1660px) and (max-width: 1751px) {
+  .headerevents {
+    margin-left: 40px;
+  }
+}
+
+/* *****webinar*************** */
+
+@media (min-width: 2048px) and (max-width: 3047px) {
+  .headerwebinar {
+    margin-left: 276px;
+  }
+}
+
+@media (min-width: 2021px) and (max-width: 2047px) {
+  .headerwebinar {
+    margin-left: 195px;
+  }
+}
+
+@media (min-width: 1971px) and (max-width: 2010px) {
+  .headerwebinar {
+    margin-left: 190px;
+  }
+}
+
+@media (min-width: 1922px) and (max-width: 1970px) {
+  .headerwebinar {
+    margin-left: 180px;
+  }
+}
+
+@media (min-width: 1921px) and (max-width: 1841px) {
+  .headerwebinar {
+    margin-left: 180px;
+  }
+}
+
+@media (min-width: 1919px) and (max-width: 1920px) {
+  .headerwebinar {
+    margin-left: 210px;
+  }
+}
+
+@media (min-width: 1840px) and (max-width: 1918px) {
+  .headerwebinar {
+    margin-left: 140px;
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 1839px) {
+  .headerwebinar {
+    margin-left: 70px;
+  }
+}
+
+@media (min-width: 1536px) and (max-width: 1537px) {
+  .headerwebinar {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 1637px) {
+  .headerwebinar {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1367px) and (max-width: 4839px) {
+  .banner1295demandcarrear {
+    height: 68%;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1366px) {
+  .banner1295demandcarrear {
+    height: 68%;
+  }
+}
+
+@media (min-width: 1787px) and (max-width: 1799px) {
+  .headerwebinar {
+    margin-left: 70px;
+  }
+}
+
+@media (min-width: 1752px) and (max-width: 1787px) {
+  .headerwebinar {
+    margin-left: 60px;
+  }
+}
+
+@media (min-width: 1728px) and (max-width: 1751px) {
+  .headerwebinar {
+    margin-left: 92px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1281px) {
+  .headerwebinar {
+    margin-left: 12px;
+  }
+}
+
+@media (min-width: 1023px) and (max-width: 1024px) {
+  .headerwebinar {
+    margin-left: 12px;
+  }
+}
+
+@media (min-width: 1660px) and (max-width: 1727px) {
+  .headerwebinar {
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: 1279px) and (max-width: 1365px) {
+  .researchmarket {
+    max-width: 82%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 2380px) {
+  .researchmarket {
+    max-width: 80%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 2048px) and (max-width: 4047px) {
+  .eventscard {
+    max-width: 71%;
+    height: 67%;
+  }
+
+  .banner1294news {
+    max-width: 1400px;
+    height: 70%;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1535px) {
+  .analytical {
+    max-width: 84%;
+  }
+}
+
+@media (min-width: 1913px) and (max-width: 2047px) {
+  .eventscard {
+    max-width: 75%;
+    height: 67%;
+  }
+
+  .banner1294news {
+    max-width: 1080px;
+  }
+
+  .banner1294news {
+    max-width: 1400px;
+    height: 70%;
+  }
+}
+
+@media (min-width: 1827px) and (max-width: 1912px) {
+  .eventscard {
+    max-width: 74%;
+    height: 67%;
+  }
+}
+
+@media (min-width: 1777px) and (max-width: 1826px) {
+  .whoweserve {
+    max-width: 77%;
+    height: 70%;
+  }
+}
+
+@media (min-width: 1538px) and (max-width: 1766px) {
+  .eventscard {
+    max-width: 82%;
+    height: 66%;
+  }
+}
+
+@media (min-width: 1534px) and (max-width: 1536px) {
+  .eventscard {
+    max-width: 88%;
+    height: 66%;
+  }
+}
+
+@media (min-width: 1536px) and (max-width: 1766px) {
+  .whoweserve {
+    max-width: 84%;
+    height: 70%;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1535px) {
+  .whoweserve {
+    max-width: 80%;
+    height: 79%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .banner1293 {
+    max-width: 82%;
+    height: 76%;
+  }
+
+  .banner1293carreardetail {
+    max-width: 82%;
+    height: 76%;
+  }
+
+  .banner12931293casestudy {
+    max-width: 82%;
+    height: 76%;
+  }
+
+  .banner1293expertise {
+    max-width: 82%;
+    height: 74%;
+  }
+
+  .banner1293aboutforcasting {
+    max-width: 88%;
+    height: 72%;
+  }
+
+  .banner1294 {
+    max-width: 82%;
+    height: 71%;
+  }
+
+  .banner1294core {
+    max-width: 82%;
+    height: 71%;
+  }
+
+  .banner1295 {
+    max-width: 97%;
+    height: 86%;
+  }
+
+  .whoweserve {
+    max-width: 82%;
+    height: 78%;
+  }
+
+  .banner1295demandcarrear {
+    max-width: 82%;
+    height: 70%;
+  }
+
+  .banner1296 {
+    max-width: 97%;
+    height: 78%;
+  }
+
+  .banner1296Serve {
+    max-width: 80%;
+    height: 78%;
+  }
+
+  .bannerHeight1293 {
+    height: 440px;
+  }
+}
+
+@media (max-width: 1078px) {
+  .banner1293 {
+    height: 80%;
+  }
+
+  .banner1293 {
+    height: 80%;
+  }
+
+  .banner1295lifeatviscadia {
+    max-width: 82%;
+    height: 70%;
+  }
+
+  .banner1293carreardetail {
+    height: 80%;
+  }
+
+  .bannerHeight1293 {
+    height: 400px;
+  }
+}
+
+@media (min-width: 637px) and (max-width: 1074px) {
+  .banner1293carreardetail {
+    max-width: 80%;
+    height: 78%;
+  }
+
+  .eventscard {
+    max-width: 80%;
+    height: 66%;
+  }
+
+  .whoweserve {
+    max-width: 80%;
+    height: 78%;
+  }
+
+  .banner1295demandcarrear {
+    max-width: 80%;
+    height: 78%;
+  }
+
+  .banner1295lifeatviscadia {
+    max-width: 80%;
+    height: 78%;
+  }
+
+  .banner1293expertise {
+    height: 80% !important;
+  }
+
+  .banner1296providing {
+    height: 80% !important;
+  }
+}
+
+@media (min-width: 1536px) and (max-width: 3035px) {
+  /* .philosphy {
+          max-width: 1220px;
+        } */
+
+  .banner1294core {
+    max-width: 1410px;
+  }
+}
+
+@media (min-width: 1536px) and (max-width: 2035px) {
+  .banner1293aboutforcasting {
+    max-width: 1455px;
+  }
+}
+
+@media (min-width: 2036px) and (max-width: 3035px) {
+  .banner1293aboutforcasting {
+    max-width: 1350px;
+  }
+}
+
+@media (min-width: 1536px) and (max-width: 1537px) {
+  .banner1294news {
+    max-width: 1350px;
+  }
+}
+
+@media (min-width: 1358px) and (max-width: 1535px) {
+  .philosphy {
+    max-width: 1100px;
+  }
+
+  .banner1294core {
+    max-width: 1300px;
+  }
+
+  .banner1294news {
+    max-width: 1080px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1357px) {
+  .banner1294news {
+    max-width: 1100px;
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 1394px) {
+  .banner1293aboutforcasting {
+    max-width: 1100px;
+  }
+
+  .banner1294core {
+    max-width: 1100px;
+  }
+}
+
+@media (min-width: 1867px) and (max-width: 3076px) {
+  .awardsaccoaldes {
+    max-width: 1610px;
+    gap: 4px;
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 1866px) {
+  .awardsaccoaldes {
+    max-width: 1170px;
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 1576px) {
+  .banner1293casestudy {
+    max-width: 85%;
+    height: 68%;
+  }
+}
+
+@media (min-width: 1365px) and (max-width: 1280px) {
+  .banner1294news {
+    max-width: 1100px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1074px) {
+  .banner1294news {
+    height: 74% !important;
+  }
+
+  .banner1296providing {
+    height: 80% !important;
+  }
+
+  .banner1293casestudy {
+    height: 70%;
+  }
+
+  .banner1293casestudy {
+    max-width: 93%;
+    height: 70%;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 640px) {
+  .banner1294news {
+    height: 70% !important;
+    padding-left: 28px;
+  }
+
+  .banner1295demandcarrear {
+    max-width: 80%;
+    height: 74%;
+  }
+
+  .whoweserve {
+    max-width: 93%;
+    height: 78%;
+  }
+
+  .banner1296providing {
+    height: 78%;
+  }
+
+  .banner1295lifeatviscadia {
+    height: 78%;
+    max-width: 90%;
+  }
+
+  .banner1293carreardetail {
+    max-width: 80%;
+    height: 78%;
+  }
+}
+
+@media (min-width: 413px) and (max-width: 540px) {
+  .banner1293casestudy {
+    padding-left: 20px;
+    height: 67%;
+  }
+}
+
+@media (min-width: 1536px) and (max-width: 1820px) {
+  .aboutindustry {
+    max-width: 66%;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1535px) {
+  .aboutindustry {
+    max-width: 58%;
+  }
+}
+
+@media (min-width: 1821px) and (max-width: 1994px) {
+  .aboutindustry {
+    max-width: 62%;
+  }
+}
+
+@media (min-width: 1995px) and (max-width: 2140px) {
+  .aboutindustry {
+    max-width: 56%;
+  }
+}
+
+@media (min-width: 413px) and (max-width: 414px) {
+  .banner1294core {
+    max-width: 90%;
+    height: 68%;
+  }
+
+  .banner1293casestudy {
+    padding-left: 20px;
+    height: 67%;
+  }
+
+  .banner1296providing {
+    height: 70% !important;
+  }
+
+  .banner1293aboutforcasting {
+    max-width: 80%;
+    margin-top: 24px;
+    margin-left: 28px;
+  }
+
+  .banner1293expertise {
+    max-width: 100%;
+
+    margin-left: 28px;
+  }
+}
+
+@media (min-width: 389px) and (max-width: 390px) {
+  .banner1294core {
+    max-width: 97%;
+    height: 68%;
+    padding-left: 12px;
+  }
+
+  .banner1293casestudy {
+    padding-left: 18px;
+    height: 72%;
+  }
+
+  .banner1296providing {
+    height: 78% !important;
+  }
+
+  .banner1293expertise {
+    max-width: 100%;
+
+    margin-left: 20px;
+  }
+
+  .banner1294news {
+    padding-left: 20px;
+    height: 67%;
+  }
+}
+
+@media (min-width: 429px) and (max-width: 430px) {
+  .banner1294core {
+    max-width: 97%;
+    height: 68%;
+    padding-left: 12px;
+  }
+
+  .banner1294corevalues {
+    padding-left: 20px;
+    height: 67%;
+  }
+
+  .banner1293casestudy {
+    padding-left: 20px;
+    height: 73%;
+  }
+
+  .banner1296providing {
+    height: 70% !important;
+  }
+
+  .banner1293expertise {
+    max-width: 97%;
+    height: 68%;
+    padding-left: 12px;
+  }
+
+  .banner1294news {
+    padding-left: 20px;
+    height: 67%;
+  }
+
+  .banner1294corevalues {
+    padding-left: 20px;
+    height: 67%;
+  }
+}
+
+@media (min-width: 411px) and (max-width: 412px) {
+  .banner1294core {
+    max-width: 97%;
+    height: 68%;
+    padding-left: 12px;
+  }
+
+  .banner1293casestudy {
+    padding-left: 20px;
+    height: 67%;
+  }
+
+  .banner1294corevalues {
+    padding-left: 20px;
+    height: 67%;
+  }
+
+  .banner1293expertise {
+    max-width: 80%;
+
+    margin-left: 28px;
+  }
+
+  .banner1296providing {
+    height: 70% !important;
+  }
+
+  .banner1294news {
+    padding-left: 20px;
+    height: 67%;
+  }
+}
+
+@media (min-width: 343px) and (max-width: 344px) {
+  .banner1294core {
+    max-width: 97%;
+    height: 88%;
+    padding-left: 7px;
+    padding-top: 40px;
+  }
+
+  .banner1293casestudy {
+    padding-left: 20px;
+    height: 67%;
+  }
+
+  .banner1293 {
+    padding-left: 20px;
+    height: 67%;
+  }
+
+  .banner1293expertise {
+    max-width: 100%;
+
+    margin-left: 28px;
+  }
+}
+
+@media (min-width: 359px) and (max-width: 360px) {
+  .banner1293casestudy {
+    padding-left: 20px;
+    height: 67%;
+  }
+
+  .banner1293 {
+    padding-left: 20px;
+    height: 67%;
+  }
+
+  .banner1294news {
+    padding-left: 20px;
+    height: 67%;
+  }
+
+  .banner1293expertise {
+    max-width: 100%;
+
+    margin-left: 28px;
+  }
+}
+
+@media (max-width: 375px) {
+  .banner1294core {
+    height: 67%;
+    max-width: 90%;
+  }
+
+  .banner1294news {
+    padding-left: 20px;
+    height: 67%;
+  }
+
+  .banner1293casestudy {
+    padding-left: 20px;
+    height: 70%;
+  }
+}
+
+@media (min-width: 374px) and (max-width: 375px) {
+  .banner1293expertise {
+    max-width: 100%;
+    padding-left: 20px;
+  }
+
+  .banner1293casestudy {
+    max-width: 100%;
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 2060px) {
+  .forwardthinking {
+    margin-left: 170px;
+  }
+}
+
+@media (min-width: 1279px) and (max-width: 1280px) {
+  .managemetnteam {
+    width: 450px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .banner1296providing {
+    max-width: 80%;
+    height: 80%;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 1023px) {
+  .banner1296providing {
+    max-width: 92%;
+  }
+}
+
+@media (min-width: 660px) and (max-width: 1280px) {
+  .devilsdetail {
+    height: 285px;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1366px) {
+  .devilsdetail {
+    height: 320px;
+  }
+}
+
+@media (min-width: 1367px) and (max-width: 3366px) {
+  .devilsdetail {
+    height: 330px;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 3023px) {
+  .devilsdetailfont {
+    font-size: 36px;
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .devilsdetailfont {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 1024px) {
+  .devilsdetailfont {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 639px) {
+  .leadershpaboutone {
+    display: block;
+  }
+}
+
+@media (min-width: 640px) {
+  .leadershpaboutone {
+    display: none;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 636px) {
+  .eventscard {
+    max-width: 92%;
+    height: 64%;
+  }
+}
+
+/*************************************media every device screen************************************/
+@media (min-width: 3840px) {
+  .devildetailsection {
+    margin-top: 165px;
+    max-width: 80%;
+  }
+
+  .banner1293forecasting {
+    max-width: 80%;
+  }
+
+  .analyticalabout {
+    max-width: 80%;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 1394px;
+  }
+
+  .analyticalaboutwhoweserve {
+    max-width: 1394px;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 80%;
+  }
+
+  .banner1295therapeutic {
+    max-width: 80%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 80%;
+  }
+
+  .researchquestion {
+    max-width: 80%;
+  }
+
+  .bannerinternanews {
+    max-width: 80%;
+  }
+
+  .banner1293expertise {
+    max-width: 80%;
+  }
+
+  .givingbackimage {
+    width: 606px;
+  }
+
+  .banner1294volunteers {
+    max-width: 80%;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 80%;
+  }
+
+  .dirtywater {
+    max-width: 80%;
+  }
+
+  .Cleanwater {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .banner1294social {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .cleancommunities {
+    max-width: 1400px;
+  }
+
+  .charitywatereducation {
+    max-width: 1400px;
+  }
+
+  .charitywatersection {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .banner1294corevalues {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .idealdrive {
+    max-width: 1420px;
+  }
+
+  .homeservice {
+    max-width: 80%;
+  }
+
+  .homeslidersection {
+    max-width: 80%;
+  }
+
+  .forecastinghome {
+    max-width: 80%;
+  }
+
+  .banner1293about {
+    max-width: 1350px;
+    height: 72%;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 1350px;
+    height: 72%;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 3839px) {
+  .devildetailsection {
+    margin-top: 165px;
+  }
+
+  .banner1295therapeutic {
+    max-width: 1400px;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 1400px;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 1400px;
+  }
+
+  .banner1295demandstudy {
+    max-width: 1400px;
+  }
+
+  .researchquestion {
+    max-width: 1400px;
+  }
+
+  .banner1293forecasting {
+    max-width: 1400px;
+  }
+
+  .banner1293expertise {
+    max-width: 1400px;
+  }
+
+  .analyticalabout {
+    max-width: 1400px;
+  }
+
+  .analyticalaboutwhoweserve {
+    max-width: 1394px;
+  }
+
+  .bannerinternanews {
+    max-width: 1400px;
+  }
+
+  .givingbackimage {
+    width: 606px;
+  }
+
+  .banner1294volunteers {
+    max-width: 1400px;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 1400px;
+  }
+
+  .dirtywater {
+    max-width: 1400px;
+  }
+
+  .cleancommunities {
+    max-width: 1400px;
+  }
+
+  .charitywatereducation {
+    max-width: 1400px;
+  }
+
+  .Cleanwater {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .charitywatersection {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .banner1294social {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .banner1293social {
+    max-width: 1400px !important;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .banner1294corevalues {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .clearforcast {
+    max-width: 1430px;
+  }
+
+  .banner1293about {
+    max-width: 1400px;
+    height: 72%;
+  }
+
+  .cahrityfundedproject {
+    max-width: 1400px;
+  }
+
+  .idealdrive {
+    max-width: 1400px;
+  }
+
+  .homeslidersection {
+    max-width: 80%;
+  }
+
+  .forecastinghome {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 2048px) and (max-width: 2559px) {
+  .devildetailsection {
+    margin-top: 165px;
+    max-width: 69%;
+  }
+
+  .banner1293forecasting {
+    max-width: 1400px;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 1400px;
+  }
+
+  .researchquestion {
+    max-width: 1400px;
+  }
+
+  .banner1295therapeutic {
+    max-width: 1400px;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 1400px;
+  }
+
+  .banner1295demandstudy {
+    max-width: 1400px;
+  }
+
+  .aboutanxityone {
+    max-width: 53%;
+  }
+
+  .aboutanxitytwo {
+    max-width: 47%;
+  }
+
+  .analyticalabout {
+    max-width: 1400px;
+  }
+
+  .analyticalaboutwhoweserve {
+    max-width: 1398px;
+  }
+
+  .banner1293expertise {
+    max-width: 1400px;
+  }
+
+  .bannerinternanews {
+    max-width: 1400px;
+  }
+
+  .givingbackimage {
+    width: 606px;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 1400px;
+    height: 67%;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 1400px;
+  }
+
+  .dirtywater {
+    max-width: 1400px;
+  }
+
+  .banner1294volunteers {
+    max-width: 1400px;
+  }
+
+  .cleancommunities {
+    max-width: 1480px;
+  }
+
+  .cahrityfundedproject {
+    max-width: 1400px;
+  }
+
+  .charitywatereducation {
+    max-width: 1400px;
+  }
+
+  .charitywatersection {
+    max-width: 1500px;
+    height: 70%;
+  }
+
+  .banner1294social {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .Cleanwater {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .banner1293social {
+    max-width: 1400px !important;
+  }
+
+  .banner1294corevalues {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .idealdrive {
+    max-width: 1400px;
+  }
+
+  .clearforcast {
+    max-width: 1430px;
+  }
+
+  .banner1293about {
+    max-width: 1400px;
+    height: 72%;
+  }
+
+  .homeservice {
+    max-width: 80%;
+  }
+
+  .forecastinghome {
+    max-width: 70%;
+  }
+
+  .homeslidersection {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2047px) {
+  .devildetailsection {
+    margin-top: 165px;
+    max-width: 73%;
+  }
+
+  .banner1295therapeutic {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .analyticalaboutwhoweserve {
+    max-width: 1398px;
+  }
+
+  .banner1295demandstudy {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .researchquestion {
+    max-width: 1400px;
+  }
+
+  .banner1293forecasting {
+    max-width: 1400px;
+  }
+
+  .givingbackimage {
+    width: 606px;
+  }
+
+  .aboutanxityone {
+    max-width: 53%;
+  }
+
+  .aboutanxitytwo {
+    max-width: 47%;
+  }
+
+  .analyticalabout {
+    max-width: 1400px;
+  }
+
+  .banner1293expertise {
+    max-width: 1400px;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 1400px;
+    height: 67%;
+  }
+
+  .bannerinternanews {
+    max-width: 1400px;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 1400px;
+  }
+
+  .banner1294volunteers {
+    max-width: 1400px;
+  }
+
+  .dirtywater {
+    max-width: 1400px;
+  }
+
+  .cahrityfundedproject {
+    max-width: 1400px;
+  }
+
+  .cleancommunities {
+    max-width: 1400px;
+  }
+
+  .charitywatereducation {
+    max-width: 1400px;
+  }
+
+  .charitywatersection {
+    max-width: 1500px;
+    height: 70%;
+  }
+
+  .Cleanwater {
+    max-width: 1400px;
+    height: 70%;
+  }
+
+  .banner1294social {
+    max-width: 1400px;
+  }
+
+  .banner1293social {
+    max-width: 1400px !important;
+  }
+
+  .clearforcast {
+    max-width: 1430px;
+  }
+
+  .idealdrive {
+    max-width: 1400px;
+  }
+
+  .banner1293about {
+    max-width: 1400px;
+    height: 72%;
+  }
+
+  .banner1294corevalues {
+    max-width: 1400px;
+    height: 68%;
+  }
+
+  .homeservice {
+    max-width: 87%;
+  }
+
+  .forecastinghome {
+    max-width: 73%;
+  }
+
+  .homeslidersection {
+    max-width: 74%;
+  }
+}
+
+@media (min-width: 1728px) and (max-width: 1919px) {
+  .devildetailsection {
+    margin-top: 165px;
+    max-width: 81%;
+  }
+
+  .researchquestion {
+    max-width: 1400px;
+  }
+
+  .analyticalaboutwhoweserve {
+    max-width: 1398px;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 1400px;
+    height: 64%;
+  }
+
+  .banner1293forecasting {
+    max-width: 1400px;
+    height: 75%;
+  }
+
+  .banner1293expertise {
+    max-width: 1400px;
+    height: 75%;
+  }
+
+  .aboutanxityone {
+    max-width: 53%;
+  }
+
+  .banner1295therapeutic {
+    max-width: 1400px;
+    height: 75%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 1400px;
+    height: 75%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 1400px;
+    height: 75%;
+  }
+
+  .aboutanxitytwo {
+    max-width: 47%;
+  }
+
+  .analyticalabout {
+    max-width: 1400px;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 1400px;
+    height: 67%;
+  }
+
+  .bannerinternanews {
+    max-width: 1400px;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 1400px;
+  }
+
+  .givingbackimage {
+    width: 606px;
+  }
+
+  .banner1294volunteers {
+    max-width: 1400px;
+  }
+
+  .dirtywater {
+    max-width: 1400px;
+  }
+
+  .cahrityfundedproject {
+    max-width: 1400px;
+  }
+
+  .cleancommunities {
+    max-width: 1480px;
+  }
+
+  .charitywatereducation {
+    max-width: 1400px;
+  }
+
+  .charitywatersection {
+    max-width: 1500px;
+  }
+
+  .banner1294social {
+    max-width: 81%;
+  }
+
+  .Cleanwater {
+    max-width: 81%;
+  }
+
+  .banner1293social {
+    max-width: 1400px !important;
+  }
+
+  .banner1294corevalues {
+    max-width: 1400px;
+  }
+
+  .clearforcast {
+    max-width: 1430px;
+  }
+
+  .banner1293about {
+    max-width: 1400px;
+    height: 72%;
+  }
+
+  .idealdrive {
+    max-width: 1400px;
+  }
+
+  .forecastinghome {
+    max-width: 70%;
+  }
+
+  .homeservice {
+    max-width: 90%;
+  }
+
+  .homeslidersection {
+    max-width: 83%;
+  }
+}
+
+@media (min-width: 1536px) and (max-width: 1727px) {
+  .devildetailsection {
+    margin-top: 149px;
+    max-width: 87%;
+  }
+
+  .analyticalaboutwhoweserve {
+    max-width: 1270px;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 1270px;
+    height: 67%;
+  }
+
+  .researchquestion {
+    max-width: 1330px;
+  }
+
+  .banner1293forecasting {
+    max-width: 1270px;
+    height: 78%;
+  }
+
+  .analyticalabout {
+    max-width: 1290px;
+  }
+
+  .aboutanxityone {
+    max-width: 47%;
+  }
+
+  .aboutanxitytwo {
+    max-width: 53%;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 1270px;
+    height: 66%;
+  }
+
+  .banner1293expertise {
+    max-width: 1270px;
+    height: 72%;
+  }
+
+  .banner1295therapeutic {
+    max-width: 1265px;
+    height: 72%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 1265px;
+    height: 72%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 1265px;
+    height: 72%;
+  }
+
+  .bannerinternanews {
+    max-width: 1270px;
+  }
+
+  .givingbackimage {
+    width: 620px;
+  }
+
+  .banner1294volunteers {
+    max-width: 1260px;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 1260px;
+  }
+
+  .cahrityfundedproject {
+    max-width: 1250px;
+  }
+
+  .dirtywater {
+    max-width: 1250px;
+  }
+
+  .cleancommunities {
+    max-width: 89%;
+  }
+
+  .charitywatereducation {
+    max-width: 1290px;
+  }
+
+  .banner1294social {
+    max-width: 83%;
+  }
+
+  .charitywatersection {
+    max-width: 90%;
+  }
+
+  .Cleanwater {
+    max-width: 87%;
+  }
+
+  .banner1293social {
+    max-width: 1340px !important;
+  }
+
+  .banner1294corevalues {
+    max-width: 1340px;
+  }
+
+  .clearforcast {
+    max-width: 1330px;
+  }
+
+  .idealdrive {
+    max-width: 1310px;
+  }
+
+  .banner1293about {
+    max-width: 1330px;
+    height: 72%;
+  }
+
+  .forecastinghome {
+    max-width: 92%;
+  }
+
+  .homeservice {
+    max-width: 91%;
+  }
+
+  .homeslidersection {
+    max-width: 88.9%;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1535px) {
+  .devildetailsection {
+    margin-top: 165px;
+    max-width: 87%;
+  }
+
+  .banner1295therapeutic {
+    max-width: 1180px;
+    height: 80%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 1180px;
+    height: 80%;
+  }
+
+  .analyticalaboutwhoweserve {
+    max-width: 1180px;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 1180px;
+    height: 67%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 1180px;
+    height: 80%;
+  }
+
+  .researchquestion {
+    max-width: 1240px;
+  }
+
+  .analyticalabout {
+    max-width: 1180px;
+  }
+
+  .banner1293forecasting {
+    max-width: 1180px;
+  }
+
+  .aboutanxityone {
+    max-width: 54%;
+  }
+
+  .aboutanxitytwo {
+    max-width: 46%;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 1180px;
+  }
+
+  .banner1293expertise {
+    max-width: 1180px;
+  }
+
+  .bannerinternanews {
+    max-width: 1180px;
+  }
+
+  .givingbackimage {
+    width: 590px;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 1180px;
+  }
+
+  .banner1294volunteers {
+    max-width: 1180px;
+  }
+
+  .dirtywater {
+    max-width: 1180px;
+  }
+
+  .cleancommunities {
+    max-width: 1260px;
+  }
+
+  .cahrityfundedproject {
+    max-width: 1180px;
+  }
+
+  .banner1294social {
+    max-width: 1180px;
+  }
+
+  .charitywatersection {
+    max-width: 1280px;
+  }
+
+  .Cleanwater {
+    max-width: 1280px;
+  }
+
+  .banner1293social {
+    max-width: 1240px !important;
+  }
+
+  .banner1294corevalues {
+    max-width: 1240px;
+  }
+
+  .clearforcast {
+    max-width: 1280px;
+  }
+
+  .idealdrive {
+    max-width: 1240px;
+  }
+
+  .banner1293about {
+    max-width: 1250px;
+    height: 72%;
+  }
+
+  .homeservice {
+    max-width: 97%;
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 1439px) {
+  .devildetailsection {
+    margin-top: 150px;
+    max-width: 1160px;
+  }
+
+  .banner1293expertise {
+    max-width: 1090px;
+    height: 74%;
+  }
+
+  .banner1295therapeutic {
+    max-width: 1090px;
+    height: 80%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 1090px;
+    height: 80%;
+  }
+
+  .analyticalaboutwhoweserve {
+    max-width: 1090px;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 1090px;
+    height: 67%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 1090px;
+    height: 75%;
+  }
+
+  .researchquestion {
+    max-width: 1160px;
+  }
+
+  .banner1293forecasting {
+    max-width: 1090px;
+    height: 74%;
+  }
+
+  .aboutanxityone {
+    max-width: 57%;
+  }
+
+  .aboutanxitytwo {
+    max-width: 43%;
+  }
+
+  .analyticalabout {
+    max-width: 1090px;
+  }
+
+  .givingbackimage {
+    width: 520px;
+  }
+
+  .cleancommunities {
+    max-width: 1160px;
+  }
+
+  .bannerinternanews {
+    max-width: 1080px;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 1080px;
+  }
+
+  .cahrityfundedproject {
+    max-width: 1080px;
+  }
+
+  .banner1293social {
+    max-width: 1080px;
+  }
+
+  .Cleanwater {
+    max-width: 1160px;
+  }
+
+  .banner1294volunteers {
+    max-width: 1100px;
+  }
+
+  .banner1294social {
+    max-width: 1100px;
+  }
+
+  .charitywatersection {
+    max-width: 1200px;
+  }
+
+  .banner1294corevalues {
+    max-width: 1100px;
+  }
+
+  .clearforcast {
+    max-width: 1120px;
+  }
+
+  .idealdrive {
+    max-width: 1080px;
+  }
+
+  .banner1293about {
+    max-width: 1100px;
+    height: 72%;
+  }
+
+  .homeservice {
+    max-width: 1160px;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 1090px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1365px) {
+  .devildetailsection {
+    margin-top: 230px;
+    max-width: 1120px;
+  }
+
+  .researchquestion {
+    max-width: 1120px;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 1120px;
+    height: 67%;
+  }
+
+  .banner1293forecasting {
+    max-width: 1120px;
+  }
+
+  .banner1295therapeutic {
+    max-width: 1120px;
+    height: 80%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 1120px;
+    height: 80%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 1120px;
+    height: 80%;
+  }
+
+  .banner1293expertise {
+    max-width: 1120px;
+  }
+
+  .aboutanxityone {
+    max-width: 53%;
+  }
+
+  .aboutanxitytwo {
+    max-width: 43%;
+  }
+
+  .analyticalabout {
+    max-width: 1120px;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 1120px;
+  }
+
+  .bannerinternanews {
+    max-width: 1120px;
+  }
+
+  .banner1294volunteers {
+    max-width: 1120px;
+  }
+
+  .banner1294social {
+    max-width: 1120px;
+  }
+
+  .cahrityfundedproject {
+    max-width: 1120px;
+  }
+
+  .dirtywater {
+    max-width: 1120px;
+  }
+
+  .charitywatersection {
+    max-width: 1230px;
+  }
+
+  .Cleanwater {
+    max-width: 1120px;
+  }
+
+  .banner1294corevalues {
+    max-width: 1140px;
+  }
+
+  .cleancommunities {
+    max-width: 1160px;
+  }
+
+  .banner1293social {
+    max-width: 1120px;
+  }
+
+  .banner1293about {
+    max-width: 1140px;
+    height: 72%;
+  }
+
+  .idealdrive {
+    max-width: 1080px;
+  }
+
+  .clearforcast {
+    max-width: 1160px;
+  }
+
+  .idealdrive {
+    max-width: 1420px;
+  }
+
+  .homeservice {
+    max-width: 1120px;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 1120px;
+  }
+}
+
+@media (min-width: 1149px) and (max-width: 1278px) {
+  .devildetailsection {
+    margin-top: 140px;
+  }
+
+  .analyticalabout {
+    max-width: 1120px;
+  }
+
+  .researchquestion {
+    max-width: 1120px;
+  }
+
+  .aboutanxityone {
+    max-width: 57%;
+  }
+
+  .banner1293forecasting {
+    max-width: 1120px;
+  }
+
+  .banner1295therapeutic {
+    max-width: 1120px;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 1120px;
+  }
+
+  .banner1295demandstudy {
+    max-width: 1120px;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 1120px;
+  }
+
+  .aboutanxitytwo {
+    max-width: 43%;
+  }
+
+  .banner1293expertise {
+    max-width: 1120px;
+  }
+
+  .viscadiavoluntters {
+    max-width: 1120px;
+  }
+
+  .bannerinternanews {
+    max-width: 1120px;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 900px;
+  }
+
+  .banner1294volunteers {
+    max-width: 1120px;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 1120px;
+  }
+
+  .banner1294social {
+    max-width: 1120px;
+  }
+
+  .charitywatersection {
+    max-width: 1120px;
+  }
+
+  .Cleanwater {
+    max-width: 90%;
+  }
+
+  .clearforcast {
+    max-width: 1430px;
+  }
+
+  .idealdrive {
+    max-width: 1420px;
+  }
+
+  .banner1294social {
+    max-width: 1420px;
+  }
+
+  .banner1294corevalues {
+    max-width: 90%;
+    height: 72%;
+  }
+}
+
+@media (min-width: 980px) and (max-width: 1148px) {
+  .devildetailsection {
+    margin-top: 170px;
+  }
+
+  .researchquestion {
+    max-width: 90%;
+  }
+
+  .banner1293expertise {
+    max-width: 85%;
+  }
+
+  .aboutanxityone {
+    max-width: 50%;
+  }
+
+  .aboutanxitytwo {
+    max-width: 43%;
+  }
+
+  .analyticalabout {
+    max-width: 85%;
+  }
+
+  .banner1294volunteers {
+    max-width: 85%;
+  }
+
+  .viscadiavoluntters {
+    max-width: 90%;
+  }
+
+  .bannerinternanews {
+    max-width: 90%;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 90%;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 90%;
+  }
+
+  .banner1294social {
+    max-width: 90%;
+  }
+
+  .charitywatersection {
+    max-width: 90%;
+  }
+
+  .Cleanwater {
+    max-width: 90%;
+  }
+
+  .banner1294corevalues {
+    max-width: 90%;
+    height: 72%;
+  }
+
+  .banner1293social {
+    max-width: 90%;
+    height: 72%;
+  }
+
+  .banner1295therapeutic {
+    max-width: 90%;
+    height: 90%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 90%;
+    height: 90%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .banner1293forecasting {
+    max-width: 90%;
+    height: 82%;
+  }
+
+  .banner1293about {
+    max-width: 90%;
+    height: 72%;
+  }
+
+  .clearforcast {
+    max-width: 90%;
+  }
+
+  .idealdrive {
+    max-width: 88%;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 85%;
+  }
+}
+
+@media (min-width: 914px) and (max-width: 979px) {
+  .devildetailsection {
+    margin-top: 175px;
+  }
+
+  .clearforcast {
+    max-width: 1430px;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 1420px;
+    height: 70%;
+  }
+
+  .banner1293forecasting {
+    max-width: 1420px;
+  }
+
+  .analyticalabout {
+    max-width: 1420px;
+  }
+
+  .banner1293expertise {
+    max-width: 1420px;
+  }
+
+  .banner1295therapeutic {
+    max-width: 1420px;
+  }
+
+  .banner1295demandstudy {
+    max-width: 1420px;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 1420px;
+  }
+
+  .researchquestion {
+    max-width: 1420px;
+  }
+
+  .bannerinternanews {
+    max-width: 1420px;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 1430px;
+  }
+
+  .banner1294social {
+    max-width: 1430px;
+  }
+
+  .charitywatersection {
+    max-width: 1430px;
+  }
+
+  .banner1294corevalues {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .homeborder {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 911px) and (max-width: 912px) {
+  .devildetailsection {
+    margin-top: 86px;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 90%;
+  }
+
+  .banner1293forecasting {
+    max-width: 90%;
+    height: 82%;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 90%;
+    height: 82%;
+  }
+
+  .banner1295therapeutic {
+    max-width: 90%;
+    height: 82%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 90%;
+    height: 82%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 90%;
+    height: 82%;
+  }
+
+  .researchquestion {
+    max-width: 90%;
+  }
+
+  .bannerinternanews {
+    max-width: 90%;
+  }
+
+  .banner1293expertise {
+    max-width: 90%;
+  }
+
+  .analyticalabout {
+    max-width: 90%;
+  }
+
+  .homeborder {
+    margin-top: 50px;
+  }
+
+  .banner1293social {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1294social {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .charitywatersection {
+    max-width: 90%;
+  }
+
+  .banner1294corevalues {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1293about {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .clearforcast {
+    max-width: 90%;
+  }
+
+  .idealdrive {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 910px) {
+  .devildetailsection {
+    margin-top: 270px;
+  }
+
+  .banner1293forecasting {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .banner1295therapeutic {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .researchquestion {
+    max-width: 90%;
+  }
+
+  .banner1293expertise {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .analyticalabout {
+    max-width: 90%;
+  }
+
+  .banner1294volunteers {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .bannerinternanews {
+    max-width: 90%;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 90%;
+  }
+
+  .banner1293social {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .banner1294social {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .charitywatersection {
+    max-width: 100%;
+  }
+
+  .banner1294corevalues {
+    max-width: 90%;
+    height: 75%;
+  }
+
+  .banner1294corevalues {
+    max-width: 90%;
+    height: 75%;
+  }
+
+  .banner1293about {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .clearforcast {
+    max-width: 90%;
+  }
+
+  .idealdrive {
+    max-width: 90%;
+  }
+
+  .homeborder {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 754px) and (max-width: 768px) {
+  .devildetailsection {
+    margin-top: 270px;
+  }
+
+  .banner1295therapeutic {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .researchquestion {
+    max-width: 90%;
+  }
+
+  .bannerinternanews {
+    max-width: 90%;
+  }
+
+  .banner1293forecasting {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .banner1293expertise {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .analyticalabout {
+    max-width: 90%;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1294volunteers {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 90%;
+  }
+
+  .homeborder {
+    margin-top: 40px;
+  }
+
+  .banner1294social {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .charitywatersection {
+    max-width: 90%;
+  }
+
+  .banner1293about {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1293social {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .banner1294corevalues {
+    max-width: 90%;
+    height: 70%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 753px) {
+  .devildetailsection {
+    margin-top: 410px;
+  }
+
+  .viscadiavolunttersgivingback {
+    max-width: 90%;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1295therapeutic {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1293forecasting {
+    max-width: 90%;
+
+    height: 70%;
+  }
+
+  .analyticalabout {
+    max-width: 90%;
+  }
+
+  .banner1293expertise {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .bannerinternanews {
+    max-width: 90%;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1293about {
+    max-width: 90%;
+
+    height: 70%;
+  }
+
+  .banner1294social {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .charitywatersection {
+    max-width: 90%;
+  }
+
+  .banner1294corevalues {
+    max-width: 90%;
+
+    height: 70%;
+  }
+
+  .banner1294volunteers {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 67%;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 640px) {
+  .devildetailsection {
+    margin-top: 470px;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1295therapeutic {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 100%;
+    height: 80%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1293forecasting {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1293expertise {
+    max-width: 90%;
+    height: 70%;
+    margin-left: 28px;
+  }
+
+  .banner1293social {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 70%;
+  }
+
+  .banner1294social {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 70%;
+  }
+
+  .banner1293about {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 70%;
+  }
+
+  .banner1294corevalues {
+    height: 70% !important;
+    padding-left: 28px;
+  }
+
+  .banner1294volunteers {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 68%;
+  }
+}
+
+@media (min-width: 411px) and (max-width: 424px) {
+  .devildetailsection {
+    margin-top: 480px;
+  }
+
+  .banner1293expertise {
+    max-width: 90%;
+    height: 68%;
+    margin-left: 28px;
+  }
+
+  .banner1295therapeutic {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .banner1293forecasting {
+    max-width: 90%;
+    height: 72%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 90%;
+    height: 68%;
+  }
+
+  .banner1294volunteers {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 68%;
+  }
+
+  .banner1294social {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 68%;
+  }
+
+  .banner1293about {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 70%;
+  }
+
+  .banner1293social {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 70%;
+  }
+
+  .banner1294corevalues {
+    height: 70% !important;
+    padding-left: 28px;
+  }
+}
+
+@media (min-width: 389px) and (max-width: 390px) {
+  .banner1293about {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 70%;
+  }
+
+  .devildetailsection {
+    margin-top: 465px;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 70%;
+  }
+
+  .banner1295therapeutic {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 90%;
+    height: 70%;
+  }
+
+  .banner1293forecasting {
+    max-width: 90%;
+    height: 72%;
+  }
+
+  .banner1293expertise {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 70%;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 90%;
+    height: 68%;
+  }
+
+  .banner1294volunteers {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 68%;
+  }
+
+  .banner1294social {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 66%;
+  }
+
+  .banner1293social {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 70%;
+  }
+
+  .banner1294corevalues {
+    padding-left: 20px;
+    height: 67%;
+  }
+
+  .banner1294corevalues {
+    padding-left: 20px;
+    height: 67%;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 388px) {
+  .devildetailsection {
+    margin-top: 465px;
+  }
+
+  .banner1293about {
+    max-width: 80%;
+
+    height: 72%;
+  }
+
+  .banner1293expertise {
+    max-width: 100%;
+    height: 66%;
+    padding-left: 25px;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 88%;
+    height: 70%;
+  }
+
+  .banner1293forecasting {
+    max-width: 88%;
+    height: 80%;
+  }
+
+  .banner1295therapeutic {
+    max-width: 88%;
+    height: 80%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 100%;
+    height: 80%;
+    padding-left: 20px;
+  }
+
+  .banner1295demandstudy {
+    max-width: 88%;
+    height: 76%;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 100%;
+    height: 66%;
+    padding-left: 25px;
+  }
+
+  .banner1294volunteers {
+    max-width: 88%;
+    height: 66%;
+  }
+
+  .banner1294corevalues {
+    max-width: 92%;
+    height: 68%;
+  }
+
+  .banner1293social {
+    max-width: 95%;
+    height: 73%;
+    padding-left: 12px;
+  }
+
+  .banner1294social {
+    max-width: 88%;
+    height: 65%;
+  }
+}
+
+@media (min-width: 358px) and (max-width: 360px) {
+  .devildetailsection {
+    margin-top: 490px;
+  }
+
+  .banner1293expertise {
+    max-width: 100%;
+    height: 70%;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 100%;
+    height: 76%;
+    padding-left: 25px;
+  }
+
+  .banner1293forecasting {
+    max-width: 100%;
+    height: 76%;
+    padding-left: 25px;
+  }
+
+  .banner1295therapeutic {
+    max-width: 100%;
+    height: 80%;
+    padding-left: 25px;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 100%;
+    height: 80%;
+    padding-left: 20px;
+  }
+
+  .banner1295demandstudy {
+    max-width: 100%;
+    height: 70%;
+    padding-left: 25px;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 100%;
+    height: 70%;
+    padding-left: 25px;
+  }
+
+  .banner1294volunteers {
+    max-width: 90%;
+    margin-left: 28px;
+    height: 67%;
+  }
+
+  .banner1294social {
+    max-width: 80%;
+    margin-left: 28px;
+    height: 67%;
+  }
+
+  .banner1293about {
+    max-width: 80%;
+    margin-top: 24px;
+    margin-left: 28px;
+    height: 72%;
+  }
+
+  .banner1293social {
+    max-width: 88%;
+    height: 76%;
+  }
+
+  .banner1294corevalues {
+    max-width: 88%;
+    height: 76%;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 357px) {
+  .devildetailsection {
+    margin-top: 490px;
+  }
+
+  .banner1294newsandpressrelease {
+    max-width: 88%;
+    height: 76%;
+  }
+
+  .banner1295therapeutic {
+    max-width: 88%;
+    height: 81%;
+  }
+
+  .banner1296internalcasestudy {
+    max-width: 88%;
+    height: 70%;
+  }
+
+  .banner1295whoweserverheader {
+    max-width: 90%;
+    height: 86%;
+  }
+
+  .banner1295demandstudy {
+    max-width: 88%;
+    height: 75%;
+  }
+
+  .banner1293forecasting {
+    max-width: 88%;
+    height: 81%;
+  }
+
+  .banner1293expertise {
+    max-width: 88%;
+    height: 71%;
+  }
+
+  .banner1294volunteers {
+    max-width: 88%;
+    height: 76%;
+  }
+
+  .banner1294corevalues {
+    max-width: 88%;
+    height: 76%;
+  }
+
+  .banner1294social {
+    max-width: 88%;
+    height: 67%;
+  }
+
+  .banner1293about {
+    max-width: 80%;
+    height: 72%;
+  }
+
+  .banner1293social {
+    max-width: 84%;
+    height: 82%;
+  }
+}
+
+.fw400 {
+  font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+/* kunal_css */
+@media (min-width: 768px) {
+  .aling_evt_text {
+    margin-left: -15px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .aling_evt_text {
+    /* margin-left: 0px; */
+        margin-left: 30px;
+  }
+
+  .event_text_align {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .aling_evt_text {
+    /* margin-left: 73px; */
+    margin-left: 105px;
+    
+  }
+
+  .event_text_align {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .aling_evt_text {
+    /* margin-left: 172px; */
+    margin-left:202px;
+  }
+
+  .event_text_align {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .aling_evt_text {
+    /* margin-left: 225px; */
+    margin-left:255px;
+  }
+
+  .event_text_align {
+    width: 72%;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #BD302B;
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+  }
+
+  .custom-scrollbar {
+    scrollbar-width: 200px;
+    scrollbar-color: #BD302B #f1f1f1;
+  }
+}
+
+@media (min-width: 1800px) {
+  .rightimagewebinar {
+    left: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+}
