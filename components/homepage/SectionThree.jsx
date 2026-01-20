@@ -6,7 +6,8 @@ const SectionThree = () => {
   return (
     <div className="bg-[#F6F6F6] md:py-0 py-3 md:mt-0 mt-5 md:min-h-[100%] mb:pb-0 pb-0 flex justify-center items-center">
       <div className="sm:gap-0 2xl:gap-12 px-0 pt-6 md:pt-0 lg:max-w-full md:ml-14 mx-0 justify-center w-full flex lg:flex-row items-center flex-col sm:mb-0">
-        <div className="lg:w-[50%] 2xl:space-y-5 h-full md:ml-[90px] ml-0">
+        <div className="tabalignment2">
+        <div className="lg:w-[50%] 2xl:space-y-5 h-full ml-0">
           <h3 className="aling_home_text text-[32px] text-center md:text-start 2xl:mt-2 leading-[1.1] md:leading-[34px] xl:leading-[45px] font-light text-[#BD302B] md:text-[48px]">
             Join our growing team
           </h3>
@@ -34,9 +35,11 @@ const SectionThree = () => {
             </div>
           </div>
         </div>
+        {/* md:ml-[90px] */}
 
         <div className="w-full flex justify-end items-center hidden sm:flex mt-10 lg:mt-0 sm:mt-0 md:w-[55%]">
           <img className="w-full h-auto" src="./homeAssets/Viscadia-Opens-European-Offices.png" alt="" />
+        </div>
         </div>
       </div>
     </div>

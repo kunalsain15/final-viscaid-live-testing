@@ -158,7 +158,6 @@ const page = () => {
             </div>
           )}
 
-          {/* Speaker Section */}
           {event.speaker && (
             <div className="bg-white py-10 px-4 sm:px-6 lg:px-24">
               {event.speaker.speaker && (
