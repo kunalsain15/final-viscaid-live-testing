@@ -119,7 +119,7 @@ const ContactPage = () => {
 
   return (
     <>
-      <div className="flex flex-col mt-34 md:grid md:grid-cols-12 mx-auto gap-16 justify-center pt-8 sm:pt-[50px] pb-10 sm:pb-[60px] md:items-start max-w-[95%] sm:max-w-[90%] 2xl:max-w-[1400px] bg-white">
+      <div className="flex flex-col mt-20 md:grid md:grid-cols-12 mx-auto gap-16 justify-center pt-8 sm:pt-[50px] pb-10 sm:pb-[60px] md:items-start max-w-[95%] sm:max-w-6xl bg-white">
         {/* Left Side */}
 
         <div className="md:col-span-5 col-span-12">
@@ -270,14 +270,14 @@ const ContactPage = () => {
                 {/* Submit button */}
                 <div className="frm_submit justify-end cursor-pointer flex gap-4 md:mt-0 mt-5">
                   <button
-                    className="frm_button_submit cursor-pointer font-normal bg-[#BD302B] text-white font-sans text-[20px] px-[30px] py-[10px] rounded-sm frm_final_submit flex items-center justify-center"
+                    className="frm_button_submit shadow-[0_2.54px_14.2px_0_#00000005] cursor-pointer font-normal bg-[#BD302B] text-white font-sans text-[20px] px-[30px] py-[8px] rounded-sm frm_final_submit flex items-center justify-center"
                     type="submit"
                     disabled={loading}
                   >
                     {loading ? (
                       <div
                         role="status"
-                        className="flex  px-[20px] items-center justify-center"
+                        className="flex px-[20px] items-center justify-center"
                       >
                         <svg
                           aria-hidden="true"
@@ -345,7 +345,7 @@ const ContactPage = () => {
 
       {/* Office Locations */}
       <div className="bg-[#f1f1f1] py-10 sm:py-16">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center mb-[14px]">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center mb-[14px]">
           {offices.map((office,index) => (
             <div
               key={office.id}
