@@ -36,7 +36,7 @@ const SectionFive = () => {
         </h2>
 
         <div ref={ref}
-          className="grid grid-cols-1 2xl:max-w-[1300px] mx-auto md:max-w-[97%] md:grid-cols-3 gap-7 md:gap-14">
+          className="grid grid-cols-1 mx-auto md:max-w-6xl md:grid-cols-3 gap-7 md:gap-14">
           <div className="flex flex-col h-full justify-between">
             <h3 className="text-[100px] mb-2 md:mb-0 md:text-[80px] font-thin text-[#BE302C] text-start md:text-center leading-[83px]">
               {startCount ? <CountUp end={25} duration={3} /> : 0}
