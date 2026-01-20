@@ -594,9 +594,9 @@ const page = () => {
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                           />
                           <div className={`absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100 flex flex-col justify-between p-5 text-white
-            ${hasLink
+            ${hasLink 
                               ? 'bg-[#BD302BB3]'
-                              : 'bg-gradient-to-b from-[#BD3028]/70 via-[#BD3028]/40 to-[#BD3028]/20'}`}
+                              : 'bg-[#BD302BB3]'}`}
                           >
                             <p className="text-[14px] leading-5 line-clamp-6">
                               {person?.introduction}
@@ -632,7 +632,7 @@ const page = () => {
                             </div>
                           </Link>
                         ) : (
-                          <div className="h-full md:mb-3 md:pb-3 flex flex-col bg-white  overflow-hidden hover:shadow-[0_8px_25px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+                            <div className="h-full md:mb-3 md:pb-3 flex flex-col bg-white  overflow-hidden hover:shadow-[0_8px_25px_rgba(0,0,0,0.12)] transition-shadow duration-300">
                             {CardContent}
                           </div>
                         )}
