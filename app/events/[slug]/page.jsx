@@ -573,8 +573,8 @@ const page = () => {
                       slidesPerGroup: 2
                     },
                     1024: {
-                      slidesPerView: 3,
-                      slidesPerGroup: 3
+                      slidesPerView: 4,
+                      slidesPerGroup: 4
                     },
                   }}
                   className="pb-12 md:pb-16 forecasting-swiper"
@@ -641,9 +641,9 @@ const page = () => {
                   })}
                 </Swiper>
 
-      <div className="section-four-pagination"></div>
+                <div className="section-four-pagination"></div>
 
-      <style jsx>{`
+                <style jsx>{`
         .section-four-pagination {
           position: relative !important;
           margin-top: 30px !important;

@@ -86,7 +86,7 @@ const CaseStudyCards = () => {
 
       <div
         id="case-study"
-        className="md:max-w-6xl sm:px-0 px-5 mx-auto min-h-[500px] py-11 sm:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+        className="md:max-w-6xl sm:px-0 px-5 mx-auto min-h-[500px] py-11 sm:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-15"
       >
         {caseStudyCardsData?.map((el, index) => (
           <div key={index} className="min-h-[600px] bg-white flex flex-col">
@@ -103,11 +103,11 @@ const CaseStudyCards = () => {
 
             <div className="flex flex-col justify-between py-5 mt-1">
               <div className="min-h-[150px]">
-                <h2 className="text-[28px] leading-[33px] font-light text-black">
+                <h2 className="text-[22px] leading-[24px] font-light text-black">
                   {el?.main_subtitle?.toUpperCase()}
                 </h2>
 
-                <p className="text-[19px] text-gray-600 font-light mt-4">
+                <p className="text-[16px] text-[#4E4E4E] md:leading-[22px] font-light mt-4">
                   {(() => {
                     const text = el?.title || "";
                     const words = text.split(" ");
@@ -119,7 +119,7 @@ const CaseStudyCards = () => {
               </div>
               <Link
                 href={`/case-studies/${el?.slug}`}
-                className="mt-6 mainBg text-white text-[16px] font-light px-6 py-[10px] w-fit"
+                className="md:mt-0 mainBg text-white text-[16px] font-light px-6 py-[10px] w-fit"
               >
                 VIEW CASE STUDY
               </Link>
@@ -152,10 +152,10 @@ const CaseStudyCards = () => {
 
               <div className="flex sm:px-0 px-3 flex-col justify-between py-5">
                 <div className="flex-1 flex flex-col justify-between min-h-[120px]">
-                  <h2 className="text-xl sm:text-[22px] leading-[33px] font-light text-black">
+                  <h2 className="text-xl sm:text-[22px] leading-[24px] font-light text-black">
                     {el?.heading}
                   </h2>
-                  <p className="text-base sm:text-[16px] text-[#4E4E4E] font-light mt-0 md:mt-3">
+                  <p className="text-base sm:text-[16px] text-[#4E4E4E] md:leading-[22px] font-light mt-0 md:mt-3">
                     {el?.sub_heading}
                   </p>
                 </div>

@@ -65,11 +65,11 @@ export default function DownloadWhitePaper({
   return (
     <div
       onClick={() => setisDownloadFomrOpen(false)}
-      className="h-full w-full fixed top-0 left-0 bg-[#00000027] z-50 flex justify-center items-center"
+      className="h-full w-full fixed top-8.5 left-0 bg-[#00000027] z-50 flex justify-center items-center"
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="h-[550px] relative w-[650px] bg-white shadow-lg rounded-lg p-8 flex flex-col items-center"
+        className="h-auto relative w-[650px] bg-white shadow-lg rounded-lg px-5 py-5 flex flex-col items-center"
       >
         <i
           onClick={() => setisDownloadFomrOpen(false)}
@@ -151,7 +151,7 @@ export default function DownloadWhitePaper({
             </div>
           </div>
 
-          <div className="pt-4">
+          <div className="pt-0">
             {isSubmiting ? (
               <div
                 role="status"

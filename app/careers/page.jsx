@@ -324,7 +324,7 @@ const page = () => {
                   {joblist.map((job) => (
                     <div
                       key={job.id}
-                      className="flex items-center justify-between border-b-2 pb-5 border-gray-300"
+                      className="flex items-center justify-between border-b-2 pb-4 border-gray-300"
                     >
                       <div className="sm:flex">
                         <div className="text-[#BD2F2C] text-[14px] sm:text-[20px] font-light">

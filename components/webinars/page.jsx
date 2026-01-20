@@ -63,7 +63,7 @@ const page = () => {
                       />
                     </Link>
                     <h2
-                      className="text-xl sm:mt-2 sm:text-[22px] font-light leading-7 mb-3"
+                      className="text-xl sm:mt-0 sm:text-[28px] font-light leading-[28px] mb-0"
                       style={{
                         display: "-webkit-box",
                         WebkitLineClamp: 3,
@@ -76,7 +76,7 @@ const page = () => {
                         ?.toLowerCase()
                         .replace(/\b\w/g, (char) => char.toUpperCase())}
                     </h2>
-                    <p className="text-[#63666A] sm:pt-4 font-light text-[16px] leading-relaxed flex-grow">
+                    <p className="text-[#4E4E4E] sm:pt-4 font-light text-[14px] leading-[22px] flex-grow">
                       {(() => {
                         const text =
                           JSON.parse(webinar?.extra_stuff)?.sections?.[0]
@@ -90,7 +90,7 @@ const page = () => {
 
                     <Link href={`/webinars/${webinar?.slug}`}>
                       <button
-                        className="frm_button_submit sm:mt-8 cursor-pointer bg-[#BD302B] hover:bg-[#8b0e0a] text-white font-sans font-light text-[13px] px-[22px] py-[8px] frm_final_submit w-fit"
+                        className="frm_button_submit sm:mt-0 cursor-pointer bg-[#BD302B] hover:bg-[#8b0e0a] text-white font-sans font-light text-[13px] px-[22px] py-[8px] frm_final_submit w-fit"
                         type="button"
                       >
                         VIEW WEBINAR

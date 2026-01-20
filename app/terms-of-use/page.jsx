@@ -3,19 +3,29 @@ import React from "react";
 const page = () => {
   return (
     <div>
-      <div className="h-[400px] md:h-[300px] w-full mb-12 md:mb-16 relative top-[45px] md:top-[65] text-white">
-        <img src="./homeAssets/corevalue_homebanner.png" className="h-[100%] w-[100%] hidden md:block" />
-        <img src="./homeAssets/mobile_homebanner.png" className="h-[100%] w-[100%] block md:hidden" />
-        <div className="h-full w-full absolute top-[-50] md:top-[0] px-5 md:right-115 z-10 flex justify-center items-center flex-col">
-          <div className="leading-snug md:leading-tight">
-            <h2 className="text-[24px] md:text-[32px] text-white/90 font-extralight leading-14">
+      <div className="h-[400px] md:h-[300px] w-full mb-12 md:mb-16 flex items-center relative top-[45px] md:top-[65px] text-white">
+        <img
+          src="/homeAssets/corevalue_homebanner.png"
+          className="h-full w-full hidden md:block"
+          alt="Banner"
+        />
+        <img
+          src="/homeAssets/mobile_homebanner.png"
+          className="h-full w-full block md:hidden"
+          alt="Mobile Banner"
+        />
+      <div className="absolute inset-0 flex justify-center md:items-center items-start mt-12 md:mt-0">
+        <div className="w-full max-w-6xl mx-auto md:px-0 px-5 flex justify-start items-center">
+          <div className="leading-[35px] md:leading-tight">
+            <h2 className="text-[32px] md:text-[40px] lg:text-[40px] text-white sm:leading-14 font-light">
               Terms of Use
             </h2>
+          </div>
           </div>
         </div>
       </div>
 
-      <div className="2xl:max-w-[1400px] lg:px-0 px-3 md:max-w-[78%] mx-auto lg:py-24 py-6">
+      <div className="lg:px-0 px-5 md:max-w-6xl mx-auto lg:py-6 py-6">
         <h1 className="text-xl sm:text-[22px] text-black font-light">
           Please read these terms of use carefully before using or obtaining any
           materials, information or services through this site.
