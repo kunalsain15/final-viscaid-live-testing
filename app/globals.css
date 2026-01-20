@@ -3573,8 +3573,10 @@ body {
 
 @media (min-width: 1280px) {
   .aling_evt_text {
-    /* margin-left: 0px; */
-        margin-left: 30px;
+    margin-left: 30px;
+  }
+    .aling_home_text {
+    margin-left: 0px;
   }
 
   .event_text_align {
@@ -3584,9 +3586,11 @@ body {
 
 @media (min-width: 1440px) {
   .aling_evt_text {
-    /* margin-left: 73px; */
     margin-left: 105px;
-    
+  }
+  .aling_home_text{
+    margin-left: 75px;
+    width: 80%;
   }
 
   .event_text_align {
@@ -3596,10 +3600,12 @@ body {
 
 @media (min-width: 1536px) {
   .aling_evt_text {
-    /* margin-left: 172px; */
-    margin-left:202px;
+    margin-left: 202px;
   }
-
+  .aling_home_text{
+    margin-left: 170px;
+     width: 75%;
+  }
   .event_text_align {
     width: 80%;
   }
@@ -3607,8 +3613,11 @@ body {
 
 @media (min-width: 1800px) {
   .aling_evt_text {
-    /* margin-left: 225px; */
-    margin-left:255px;
+    margin-left: 255px;
+  }
+    .aling_home_text{
+    margin-left: 225px;
+    width: 70%;
   }
 
   .event_text_align {

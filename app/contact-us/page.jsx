@@ -79,7 +79,7 @@ const ContactPage = () => {
         setFieldErrors(newFieldErrors);
         setError(
           "Please correct any issues noted below and resubmit the form."
-        ); // generic top message
+        ); 
       }
     } finally {
       setLoading(false);
@@ -120,8 +120,6 @@ const ContactPage = () => {
   return (
     <>
       <div className="flex flex-col mt-20 md:grid md:grid-cols-12 mx-auto gap-16 justify-center pt-8 sm:pt-[50px] pb-10 sm:pb-[60px] md:items-start max-w-[95%] sm:max-w-6xl bg-white">
-        {/* Left Side */}
-
         <div className="md:col-span-5 col-span-12">
           <div className="mb-8">
             <img

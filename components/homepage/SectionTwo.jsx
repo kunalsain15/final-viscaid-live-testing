@@ -5,7 +5,7 @@ const SectionTwo = () => {
   return (
     <div>
       <div className="bg-white py-[32px] sm:py-[35px] md:max-w-6xl mx-auto">
-        <h3 className="text-[20px] md:text-[36px] px-6 sm:px-0 font-light text-center homeservice leading-snug sm:leading-[45px] mx-auto text-black">
+        <h3 className="text-[20px] md:text-[36px] px-5 sm:px-0 font-light text-center homeservice leading-snug sm:leading-[45px] mx-auto text-black">
           Viscadia forecasting services empower life sciences companies with
           invaluable insight, revenue guidance, and confidence to make
           decisions

@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 
 const SectionFour = () => {
   return (
-    <div className="mb-2 md:mb-0 mt-10 md:mt-10 sm:pt-4 sm:px-0 px-6">
+    <div className="mb-2 md:mb-0 mt-10 md:mt-10 sm:pt-4 sm:px-0 px-5">
       <div className="container max-w-6xl px-0 mx-auto items-center justify-center">
         <Swiper
           modules={[Pagination, Autoplay]}
