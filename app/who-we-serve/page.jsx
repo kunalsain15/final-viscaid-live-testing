@@ -555,7 +555,7 @@ const expertise = () => {
                   },
                 }}
                 className="pb-10">
-                <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-5 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
+                <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-4 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
                   <div>
                     <img src="./homeAssets/quote.png" className="w-8 mb-4 mt-1" />
                     <p className="text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start">
@@ -586,7 +586,7 @@ const expertise = () => {
                   <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#BD302B]" />
                 </SwiperSlide>
       
-                <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-5 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
+                <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-4 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
                   <div>
                     <img src="./homeAssets/quote.png" className="w-8 mb-4 mt-1" />
                     <p className="text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start">
@@ -618,7 +618,7 @@ const expertise = () => {
                   <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#BD302B]" />
                 </SwiperSlide>
       
-                <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-5 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
+                <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-4 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
                   <div>
                     <img src="./homeAssets/quote.png" className="w-8 mb-4 mt-1" />
                     <p className="text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start">
@@ -643,7 +643,7 @@ const expertise = () => {
                   <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#BD302B]" />
                 </SwiperSlide>
       
-                <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-5 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
+                <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-4 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
                   <div>
                     <img src="./homeAssets/quote.png" className="w-8 mb-4 mt-1" />
                     <p className="text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start">
@@ -672,7 +672,7 @@ const expertise = () => {
                   <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#BD302B]" />
                 </SwiperSlide>
       
-                <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-5 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
+                <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-4 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
                   <div>
                     <img src="./homeAssets/quote.png" className="w-8 mb-4 mt-1" />
                     <p className="text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start">
