@@ -3599,9 +3599,9 @@ body {
 }
 
 @media (min-width: 1280px) and (max-width: 1537px) {
-  .section_home_fourth {
+  /* .section_home_fourth {
     display: none;
-  }
+  } */
 
   /* .section_home_fourth {
     padding-left: 1.25rem;
