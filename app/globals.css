@@ -179,8 +179,8 @@ body {
 
 @media (min-width: 641px) and (max-width: 1280px) {
   .logonavbar {
-    height: 77px !important;
-    width: 233px;
+    height: 60px !important;
+    width: 130px;
   }
 }
 
@@ -3556,17 +3556,58 @@ body {
 }
 
 @media (max-width: 768px) {
-  .logonavbar {
+  /* .logonavbar {
     width: 150px !important;
     height: 35px !important;
-  }
+  } */
 }
+
 @media (max-width: 1024px) {
-  .width_align_image{
-    width: 100%!important;
+  /* .width_align_image {
+    width: 100% !important;
+  } */
+}
+
+
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .logonavbar {
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 35px;
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logonavbar {
+    /* border: 2px solid pink; */
+    width: 168px;
+    height: 55px;
+  }
+
+  .section_home_fourth {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .width_align_image {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1537px) {
+  .section_home_fourth {
+    display: none;
+  }
+
+  /* .section_home_fourth {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  } */
+}
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -3640,16 +3681,22 @@ body {
     height: 165px !important;
   }
 
-  .logonavbar {
+  /* .logonavbar {
     width: 168px;
     height: 62px !important;
-  }
+  } */
 }
 
 @media (max-width: 1280px) and (max-width: 1537px) {
-  .logonavbar {
+
+  /* .logonavbar {
     width: 130px!important;
-    height: 35px !important;
+        height: 55px !important;
+  } */
+  .section_home_fourth {
+    padding-left: 1.25rem;
+    /* padding-right: 1.25rem; */
+    /* display: none; */
   }
 
   .section_home_first {
@@ -3678,11 +3725,10 @@ body {
     font-size: 15px !important;
   }
 
-  .section_home_fourth {
+  /* .section_home_fourth {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-    ;
-  }
+  } */
 
   .section_home_fourth_button {
     width: 41%;
