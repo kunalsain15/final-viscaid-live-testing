@@ -206,7 +206,7 @@ const CommonNavbar = () => {
 
                 {/* Desktop Menu */}
                 <div className="desktophead mx-auto flex items-center gap-6">
-                  <div className="desktopmenu ml-6 mx-auto flex items-center">
+                  <div className="desktopmenu ml-6 mx-auto desktopmenu_max_size flex items-center">
                     <div
                       className="relative group"
                       onMouseEnter={() => handleMouseEnter("about")}
@@ -464,8 +464,8 @@ const CommonNavbar = () => {
                       onMouseEnter={() => handleMouseEnter("casestudies")}
                       onMouseLeave={handleMouseLeave}
                     >
-                      <Link href="/case-studies">
-                        <span
+                      <Link href="/case-studies"
+                  
                           onClick={() => {
                             handleTabClick("Case Studies & White Papers");
                             setIsDropdownItemClickedcasestudy(false);
@@ -476,7 +476,7 @@ const CommonNavbar = () => {
                             }`}
                         >
                           Case Studies & White Papers
-                        </span>
+              
                       </Link>
 
                       {activeDropdown === "casestudies" && (
@@ -516,8 +516,8 @@ const CommonNavbar = () => {
                       onMouseEnter={() => handleMouseEnter("leadership")}
                       onMouseLeave={handleMouseLeave}
                     >
-                      <Link href="/leadership/">
-                        <span
+                      <Link href="/leadership/"
+                        // <span
                           onClick={() => handleTabClick("Leadership")}
                           className={`relative [word-spacing:1px] font-normal inline-block py-5 text-base ${activeTab === "Leadership"
                             ? 'text-black font-light after:content-[""] after:absolute after:left-0 after:bottom-3 after:h-[3px] after:w-full after:bg-black'
@@ -525,7 +525,7 @@ const CommonNavbar = () => {
                             }`}
                         >
                           Leadership
-                        </span>
+                        {/* </span> */}
                       </Link>
                     </div>
                     <div
@@ -533,7 +533,7 @@ const CommonNavbar = () => {
                       onMouseEnter={() => handleMouseEnter("events")}
                       onMouseLeave={handleMouseLeave}
                     >
-                      <span
+                     <Link href=""
                         onClick={() => handleTabClick("Events & Webinars")}
                         className={`relative [word-spacing:1px] cursor-pointer inline-block py-5 text-base ${activeTab === "Events & Webinars"
                           ? 'text-black font-normal after:content-[""] after:absolute after:left-0 after:bottom-3 after:h-[3px] after:w-full after:bg-black'
@@ -541,7 +541,7 @@ const CommonNavbar = () => {
                           }`}
                       >
                         Events & Webinars
-                      </span>
+                      {/* </span> */}
                       {activeDropdown === "events" && (
                         <div className="absolute cursor-pointer tracking-normal top-[65px] left-0 w-max bg-white shadow-xl z-50 group-hover:block">
                           <div className="relative group/custom">
@@ -618,6 +618,7 @@ const CommonNavbar = () => {
                           </div>
                         </div>
                       )}
+                     </Link>
                     </div>
                     <div
                       className="relative group eventsrepsonsive"

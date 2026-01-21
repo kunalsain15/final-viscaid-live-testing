@@ -7,8 +7,8 @@ import "swiper/css/pagination";
 
 const SectionFour = () => {
   return (
-    <div className="mb-2 md:mb-0 mt-10 md:mt-10 sm:pt-4 sm:px-0 px-5">
-      <div className="container max-w-6xl px-0 mx-auto items-center justify-center">
+    <div className="mb-2 md:mb-0 mt-10 md:mt-10 sm:pt-4 sm:px-0 px-5 slider__max_size">
+      <div className="container section_home_fourthsss max-w-6xl px-0 mx-auto items-center justify-center">
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={30}
@@ -36,7 +36,7 @@ const SectionFour = () => {
           <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-5 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
             <div>
               <img src="./homeAssets/quote.png" className="w-8 mb-4 mt-1" />
-              <p className="text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start">
+              <p className="slider__max_size_para text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start">
                 Across multiple projects, Viscadia has listened to our needs and
                 prioritized delivery of key insights that help us gain alignment
                 with the broader team. Their specialization in oncology
@@ -67,7 +67,7 @@ const SectionFour = () => {
           <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-5 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
             <div>
               <img src="./homeAssets/quote.png" className="w-8 mb-4 mt-1" />
-              <p className="text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start">
+              <p className="text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start slider__max_size_para">
                 I have worked with Viscadia across many companies and clients. I
                 keep returning to them because they stay on point, grasp and
                 incorporate changes quickly, and their team can provide a
@@ -99,7 +99,7 @@ const SectionFour = () => {
           <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-5 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
             <div>
               <img src="./homeAssets/quote.png" className="w-8 mb-4 mt-1" />
-              <p className="text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start">
+              <p className="text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start slider__max_size_para">
                 Viscaida brought additional dimensions to the existing forecast, which aided buy-in from our stakeholders. I needed someone to work alongside me, and they were the ideal partner.
               </p>
             </div>
@@ -124,7 +124,7 @@ const SectionFour = () => {
           <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-5 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
             <div>
               <img src="./homeAssets/quote.png" className="w-8 mb-4 mt-1" />
-              <p className="text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start">
+              <p className="text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start slider__max_size_para">
                 Viscadia has been a long-term strategic partner to Milestone on
                 the forecasting front. In addition to their responsiveness and
                 innovative modeling techniques, they have deep therapeutic
@@ -153,7 +153,7 @@ const SectionFour = () => {
           <SwiperSlide className="relative min-h-[435px] lg:min-h-[460px] p-5 w-full bg-[#FAFAFA] dflex flex-col gap-4 justify-between items-center">
             <div>
               <img src="./homeAssets/quote.png" className="w-8 mb-4 mt-1" />
-              <p className="text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start">
+              <p className="text-[14px] md:text-[16px] font-light text-black leading-[22px] md:leading-6 text-start slider__max_size_para">
                 Our forecast was accurate... that was a critical piece of allowing
                 us to complete a successful and valuable acquisition.
               </p>

@@ -12,7 +12,7 @@ const SectionSix = () => {
         <div className="sm:flex flex-wrap sm:mt-8 mb-5 max-w-7xl justify-center mx-auto items-start gap-5 sm:gap-3 2xl:gap-3  text-center">
           <div className="flex flex-col items-center justify-between sm:w-[30%] h-full text-center">
             <div className="justify-center flex w-full">
-              <img src="./homeAssets/Inc-PP-1-681x385.png" alt="" className="w-full md:w-[90%] md:h-[210px] 2xl:h-[200px]"
+              <img src="./homeAssets/Inc-PP-1-681x385.png" alt="" className="w-full md:w-[90%] md:h-[210px] 2xl:h-[200px] section_home_sixth"
               />
             </div>
             <p className="font-normal text-[16px] 2xl:mt-6 md:text-[18px] sm:mb-0 md:mb-5 mb-0 leading-5.5 text-[#4E4E4E] md:font-light mt-5 sm:mt-5 min-h-auto md:min-h-[100px] md:w-[90%]">
@@ -27,7 +27,7 @@ const SectionSix = () => {
               <img
                 src="./homeAssets/Group-849.webp"
                 alt=""
-                className="w-full md:w-[90%] md:h-[210px] 2xl:h-[200px]"
+                className="w-full md:w-[90%] md:h-[210px] 2xl:h-[200px] section_home_sixth"
               />
             </div>
             <p className="font-normal text-[16px] 2xl:mt-6 md:text-[18px] sm:mb-0 md:mb-5 mb-0 leading-5.5 text-[#4E4E4E] md:font-light mt-5 sm:mt-5 min-h-auto md:min-h-[100px] md:w-[90%]">
@@ -42,7 +42,7 @@ const SectionSix = () => {
               <img
                 src="./homeAssets/GPTW-All-Badges-681x385.png"
                 alt=""
-                className="w-full md:w-[90%] md:h-[210px] 2xl:h-[200px]"
+                className="w-full md:w-[90%] md:h-[210px] 2xl:h-[200px] section_home_sixth"
               />
             </div>
             <p className="font-normal text-[16px] 2xl:mt-6 md:text-[18px] sm:mb-0 md:mb-5 mb-0 leading-5.5 text-[#4E4E4E] md:font-light mt-5 sm:mt-5 min-h-auto md:min-h-[100px] md:w-[90%]">

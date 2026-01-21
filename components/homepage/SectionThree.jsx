@@ -5,22 +5,22 @@ import Link from "next/link";
 const SectionThree = () => {
   return (
     <div className="bg-[#F6F6F6] md:py-0 py-3 md:mt-0 mt-5 md:min-h-[100%] mb:pb-0 pb-0 flex justify-center items-center">
-      <div className="sm:gap-0 2xl:gap-12 px-0 pt-6 md:pt-0 lg:max-w-full md:ml-14 mx-0 justify-center w-full flex lg:flex-row items-center flex-col sm:mb-0">
+      <div className="sm:gap-0 2xl:gap-12 px-0 section_home_second_alignment pt-6 md:pt-0 lg:max-w-full md:ml-14 section_home_second mx-0 justify-center w-full flex lg:flex-row items-center flex-col sm:mb-0">
         <div className="tabalignment2">
-        <div className="lg:w-[50%] 2xl:space-y-5 h-full ml-0">
-          <h3 className="aling_home_text text-[32px] text-center md:text-start 2xl:mt-2 leading-[1.1] md:leading-[34px] xl:leading-[45px] font-light text-[#BD302B] md:text-[48px]">
+        <div className="lg:w-[50%] 2xl:space-y-5 h-full ml-0 width_align_image">
+          <h3 className="aling_home_text section_home_second_heading text-[32px] text-center md:text-start 2xl:mt-2 leading-[1.1] md:leading-[34px] xl:leading-[45px] font-light text-[#BD302B] md:text-[48px]">
             Join our growing team
           </h3>
 
           <div className="flex flex-col items-center md:items-start gap-5 md:gap-0 px-0 mt-3 lg:mt-0">
             <div className="flex flex-col items-center md:items-start order-1 md:order-1">
-              <p className="aling_home_text md:w-[93%] w-full leading-snug text-[16px] text-center md:text-start px-5 md:px-0 lg:text-[22px] text-black sm:leading-[25px] lg:leading-[130%] md:mt-5 mt-0 font-light">
+              <p className="aling_home_text section_home_second_para md:w-[93%] w-full leading-snug text-[16px] text-center md:text-start px-5 md:px-0 lg:text-[22px] text-black sm:leading-[25px] lg:leading-[130%] md:mt-5 mt-0 font-light">
                 At Viscadia, our team members make us who we are.
                 Our commitment to each other, our clients and
                 our communities is the foundation of our success.
               </p>
               <Link href="/careers">
-                <button className="aling_home_text mainBg text-[12px] m-auto md:mx-0 md:text-[19px] cursor-pointer text-white bg-[#bd302b] py-2 md:py-1.5 w-[110px] md:w-[160px] font-normal mt-5 md:mt-8 flex justify-center items-center">
+                <button className="aling_home_text mainBg section_home_second_button text-[12px] m-auto md:mx-0 md:text-[19px] cursor-pointer text-white bg-[#bd302b] py-2 md:py-1.5 w-[110px] md:w-[160px] font-normal mt-5 md:mt-8 flex justify-center items-center">
                   APPLY NOW
                 </button>
               </Link>
@@ -37,7 +37,7 @@ const SectionThree = () => {
         </div>
         {/* md:ml-[90px] */}
 
-        <div className="w-full flex justify-end items-center hidden sm:flex mt-10 lg:mt-0 sm:mt-0 md:w-[55%]">
+        <div className="w-full section_home_second_image flex justify-end items-center hidden sm:flex mt-10 lg:mt-0 sm:mt-0 md:w-[55%]">
           <img className="w-full h-auto" src="./homeAssets/Viscadia-Opens-European-Offices.png" alt="" />
         </div>
         </div>

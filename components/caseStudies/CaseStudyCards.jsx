@@ -155,7 +155,7 @@ const CaseStudyCards = () => {
                   <h2 className="text-xl sm:text-[22px] leading-[24px] font-light text-black">
                     {el?.heading}
                   </h2>
-                  <p className="text-base sm:text-[16px] text-[#4E4E4E] md:leading-[22px] font-light mt-0 md:mt-3">
+                  <p className="text-base sm:text-[16px] text-[#4E4E4E] md:leading-[22px] font-light mt-0 md:mt-3 mb-5 md:mb-0">
                     {el?.sub_heading}
                   </p>
                 </div>
