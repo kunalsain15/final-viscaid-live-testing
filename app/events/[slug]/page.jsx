@@ -47,6 +47,7 @@ const page = () => {
       )}
       {!loading && (
         <div className="mt-11 md:mt-17 bg-white">
+          <div className="hidden sm:block">
           <div className="h-[400px] w-full relative flex ">
             <div className="EventPagesectionOne w-full  h-[400px] object-cover absolute z-10">
               <img
@@ -97,7 +98,6 @@ const page = () => {
               </div>
             </div>
 
-            {/* Right side main image */}
             <div className="w-[42%] h-full rightSide z-0 flex justify-end relative">
               <div className="absolute left-0 top-0 h-full w-full bg-[#FFF8F8] flex justify-center items-center flex-col">
                 <img
@@ -108,8 +108,12 @@ const page = () => {
               </div>
             </div>
           </div>
+          </div>
 
-          {/* <div className="sm:h-[300px] w-full sm:relative sm:flex">
+
+
+
+          <div className="sm:h-[300px] block sm:hidden w-full sm:relative sm:flex">
             <div className="EventPagesectionOne left-[56%] sm:block hidden w-full h-[300px] object-cover absolute z-10">
               <img
                 className="h-[100%] w-[20%]"
@@ -189,7 +193,10 @@ const page = () => {
                 />
               </div>
             </div>
-          </div> */}
+          </div>
+
+
+
 
           <div className="relative  w-full block sm:hidden overflow-hidden">
             <img
@@ -466,7 +473,7 @@ const page = () => {
           )} */}
 
           {pageData?.section_four_status === 1 && (
-            <div className="relative">
+            <div className="relative sm:px-0 px-5">
               <h2 className="text-xl md:text-[29px] lg:text-[38px] my-8 sm:my-8 pt-6 text-center font-light">
                 Our Forecasting Specialists at the Event
               </h2>

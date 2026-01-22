@@ -3838,6 +3838,11 @@ body {
     max-width: 72rem
   }
 }
+@media (min-width: 1900px) {
+    .aling_evt_text {
+    margin-left: 368px;
+  }
+}
 @media (min-width: 2200px) {
   .tabalignment {
     margin: auto;
