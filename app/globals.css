@@ -3571,7 +3571,7 @@ body {
 
 
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .logonavbar {
     /* border: 1px solid green; */
     width: 100%;
