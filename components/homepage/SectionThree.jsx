@@ -20,7 +20,7 @@ const SectionThree = () => {
                 our communities is the foundation of our success.
               </p>
               <Link href="/careers">
-                <button className="aling_home_text mainBg section_home_second_button text-[12px] m-auto md:mx-0 md:text-[19px] cursor-pointer text-white bg-[#bd302b] py-2 md:py-1.5 w-[110px] md:w-[160px] font-normal mt-5 md:mt-8 flex justify-center items-center">
+                <button className="aling_home_text aling_home_text2 mainBg section_home_second_button text-[12px] m-auto md:mx-0 md:text-[19px] cursor-pointer text-white bg-[#bd302b] py-2 md:py-1.5 w-[110px] md:w-[160px] font-normal mt-5 md:mt-8 flex justify-center items-center">
                   APPLY NOW
                 </button>
               </Link>
