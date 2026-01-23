@@ -46,68 +46,68 @@ const page = () => {
         </div>
       )}
       {!loading && (
-    <div className="mt-11 md:mt-17 event_tab_alignt bg-white">
+        <div className="mt-11 md:mt-17 event_tab_alignt bg-white">
           <div className="hidden sm:block">
-          <div className="h-[400px] w-full relative flex flex_event_tab_res">
-            <div className="EventPagesectionOne w-full  h-[400px] object-cover flex_event_tab_res absolute z-10">
-              <img
-                className="h-full w-full object-fill flex_event_tab_res"
-                src="/events/SectionOneBg.png"
-                alt="Background"
-              />
-            </div>
-            <div className="w-[60%] h-full event_tab_alignt2 p-4 pt-[40px] flex flex-col gap-4 relative z-20 ps-[70px]">
-              <div className="w-[100%]">
-                <div className="h-[180px] w-full relative">
-                  <div className="absolute aling_evt_text left-0 top-0 h-full w-full flex justify-center items-start flex-col">
-                    <img
-                      src={pageData?.logo}
-                      className="max-w-full max-h-full object-contain event_imgae_tab"
-                      alt="Event Logo"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div className="h-[40px] w-full aling_evt_text flex items-center">
-                  <h1 className="w-full text-[#133D65] text-[30px]">
-                    {pageData?.title}
-                  </h1>
-                </div>
-
-                <div className="mt-8 md:mt-2 mb-3 aling_evt_text flex gap-10">
-                  <div className="flex gap-2 min-w-[100px] items-center">
-                    <img
-                      className="h-[20px]"
-                      src="/icons/date.png"
-                      alt="Date"
-                    />
-
-                    <p className="text-[16px]">{pageData?.date}</p>
-                  </div>
-                  <div className="flex gap-2  items-center">
-                    <img
-                      className="h-[20px]"
-                      src="/icons/location.png"
-                      alt="Location"
-                    />
-                    <p className="text-[16px]">{pageData?.location}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-[42%] h-full rightSide z-0 flex justify-end relative">
-              <div className="absolute left-0 top-0 h-full w-full bg-[#FFF8F8] flex justify-center items-center flex-col">
+            <div className="h-[400px] w-full relative flex flex_event_tab_res">
+              <div className="EventPagesectionOne w-full  h-[400px] object-cover flex_event_tab_res absolute z-10">
                 <img
-                  src={pageData?.image}
-                  className="h-full w-full object-cover"
-                  alt="Event"
+                  className="h-full w-full object-fill flex_event_tab_res"
+                  src="/events/SectionOneBg.png"
+                  alt="Background"
                 />
               </div>
+              <div className="w-[60%] h-full event_tab_alignt2 p-4 pt-[40px] flex flex-col gap-4 relative z-20 ps-[70px]">
+                <div className="w-[100%]">
+                  <div className="h-[180px] w-full relative">
+                    <div className="absolute aling_evt_text left-0 top-0 h-full w-full flex justify-center items-start flex-col">
+                      <img
+                        src={pageData?.logo}
+                        className="max-w-full max-h-full object-contain event_imgae_tab"
+                        alt="Event Logo"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="h-[40px] w-full aling_evt_text flex items-center">
+                    <h1 className="w-full text-[#133D65] text-[30px]">
+                      {pageData?.title}
+                    </h1>
+                  </div>
+
+                  <div className="mt-8 md:mt-2 mb-3 aling_evt_text flex gap-10">
+                    <div className="flex gap-2 min-w-[100px] items-center">
+                      <img
+                        className="h-[20px]"
+                        src="/icons/date.png"
+                        alt="Date"
+                      />
+
+                      <p className="text-[16px]">{pageData?.date}</p>
+                    </div>
+                    <div className="flex gap-2  items-center">
+                      <img
+                        className="h-[20px]"
+                        src="/icons/location.png"
+                        alt="Location"
+                      />
+                      <p className="text-[16px]">{pageData?.location}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="w-[42%] h-full rightSide z-0 flex justify-end relative">
+                <div className="absolute left-0 top-0 h-full w-full bg-[#FFF8F8] flex justify-center items-center flex-col">
+                  <img
+                    src={pageData?.image}
+                    className="h-full w-full object-cover"
+                    alt="Event"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
           </div>
 
           <div className="sm:h-[300px] block sm:hidden w-full sm:relative sm:flex">
@@ -468,12 +468,12 @@ const page = () => {
 
           {pageData?.section_four_status === 1 && (
             <div className="relative">
-              <h2 className="text-xl md:text-[29px] slider_alignt_tabs lg:text-[38px] my-8 sm:my-8 pt-6 text-center font-light">
+              <h2 className="text-xl md:text-[29px] slider_alignt_tabs lg:text-[38px] my-8 sm:my-4 pt-6 text-center font-light">
                 Our Forecasting Specialists at the Event
               </h2>
               {/* <div className="flex items-start overflow-x-auto pb-6 md:pb-0 px-5 sm:px-0 mb-8 sm:mb-10 gap-10 md:gap-5 max-w-6xl mx-auto custom-scrollbar */}
               {/* flex items-start pb-6 md:pb-0 px-5 sm:px-0 mb-8 sm:mb-10 gap-10 md:gap-5 max-w-6xl mx-auto */}
-              <div className="max-w-6xl mx-auto slider_alignt_tabs">
+              <div className="max-w-7xl mx-auto slider_alignt_tabs">
                 {/* {pageData?.forecasting_specialists?.map((person) => (
                   <React.Fragment key={person.id}>
                     {person?.image && person.fullName && (
@@ -578,7 +578,7 @@ const page = () => {
                       slidesPerGroup: 4
                     },
                   }}
-                  className="pb-12 md:pb-16 forecasting-swiper"
+                  className="pb-12 md:pb-16 lg:!px-[65px] lg:!py-[18px] swipper_slider_align"
                 >
 
                   {pageData?.forecasting_specialists?.map((person) => {
@@ -595,7 +595,7 @@ const page = () => {
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                           />
                           <div className={`absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100 flex flex-col justify-between p-5 text-white
-            ${hasLink 
+            ${hasLink
                               ? 'bg-[#BD302BB3]'
                               : 'bg-[#BD302BB3]'}`}
                           >
@@ -628,12 +628,12 @@ const page = () => {
                             href={`/leadership/${person.slug}`}
                             className="block h-full"
                           >
-                            <div className="h-full md:mb-3 md:pb-3 flex flex-col bg-white  overflow-hidden hover:shadow-[0_8px_25px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+                            <div className="h-full md:mb-3 md:pb-3 flex flex-col bg-white overflow-hidden hover:shadow-[0px_3px_6px_2px_rgba(0,_0,_0,_0.1)] transition-shadow duration-300">
                               {CardContent}
                             </div>
                           </Link>
                         ) : (
-                            <div className="h-full md:mb-3 md:pb-3 flex flex-col bg-white  overflow-hidden hover:shadow-[0_8px_25px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+                          <div className="h-full md:mb-3 md:pb-3 flex flex-col bg-white overflow-hidden hover:shadow-[0px_3px_6px_2px_rgba(0,_0,_0,_0.1)] transition-shadow duration-300">
                             {CardContent}
                           </div>
                         )}
@@ -1360,7 +1360,7 @@ export default page;
 //                   // slidesPerGroup={1}
 //                   // pagination={{
 //                   //   clickable: true,
-//                   //   el: ".forecasting-pagination"  
+//                   //   el: ".forecasting-pagination"
 //                   // }}
 //                   modules={[Pagination, Autoplay]}
 //                   spaceBetween={30}

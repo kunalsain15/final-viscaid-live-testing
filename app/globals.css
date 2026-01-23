@@ -3573,12 +3573,11 @@ body {
 
 @media (min-width: 320px) and (max-width: 767px) {
   .logonavbar {
-    /* border: 1px solid green; */
     width: 100%;
     height: 35px;
   }
-  
-    .slider_alignt_tabs{
+
+  .slider_alignt_tabs {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
@@ -3590,34 +3589,30 @@ body {
 
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .logonavbar {
-    width: 168px;
-    height: 55px;
-  }
-
-  /* .section_home_fourth {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  } */
-}
-
 @media (min-width: 1024px) and (max-width: 1280px) {
   .width_align_image {
     width: 100% !important;
   }
 
-  .borderbjknk{
-      width: 85%!important;
+  .borderbjknk {
+    width: 85% !important;
   }
-      .aling_home_text {
-        width: 82%;
-        margin-left: 40px;
-    }
+
+  .aling_home_text {
+    width: 82%;
+    margin-left: 40px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  
+    .logonavbar {
+    width: 168px;
+    height: 55px;
+  }
+  .swipper_slider_align {
+    padding: 0px !important;
+  }
+
   .align_tablests_header {
     font-size: 45px;
   }
@@ -3698,18 +3693,20 @@ body {
 
   .event_tab_alignt2 {
     padding-top: 0px !important;
-    padding-left: 60px!important;
+    padding-left: 60px !important;
   }
 
   .event_imgae_tab {
     width: 75% !important;
   }
-  .slider_alignt_tabs{
+
+  .slider_alignt_tabs {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
-  .fs_tab{
-    font-size: 14px!important;
+
+  .fs_tab {
+    font-size: 14px !important;
   }
 }
 
