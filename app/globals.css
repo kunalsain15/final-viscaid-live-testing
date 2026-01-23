@@ -3606,9 +3606,18 @@ body {
   .width_align_image {
     width: 100% !important;
   }
+
+  .borderbjknk{
+      width: 85%!important;
+  }
+      .aling_home_text {
+        width: 82%;
+        margin-left: 40px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  
   .align_tablests_header {
     font-size: 45px;
   }
@@ -3774,7 +3783,7 @@ body {
   }
 
   .aling_home_text2 {
-    margin-left: 100px;
+    /* margin-left: 100px; */
     width: 70%;
   }
 
