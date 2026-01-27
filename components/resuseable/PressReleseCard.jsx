@@ -110,7 +110,7 @@ export default function PressReleseCard() {
   };
 
   return (
-    <div className="grid grid-cols-1 sm:px-0 px-5 sm:grid-cols-2 lg:grid-cols-3 py-10 sm:py-19 gap-8 xl:gap-10 w-full md:max-w-6xl 2xl:gap-24 mx-auto">
+    <div className="grid grid-cols-1 sm:px-0 px-5 sm:grid-cols-2 lg:grid-cols-3 py-10 sm:py-19 gap-8 xl:gap-10 w-full md:max-w-6xl 2xl:gap-24 mx-auto about_tab_align">
       {data?.map((item, indx) => {
         let sectionThree = {};
         try {

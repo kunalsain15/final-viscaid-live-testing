@@ -34,7 +34,7 @@ const RenderSectionsAlternate = () => {
         </div>
       </div>
       <div className="bg-[#F8F8F8]">
-      <div className="max-w-6xl mx-auto sm:mt-0 mt-8 lg:px-0 px-4">
+      <div className="max-w-6xl mx-auto sm:mt-0 mt-8 lg:px-0 px-5">
         <div className="py-3 md:py-20 2xl:min-h-auto gap-16 lg:gap-20 2xl:gap-10 md:flex flex-row-reverse">
             <div className="md:h-full sm:mt-0 2xl:ml-40 mt-4 md:w-[50%] xl:w-[80%] 2xl:w-[100%] flex items-center justify-center">
               <img

@@ -96,7 +96,7 @@ const SectionTwo = () => {
 
       <div className="w-full bg-[#EEEEEE] md:bg-[#F8F8F8] py-7 sm:py-8 md:px-0 px-5">
         <div className="md:max-w-7xl mx-auto px-0 sm:px-0">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-0 md:gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-0 md:gap-12 items-center about_tab_align">
             <div className="col-span-full md:col-span-3 flex justify-center md:justify-end">
               <img
                 src="./homeAssets/Satishimage.png"
@@ -106,7 +106,7 @@ const SectionTwo = () => {
             </div>
 
             <div className="col-span-full md:col-span-9 text-center md:text-left">
-              <h3 className="text-[20px] sm:text-[24px] leading-6.5 md:leading-[150%] md:w-[80%] font-light text-center md:text-start text-[#BE302C]">
+              <h3 className="text-[20px] sm:text-[24px] leading-6.5 md:leading-[150%] md:w-[80%] font-light text-center md:text-start text-[#BE302C] core_value_tab_text">
                 “At Viscadia our core values drive the success of our clients, colleagues, and community. This integrated and overarching approach ensures that we are always aligned in our shared vision of success.”
               </h3>
               <div className="block md:hidden flex justify-center items-center pt-15 pb-2">

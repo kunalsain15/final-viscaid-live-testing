@@ -28,7 +28,7 @@
 //         <img src="./homeAssets/corevalue_homebanner.png" className="h-[100%] w-[100%] hidden md:block" />
 //         <img src="./homeAssets/mobile_homebanner.png" className="h-[100%] w-[100%] block md:hidden" />
 //         <div className="h-full w-full absolute top-[-50] md:top-[0] px-5 md:right-125 z-10 flex justify-center items-start sm:items-center flex-col">
-//           <div className="leading-snug md:leading-tight">
+//           <div className="leading-snug md:leading-tight about_tab_align">
 //             <h2 className="text-[24px] sm:ml-0 ml-2 md:text-[32px] text-white/90 font-extralight leading-14">
 //               Events
 //             </h2>
@@ -131,7 +131,7 @@ const page = () => {
         />
         <div className="absolute inset-0 flex justify-center md:items-center items-start mt-12 md:mt-0">
           <div className="w-full max-w-6xl mx-auto md:px-0 px-5 flex justify-start items-center">
-            <div className="leading-[35px] md:leading-tight">
+            <div className="leading-[35px] md:leading-tight about_tab_align">
               <h2 className="text-[32px] md:text-[40px] lg:text-[40px] text-white sm:leading-14 font-light">
                 Events
               </h2>
@@ -150,7 +150,7 @@ const page = () => {
             />
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:px-0 px-5 eventshomepage gap-y-8 sm:gap-y-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:px-0 px-5 about_tab_align eventshomepage gap-y-8 sm:gap-y-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:max-w-6xl mx-auto">
             {showevents?.map((event) => (
               <div
                 key={`dynamic-${event.slug}`}

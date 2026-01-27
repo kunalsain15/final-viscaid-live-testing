@@ -98,7 +98,7 @@ const page = () => {
       </div>
 
       <div className="bg-[#ECECEC] sm:pt-16 sm:pb-16 pt-8 pb-8 px-5 md:px-5 mt-10 md:mt-14">
-        <div className="mx-auto md:max-w-6xl lg:px-0 sm:px-4 px-0">
+        <div className="mx-auto md:max-w-6xl lg:px-0 sm:px-5 about_tab_align px-0">
           <div className=" mx-auto">
             <h2 className="text-[34px] font-light text-black mb-4">
               Experience

@@ -73,7 +73,7 @@ export default function ViscadiaPressRelease({ imageSrc = IMAGE_SRC }) {
 
   return (
     <div>
-      <main className="mx-auto mt-[80px] md:mt-[65px] md:max-w-6xl md:py-12">
+      <main className="mx-auto mt-[80px] md:mt-[65px] md:max-w-6xl md:py-12 about_tab_align">
         <Link
           href="/news-press-releases"
           className="h-[43px] sm:mx-0 mx-5 w-[199px] px-0 mt-2 mainBg font-normal text-[14px] flex justify-center items-center gap-1 shadow-[0_2.54px_14.2px_0_#00000005] mb-5"

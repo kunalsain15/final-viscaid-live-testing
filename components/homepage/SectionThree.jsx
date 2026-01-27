@@ -37,10 +37,7 @@ const SectionThree = () => {
         </div>
         {/* md:ml-[90px] */}
 
-        {/* <div className="w-full borderbjknk section_home_second_image flex justify-end items-center hidden sm:flex mt-10 lg:mt-0 sm:mt-0 md:w-[55%]">
-          <img className="w-full h-auto" src="./homeAssets/Viscadia-Opens-European-Offices.png" alt="" />
-        </div> */}
-            <div className="w-full borderbjknk section_home_second_image flex justify-end items-center hidden sm:flex mt-10 lg:mt-0 sm:mt-0 md:w-[55%]">
+        <div className="w-full borderbjknk section_home_second_image flex justify-end items-center hidden sm:flex mt-10 lg:mt-0 sm:mt-0 md:w-[55%]">
           {/* <img className="w-full h-auto" src="./homeAssets/Viscadia-Opens-European-Offices.png" alt="" /> */}
           <img className="w-full h-auto" src="./homeAssets/Viscadia-Opens-European-Offices222ui2y3.png" alt="" />
         </div>

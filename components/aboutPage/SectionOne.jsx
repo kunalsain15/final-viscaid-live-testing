@@ -18,7 +18,7 @@ const SectionOne = () => {
           />
           <div className="absolute inset-0 flex justify-center md:items-center items-start mt-12 md:mt-0">
             <div className="w-full max-w-6xl mx-auto md:px-0 px-5 flex justify-start items-center">
-              <div className="leading-[35px] md:leading-tight">
+              <div className="leading-[35px] md:leading-tight about_tab_align">
                 <h2 className="text-[24px] md:text-[32px] text-white/90 font-extralight leading-14">
                   About Us
                 </h2>
@@ -31,7 +31,7 @@ const SectionOne = () => {
         </div>
       </div>
 
-      <div className="lg:h-[320px] gap-10 py-[32px] sm:py-[50px] bg-white sm:flex lg:items-center md:max-w-6xl mx-auto md:px-0 px-0">
+      <div className="lg:h-[320px] gap-10 py-[32px] sm:py-[50px] bg-white sm:flex lg:items-center md:max-w-6xl mx-auto md:px-0 px-0 about_tab_align">
         <div className="h-full md:w-[53%] md:px-0 px-5">
           <h3 className="text-[20px] font-normal sm:text-[28px] md:font-light leading-[28px] md:leading-[35px] text-[#BD2F2C]">
             Our comprehensive, dynamic and clear forecasts drive optimized

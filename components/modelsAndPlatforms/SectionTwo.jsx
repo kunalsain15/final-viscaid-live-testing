@@ -29,7 +29,7 @@ const SectionTwo = () => {
           </div>
         </div>
       </div>
-      <div className="md:max-w-6xl sm:px-0 px-5 md:min-h-[100px] mx-auto py-7 sm:py-12">
+      <div className="md:max-w-6xl sm:px-0 px-5 md:min-h-[100px] mx-auto py-7 sm:py-12 about_tab_align">
         <p className="text-base sm:text-xl lg:text-[24px] font-light">
           At Viscadia, our expertise extends beyond general forecasting as we
           also possess deep-rooted knowledge in several therapeutic areas. Our

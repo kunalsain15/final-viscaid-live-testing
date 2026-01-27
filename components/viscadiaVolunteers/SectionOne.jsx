@@ -30,11 +30,11 @@ const SectionOne = () => {
           alt="Mobile Banner"
         />
         {/* <div className="h-full w-full absolute top-[-50] md:top-[0] px-5 md:right-101 right-5 z-10 flex justify-center items-center flex-col">
-          <div className="leading-snug md:leading-tight">
+          <div className="leading-snug md:leading-tight about_tab_align">
             <h2 className="text-[24px] md:text-[32px] text-white/90 font-extralight leading-14"> */}
                          <div className="absolute inset-0 flex justify-center md:items-center items-start mt-12 md:mt-0">
           <div className="w-full max-w-6xl mx-auto md:px-0 px-5 flex justify-start items-center">
-            <div className="leading-[35px] md:leading-tight">
+            <div className="leading-[35px] md:leading-tight about_tab_align">
               <h2 className="text-[24px] md:text-[32px] text-white/90 font-extralight leading-14">
                 Social Impact
               </h2>
@@ -56,7 +56,7 @@ const SectionOne = () => {
         </h3>
       </div>
 
-      <div className="mx-auto md:max-w-6xl py-9 px-5 md:px-0 sm:py-14 mb-9">
+      <div className="mx-auto md:max-w-6xl py-9 px-5 md:px-0 sm:py-14 mb-9 about_tab_align">
         <div className=" lg:flex justify-between">
           <div className="lg:w-[50%] w-full sm:px-0 px-0">
             {/* <Swiper

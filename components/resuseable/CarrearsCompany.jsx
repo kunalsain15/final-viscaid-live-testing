@@ -13,7 +13,7 @@ const CarrearsComapny = ({ data, colorType = 1 }) => {
             }`}
           >
             <div
-              className={`lg:h-[450px] flex flex-col-reverse md:flex-row flex-wrap md:flex-nowrap sm:grid sm:grid-cols-12 md:gap-0 gap-0 2xl:gap-18  mt-3 sm:mt-0 2xl:mt-14 lg:py-10 py-3 xl:max-w-6xl  md:flex justify-between mx-auto`}
+              className={`lg:h-[450px] about_tab_align flex flex-col-reverse md:flex-row flex-wrap md:flex-nowrap sm:grid sm:grid-cols-12 md:gap-0 gap-0 2xl:gap-18  mt-3 sm:mt-0 2xl:mt-14 lg:py-10 py-3 xl:max-w-6xl  md:flex justify-between mx-auto`}
             >
               {/* CONTENT LEFT */}
               <div className="md:h-full pb-3 md:pb-0 col-span-6 space-y-5 md:w-[50%] lg:w-[59%] 2xl:w-[76%] flex flex-col justify-center">

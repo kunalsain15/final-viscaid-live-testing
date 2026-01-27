@@ -176,7 +176,7 @@ const Footer = () => {
 
         <div className="mt-5 md:mt-20 text-center">
           <p className="text-[12px] md:text-white/70 text-white/60 font-light leading-relaxed">
-            © 2025 Viscadia Inc. All Rights Reserved.
+            © 2026 Viscadia Inc. All Rights Reserved.
             <br className="block sm:hidden" />
             <a
               href="/privacy-policy"

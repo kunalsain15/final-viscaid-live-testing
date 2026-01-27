@@ -4,7 +4,7 @@ import React from "react";
 const SectionTwo = () => {
   return (
     <>
-      <div className="md:max-w-6xl md:px-0 px-5 pt-10 md:pt-0 mx-auto md:flex my-7 sm:my-18">
+      <div className="md:max-w-6xl md:px-0 px-5 pt-10 md:pt-0 mx-auto md:flex my-7 sm:my-18 about_tab_align">
         <div className="aboutanxityone min-h-[100px] md:min-h-0 sm:px-0">
           <h3 className="text-[#BD302B] sm:leading-8 md:mt-15 analytical text-xl lg:text-[30px] font-light ">
             We help reduce the analytical burden and anxiety of developing,

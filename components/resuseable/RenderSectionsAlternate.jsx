@@ -41,7 +41,7 @@ const RenderSectionsAlternate = () => {
       <div className="bg-[#EEEEEE] py-7 md:py-10">
         <div className="flex justify-center items-center min-h-auto w-full">
           <div className="max-w-6xl w-full px-5 md:px-0">
-            <div className="flex flex-col sm:grid sm:grid-cols-12 gap-2 sm:gap-20">
+            <div className="flex flex-col sm:grid sm:grid-cols-12 gap-2 sm:gap-20 about_tab_align">
               <div className="col-span-6">
                 <img
                   // className="w-full h-auto sm:h-[300px] object-contain"
@@ -109,7 +109,7 @@ const RenderSectionsAlternate = () => {
       <div className="flex justify-center items-center min-h-auto w-full py-7 md:py-10">
         <div className="max-w-6xl w-full px-5 md:px-0">
           {/* flex-col-reverse: Mobile par niche wali Image ko utha kar upar kar dega */}
-          <div className="flex flex-col-reverse sm:grid sm:grid-cols-12 gap-2 sm:gap-20">
+          <div className="flex flex-col-reverse sm:grid sm:grid-cols-12 gap-2 sm:gap-20 about_tab_align">
 
             {/* Content Div - Mobile par niche chala jayega */}
             <div className="col-span-6">
@@ -180,7 +180,7 @@ const RenderSectionsAlternate = () => {
       <div className="bg-[#EEEEEE] py-7 md:py-10">
         <div className="flex justify-center items-center min-h-auto w-full">
           <div className="max-w-6xl w-full px-5 md:px-0">
-            <div className="flex flex-col sm:grid sm:grid-cols-12 gap-2 sm:gap-20">
+            <div className="flex flex-col sm:grid sm:grid-cols-12 gap-2 sm:gap-20 about_tab_align">
 
               {/* Image Section - Mobile par automatically Top par rahega */}
               <div className="col-span-6 flex justify-center">

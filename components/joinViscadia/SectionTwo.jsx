@@ -18,7 +18,7 @@ const SectionTwo = () => {
         </div>
       </div>
 
-      <div className="md:max-w-6xl sm:mt-0 mt-7 mx-auto mb-15">
+      <div className="md:max-w-6xl sm:mt-0 mt-7 mx-auto mb-15 about_tab_align">
         <div className="w-full min-h-[300px] sm:flex gap-10 sm:px-0 px-5 my-6 sm:my-12 flex-row-reverse">
           <div className="sm:w-[50%] flex justify-end">
             <div className="w-[526px]">
@@ -33,7 +33,7 @@ const SectionTwo = () => {
             <h2 className="text-[32px] lg:text-[32px] font-light">
               10 Years and Counting
             </h2>
-            <p className="sm:text-[24px] text-xl font-light mt-3 md:w-[92%]">
+            <p className="sm:text-[24px] text-xl font-light mt-3 md:w-[92%] core_value_tab_text">
               In 2020, Viscadia celebrated an important milestone, our 10th
               anniversary. To celebrate we created a video that reflects on the
               important milestones along the way and the people who helped us
@@ -44,7 +44,7 @@ const SectionTwo = () => {
       </div>
 
       <div className="bg-[#EEEEEE] w-full">
-        <div className="min-h-[210px] pb-11 mx-auto md:max-w-6xl flex flex-col justify-start items-center">
+        <div className="min-h-[210px] about_tab_align pb-11 mx-auto md:max-w-6xl flex flex-col justify-start items-center">
           <img
             src="./joinViscadia/qouteIcon.png"
             alt=""

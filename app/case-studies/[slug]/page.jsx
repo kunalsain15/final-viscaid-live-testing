@@ -17,9 +17,7 @@ const CaseStudy = () => {
   const [loading, setLoading] = useState(true);
 
   const params = useParams();
-  const id = Array.isArray(params?.slug)
-    ? params.slug[0]
-    : params?.slug;
+  const id = Array.isArray(params?.slug) ? params.slug[0] : params?.slug;
 
   useEffect(() => {
     if (!id) {
@@ -30,7 +28,7 @@ const CaseStudy = () => {
     const getData = async () => {
       try {
         const res = await axios.get(
-          `https://api.viscadia.com/api/v1/casestudy/${id}`
+          `https://api.viscadia.com/api/v1/casestudy/${id}`,
         );
 
         if (res.data?.success) {
@@ -79,7 +77,7 @@ const CaseStudy = () => {
         />
 
         <div className="absolute inset-0 flex justify-center md:items-center items-start mt-12 md:mt-0">
-          <div className="w-full max-w-6xl mx-auto px-5 md:px-0">
+          <div className="w-full max-w-6xl mx-auto px-5 md:px-0 about_tab_align">
             <h2 className="text-[24px] md:text-[32px] font-extralight">
               Case Studies
             </h2>
@@ -94,21 +92,21 @@ const CaseStudy = () => {
 
       {/* Section 2 */}
       <div className="mt-24 md:mt-44 px-5 md:px-0 md:max-w-6xl mx-auto">
-        <div className="flex md:h-[250px] flex-col relative top-[-30] lg:flex-row bg-white shadow-[2px_2px_22px_0px_#0000002E] my-10 overflow-hidden">
+        <div className="flex md:h-[250px] case_studies_tabs_align flex-col relative top-[-30] lg:flex-row bg-white shadow-[2px_2px_22px_0px_#0000002E] my-10 overflow-hidden">
           <img
             src={caseStudyData.img}
             alt="Case Study"
             className="object-cover"
           />
 
-          <div className="p-5 lg:py-4">
-            <h1 className="text-[22px] lg:text-[24px] font-light">
+          <div className="p-5 lg:py-4 case_studies_tabs_align_content">
+            <h1 className="text-[22px] lg:text-[24px] font-light case_studies_tabs_align_content_heading">
               {caseStudyData.title}
             </h1>
 
-            <div className="space-y-6 mt-6">
+            <div className="space-y-6 mt-6 therapeutic-areas_tab">
               {caseStudyData.texts?.map((text, i) => (
-                <p key={i} className="text-[16px] text-[#4E4E4E] font-light">
+                <p key={i} className="text-[16px] text-[#4E4E4E] font-light case_studies_tabs_align_content_para">
                   {text}
                 </p>
               ))}
@@ -194,7 +192,7 @@ const Section = ({ title, icon, data }) => (
       <h3 className="text-[28px] mt-5 font-light">{title}</h3>
     </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 about_tab_align">
       {data?.map((item, i) => (
         <div key={i}>
           {item.img && <img src={item.img} className="h-[60px]" alt="" />}
@@ -208,7 +206,7 @@ const Section = ({ title, icon, data }) => (
                   <li key={j} className="my-2 text-stone-500 font-light">
                     {text}
                   </li>
-                )
+                ),
             )}
           </ul>
         </div>

@@ -41,7 +41,7 @@ const SectionThree = () => {
 
   return (
     <div>
-      <div className="sm:min-h-[580px] mt-[35px] md:mt-[0px] min-h-full md:max-w-6xl mx-auto px-5 md:px-0">
+      <div className="sm:min-h-[580px] mt-[35px] md:mt-[0px] min-h-full md:max-w-6xl mx-auto px-5 md:px-0 about_tab_align">
         <h2 className="text-xl sm:text-2xl lg:text-[26px] font-light text-center">
           Employee Supported
         </h2>
@@ -108,7 +108,7 @@ const SectionThree = () => {
               className="flex py-8  flex-col justify-center text-center "
             >
               <div className="flex  justify-center">
-                <p className="sm:text-[24px] text-xl w-full leading-[27px] mainColor font-light  text-center">
+                <p className="sm:text-[24px] text-xl w-full leading-[27px] mainColor font-light  text-center about_tab_align">
                   {el.text}
                 </p>
               </div>

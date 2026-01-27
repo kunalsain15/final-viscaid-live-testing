@@ -53,7 +53,7 @@ const SectionTwo = () => {
   ];
   return (
     <div>
-      <div className="sm:min-h-[400px] w-full py-5 sm:py-10">
+      <div className="sm:min-h-[400px] w-full py-5 sm:py-10 about_tab_align">
         <div className="md:max-w-6xl sm:px-0 px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto">
           {data?.map((el, index) => (
             <div
@@ -69,7 +69,7 @@ const SectionTwo = () => {
         </div>
       </div>
       <div className="md:max-w-6xl sm:px-0 2xl:px-1 px-5 mx-auto mb-10">
-        <div className="w-full space-y-4 min-h-[300px] md:flex gap-10 my-20">
+        <div className="w-full space-y-4 min-h-[300px] md:flex gap-10 my-20 about_tab_align">
           <div className="md:w-[40%] w-full">
             <img
               className="h-full"
@@ -79,7 +79,7 @@ const SectionTwo = () => {
           </div>
           <div className="md:w-[60%] w-full">
             <h2 className="text-[22px] font-light">Mira Aubuchon, MD, FACOG</h2>
-            <p className="text-[16px] text-[#63666A] font-light mt-2 md:mt-5">
+            <p className="text-[16px] text-[#63666A] font-light mt-2 md:mt-5 therapeutic-areas_tab">
               Patient preference, efficacy, side effects and affordability
               influence a physician’s treatment choice across a wide spectrum of
               women’s health issues. Accurately forecasting demand requires much
@@ -93,7 +93,7 @@ const SectionTwo = () => {
             </p>
           </div>
         </div>
-        <div className="w-full space-y-4 sm:min-h-[300px] md:flex gap-10 my-20 flex-row-reverse">
+        <div className="w-full space-y-4 sm:min-h-[300px] md:flex gap-10 my-20 flex-row-reverse about_tab_align">
           <div className="md:w-[40%] w-full">
             <img
               className="h-full"
@@ -103,7 +103,7 @@ const SectionTwo = () => {
           </div>
           <div className="md:w-[60%] 2xl:w-[70%] w-full">
             <h2 className="text-[22px] font-light">Sapan K. Polepalle, MD</h2>
-            <p className="text-[16px] text-[#63666A] font-light mt-2 md:mt-5">
+            <p className="text-[16px] text-[#63666A] font-light mt-2 md:mt-5 therapeutic-areas_tab">
               Men’s health has evolved rapidly in the last decade, bringing
               men’s sexual, physical, endocrine, and mental issues to the
               forefront. Several factors influence the choice of treatment and

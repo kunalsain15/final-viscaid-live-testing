@@ -458,7 +458,7 @@ const expertise = () => {
       {/* Top Section */}
       <div className="bg-[#F1F1F1] sm:pt-2 sm:pb-0 pt-2 pb-2 sm:px-0 px-5 sm:h-[320px] flex justify-center items-center">
         <div className="md:max-w-6xl md:px-0 px-0 mx-auto md:flex my-7 sm:my-18 ">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 about_tab_align">
             <div className="text-white p-0 text-center">
               <h2 className="text-xl sm:leading-[32px] text-[#BD302B]   lg:w-[86%] 2xl:w-[100%] sm:text-2xl md:text-[30px]  font-light  mb-4 text-start">
                 We work with large and mid-sized pharmaceutical and
@@ -494,7 +494,7 @@ const expertise = () => {
             {clients.map((row, rowIndex) => (
               <div
                 key={rowIndex}
-                className="flex flex-row flex-wrap sm:px-0 px-5 justify-center  sm:justify-between items-center space-y-3 sm:space-y-5 gap-2 sm:gap-10  py-2.5"
+                className="flex flex-row flex-wrap sm:px-0 px-5 justify-center sm:justify-between items-center space-y-3 sm:space-y-5 gap-2 sm:gap-10  py-2.5"
               >
                 {row.map((client, index) => (
                   <div
@@ -505,7 +505,7 @@ const expertise = () => {
                       src={client.src}
                       alt={client.alt}
                       title={client.title}
-                      className="w-full max-w-[220px] h-auto object-contain"
+                      className="w-full max-w-[220px] who_we_serve_tans_align h-auto object-contain"
                       loading="lazy"
                       decoding="async"
                     />
@@ -517,18 +517,9 @@ const expertise = () => {
         </section>
       </div>
 
-       <div className="mb-2 md:mb-0 mt-5 md:mt-10 sm:pt-4 sm:px-0 px-5">
+       <div className="mb-2 md:mb-0 mt-5 md:mt-10 sm:pt-4 sm:px-0 px-5 about_tab_align">
             <div className="container max-w-6xl px-0 mx-auto items-center justify-center">
               <Swiper
-                // modules={[Pagination, Autoplay]}
-                // spaceBetween={30}
-                // slidesPerView={1}
-                // pagination={{ clickable: true, el: ".section-four-pagination" }}
-                // breakpoints={{
-                //   640: { slidesPerView: 1 },
-                //   768: { slidesPerView: 2 },
-                //   1024: { slidesPerView: 3 },
-                // }}
                 modules={[Pagination, Autoplay]}
                 spaceBetween={30}
                 slidesPerView={1}
@@ -538,17 +529,14 @@ const expertise = () => {
                   el: ".section-four-pagination"
                 }}
                 breakpoints={{
-                  // Mobile: Show 1, Move 1
                   640: {
                     slidesPerView: 1,
                     slidesPerGroup: 1
                   },
-                  // Tablet: Show 2, Move 2 (Dot 1 = 1-2, Dot 2 = 3-4)
                   768: {
                     slidesPerView: 2,
                     slidesPerGroup: 2
                   },
-                  // Desktop: Show 3, Move 3 (Dot 1 = 1-2-3, Dot 2 = 4-5-6)
                   1024: {
                     slidesPerView: 3,
                     slidesPerGroup: 3

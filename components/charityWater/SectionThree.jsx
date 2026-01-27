@@ -65,7 +65,7 @@ const SectionThree = () => {
       </div>
 
       <div className="md:max-w-6xl mt-[32px] sm:mt-17 mx-auto px-5 lg:px-0 grid md:grid-cols-2 gap-0 sm:gap-9">
-        <div className="md:h-full xl:px-0 md:px-5 px-0 sm:px-0 flex  items-center">
+        <div className="md:h-full xl:px-0 md:px-0 px-0 sm:px-0 flex  items-center">
           <img
             className="w-full h-auto object-contain"
             src={"./charityWater/Charity-Water-Funded-Projects.webp"}
@@ -91,7 +91,7 @@ const SectionThree = () => {
         </div>
       </div>
 
-      <div className="mt-8 md:mt-20 md:h-[300px] md:max-w-full sm:px-0 px-5  grid grid-cols-1 lg:grid-cols-2 lg:flex justify-between  mx-auto">
+      <div className="mt-8 md:mt-20 md:h-[300px] charity_water_tab_align md:max-w-full sm:px-0 px-5  grid grid-cols-1 lg:grid-cols-2 lg:flex justify-between  mx-auto">
         <div className="lg:w-[50%] lg:py-0 py-7 h-[350px] sm:h-full bg-[#C2C2C2] flex flex-col justify-center items-center">
           <p className="text-2xl sm:text-[26px] font-light text-center">
             Dirty Water Impacts <br />

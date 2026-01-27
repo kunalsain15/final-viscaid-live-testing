@@ -13,7 +13,7 @@ const RenderSectionsAlternateTwo = ({ data, colorType = 1 }) => {
             }`}
           >
             <div
-              className={`md:gap-0 gap-0 flex flex-col sm:grid sm:grid-cols-12 2xl:gap-0 mt-3 sm:mb-9 2xl:mt-14 xl:py-0 py-3 xl:max-w-6xl mx-auto md:flex justify-between flex-wrap md:flex-nowrap ${
+              className={`md:gap-0 gap-0 flex about_tab_align flex-col sm:grid sm:grid-cols-12 2xl:gap-0 mt-3 sm:mb-9 2xl:mt-14 xl:py-0 py-3 xl:max-w-6xl mx-auto md:flex justify-between flex-wrap md:flex-nowrap ${
                 indx % 2 === 0 ? "flex-row" : "flex-row-reverse"
               }  2xl:max-w-[1200px] mx-auto`}
             >

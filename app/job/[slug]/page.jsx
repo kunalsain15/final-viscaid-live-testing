@@ -753,7 +753,7 @@ const page = () => {
         />
         <div className="absolute inset-0 flex justify-center md:items-center items-start mt-12 md:mt-0">
           <div className="w-full max-w-6xl mx-auto md:px-0 px-5 flex justify-start items-center">
-            <div className="leading-[35px] md:leading-tight">
+            <div className="leading-[35px] md:leading-tight about_tab_align">
               <h2 className="text-[24px] md:text-[32px] text-white/90 font-extralight leading-14">
                 {"Career"}
               </h2>
@@ -862,7 +862,7 @@ const page = () => {
         ))}
 
       <div className="Contact Information">
-        <div className="sm:py-18 mx-auto sm:max-w-6xl px-5 md:px-0">
+        <div className="sm:py-18 mx-auto sm:max-w-6xl px-5 md:px-0 about_tab_align">
           <div className=" mx-auto">
             {/* <div className="px-5"> */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8">

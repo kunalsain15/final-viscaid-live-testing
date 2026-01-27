@@ -16,7 +16,7 @@ const page = () => {
         />
       <div className="absolute inset-0 flex justify-center md:items-center items-start mt-12 md:mt-0">
         <div className="w-full max-w-6xl mx-auto md:px-0 px-5 flex justify-start items-center">
-          <div className="leading-[35px] md:leading-tight">
+          <div className="leading-[35px] md:leading-tight about_tab_align">
             <h2 className="text-[32px] md:text-[40px] lg:text-[40px] text-white sm:leading-14 font-light">
               Terms of Use
             </h2>

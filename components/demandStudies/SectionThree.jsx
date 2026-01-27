@@ -28,7 +28,7 @@ const SectionThree = () => {
   ];
 
   return (
-    <div className="bg-white pb-7 sm:pb-25">
+    <div className="bg-white pb-7 sm:pb-25 about_tab_align">
       <div className="md:max-w-6xl mx-auto px-5 md:px-0">
         <h2 className="text-center text-[38px] mt-5 sm:mt-8 leading-[45px] font-light mb-13">
           Why Viscadia?

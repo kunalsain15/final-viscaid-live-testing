@@ -4,11 +4,11 @@
 @import "tailwindcss";
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .headevents {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .head {
@@ -3568,9 +3568,6 @@ body {
   } */
 }
 
-
-
-
 @media (min-width: 320px) and (max-width: 767px) {
   .logonavbar {
     width: 100%;
@@ -3586,7 +3583,6 @@ body {
     padding-left: 0rem !important;
     padding-right: 0rem !important;
   }
-
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
@@ -3605,10 +3601,46 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .logonavbar {
+  .about_tab_align {
+    gap: 20px !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  .case_studies_tabs_align {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .who_we_serve_tans_align {
+    width: 150px !important;
+  }
+  .core_value_tab_text {
+    width: 100% !important;
+    line-height: 30px !important;
+  }
+  .case_studies_tabs_align_content {
+    padding-top: 5px !important;
+  }
+  .case_studies_tabs_align_content_para {
+    font-size: 14px !important;
+  }
+  .case_studies_tabs_align_content_heading {
+    font-size: 21px !important;
+  }
+  .therapeutic-areas_tab {
+    margin-top: 5px !important;
+  }
+  .charity_water_tab_align {
+    height: auto !important;
+  }
+  .logonavbar {
     width: 168px;
     height: 55px;
   }
+
   .swipper_slider_align {
     padding: 0px !important;
   }
@@ -3752,7 +3784,6 @@ body {
   }
 }
 
-
 /* kunal_css */
 @media (min-width: 768px) {
   /* .aling_evt_text {
@@ -3822,7 +3853,6 @@ body {
     margin-left: 202px;
   }
 
-
   .aling_home_text {
     margin-left: 20px;
     width: 100%;
@@ -3835,7 +3865,7 @@ body {
   .tabalignment2 {
     display: flex;
     align-items: center;
-    max-width: 72rem
+    max-width: 72rem;
   }
 }
 
@@ -3856,7 +3886,7 @@ body {
   .tabalignment2 {
     display: flex;
     align-items: center;
-    max-width: 72rem
+    max-width: 72rem;
   }
 }
 
@@ -3887,7 +3917,7 @@ body {
   .tabalignment2 {
     display: flex;
     align-items: center;
-    max-width: 72rem
+    max-width: 72rem;
   }
 }
 
@@ -3902,14 +3932,14 @@ body {
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #BD302B;
+    background: #bd302b;
     border-radius: 10px;
     border: 2px solid #f1f1f1;
   }
 
   .custom-scrollbar {
     scrollbar-width: 200px;
-    scrollbar-color: #BD302B #f1f1f1;
+    scrollbar-color: #bd302b #f1f1f1;
   }
 }
 

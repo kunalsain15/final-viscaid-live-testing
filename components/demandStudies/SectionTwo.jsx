@@ -5,7 +5,7 @@ const SectionTwo = () => {
     <div>
       <div className="bg-[#d3f5ff67]  ">
         <div className="bg-[#F0F6FB] sm:mt-0 mt-10 ">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-full py-6  sm:py-8 lg:py-12 px-5 md:px-0 md:max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-full py-6  sm:py-8 lg:py-12 px-5 md:px-0 md:max-w-6xl mx-auto about_tab_align">
             <div className="w-full  xl:min-h-[460px] flex flex-col justify-center">
               <h2 className="text-[18px] sm:text-[38px] font-light sm:leading-[38px]">
                 Research That Asks the Right Questions, Drives the Best
@@ -35,7 +35,7 @@ const SectionTwo = () => {
           </div>
         </div>
       </div>
-      <div className="md:max-w-6xl sm:px-0 px-5 md:min-h-[100px] mx-auto py-7 sm:py-12">
+      <div className="md:max-w-6xl sm:px-0 px-5 md:min-h-[100px] mx-auto py-7 sm:py-12 about_tab_align">
         <p className="text-base sm:text-xl lg:text-[24px] font-light">
           With a deep understanding of 65+ therapy areas and extensive
           experience across 40+ global markets, we provide custom solutions that

@@ -86,7 +86,7 @@ const CaseStudyCards = () => {
 
       <div
         id="case-study"
-        className="md:max-w-6xl sm:px-0 px-5 mx-auto min-h-[500px] py-11 sm:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-15"
+        className="md:max-w-6xl about_tab_align sm:px-0 px-5 mx-auto min-h-[500px] py-11 sm:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-15"
       >
         {caseStudyCardsData?.map((el, index) => (
           <div key={index} className="min-h-[600px] bg-white flex flex-col">
@@ -131,7 +131,7 @@ const CaseStudyCards = () => {
       <div className="bg-[#EEEEEE]">
         <div
           id="white-paper"
-          className="md:max-w-6xl sm:px-0 px-3 mx-auto min-h-[500px] py-11 sm:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-25 gap-2"
+          className="md:max-w-6xl about_tab_align sm:px-0 px-3 mx-auto min-h-[500px] py-11 sm:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-25 gap-2"
         >
           {whitePapersData?.map((el, index) => (
             <div key={index} className=" min-h-[600px]  flex flex-col">

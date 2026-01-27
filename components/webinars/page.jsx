@@ -28,7 +28,7 @@ const page = () => {
         <img src="./homeAssets/corevalue_homebanner.png" className="h-[100%] w-[100%] hidden md:block" />
         <img src="./homeAssets/mobile_homebanner.png" className="h-[100%] w-[100%] block md:hidden" />
          <div className="h-full w-full absolute top-[-50] md:top-[0] px-5 md:right-125 z-10 flex justify-center items-start sm:items-center flex-col">
-          <div className="leading-snug md:leading-tight">
+          <div className="leading-snug md:leading-tight about_tab_align">
             <h2 className="text-[32px] md:text-[40px] lg:text-[40px] text-white sm:leading-14 font-light">
               Webinars
             </h2>

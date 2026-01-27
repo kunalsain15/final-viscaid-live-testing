@@ -29,7 +29,7 @@ const SectionTwo = () => {
     },
   ];
   return (
-    <div className="sm:min-h-[650px] sm:py-0 py-0  md:max-w-6xl mx-auto ">
+    <div className="sm:min-h-[650px] sm:py-0 py-0  md:max-w-6xl mx-auto about_tab_align">
       <h2 className="text-xl sm:text-2xl lg:text-[26px] font-light text-center">
         Our Charitable Partners
       </h2>

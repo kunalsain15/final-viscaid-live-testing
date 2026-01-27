@@ -17,7 +17,7 @@ const SectionOne = () => {
         />
         <div className="absolute inset-0 flex justify-center md:items-center items-start mt-12 md:mt-0">
           <div className="w-full max-w-6xl mx-auto md:px-0 px-5 flex justify-start items-center">
-            <div className="leading-[35px] md:leading-tight">
+            <div className="leading-[35px] md:leading-tight about_tab_align">
               <h2 className="text-[24px] md:text-[32px] text-white/90 font-extralight leading-14">
                 Forecasting Solutions
               </h2>
@@ -29,7 +29,7 @@ const SectionOne = () => {
         </div>
       </div>
 
-      <div className="bg-white lg:h-[40px] flex sm:py-0 py-3 flex-wrap justify-center items-center gap-3">
+      <div className="bg-white sm:h-[50px] flex sm:py-0 sm:mt-0 sm:mb-0 mt-3 mb-3 flex-wrap justify-center items-center gap-3">
         <Link href={"market-research"} className="text-sm mainColor font-light">
           Market Research
         </Link>

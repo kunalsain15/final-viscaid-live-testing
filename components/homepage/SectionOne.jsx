@@ -8,7 +8,7 @@ const SectionOne = () => {
       <img src="./homeAssets/homebanner.png" className="h-[100%] w-[100%] hidden md:block" />
       <img src="./homeAssets/mobilehomebanner.png" className="h-[100%] w-[100%] block md:hidden" />
       <div className="h-full w-full absolute top-[0] md:top-[-15] left-0 z-10 flex justify-center items-center flex-col">
-        <div className="leading-snug md:leading-tight">
+        <div className="leading-snug md:leading-tight about_tab_align">
           <h2 className="fade-in-1 align_tablests_header text-[20px] md:text-[60px] sm:px-0 px-3 text-center font-light">
             How do you achieve clarity and
           </h2>
@@ -46,7 +46,7 @@ export default SectionOne;
 //       </div> */}
 //         <img src="./homeAssets/mobilehomebanner.png" className="h-[100%] w-[100%] block md:hidden" />
 //         <div className="h-full w-full absolute top-[0] md:top-[-15] left-0 z-10 flex justify-center items-center flex-col">
-//           <div className="leading-snug md:leading-tight">
+//           <div className="leading-snug md:leading-tight about_tab_align">
 //             <h2 className="fade-in-1 text-[20px] md:text-[60px] sm:px-0 px-3 text-center font-light">
 //               How do you achieve clarity and
 //             </h2>

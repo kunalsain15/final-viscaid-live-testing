@@ -3,7 +3,7 @@ import React from "react";
 
 const SectionCycle = () => {
   return (
-    <div className="md:max-w-6xl space-y-4 lg:mt-7 md:px-0 px-5 sm:pb-0 pb-9 sm:min-h-[320px] sm:pt-4 w-full mx-auto">
+    <div className="md:max-w-6xl space-y-4 lg:mt-7 md:px-0 px-5 sm:pb-0 pb-9 sm:min-h-[320px] sm:pt-4 w-full mx-auto about_tab_align">
       <h2 className="text-xl text-black sm:px-0 px-3 sm:text-[36px] font-light sm:text-center text-left">
         Empowering You with Confidence
       </h2>

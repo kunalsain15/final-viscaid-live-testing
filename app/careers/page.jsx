@@ -218,7 +218,7 @@ const page = () => {
         />
         <div className="absolute inset-0 flex justify-center md:items-center items-start mt-12 md:mt-0">
           <div className="w-full max-w-6xl mx-auto md:px-0 px-5 flex justify-start items-center">
-            <div className="leading-[35px] md:leading-tight">
+            <div className="leading-[35px] md:leading-tight about_tab_align">
               <h2 className="text-[24px] md:text-[32px] text-white/90 font-extralight leading-14">
                 Careers
               </h2>
@@ -232,7 +232,7 @@ const page = () => {
 
       <div className="bg-[#EEEEEE] ">
         <div className="md:max-w-6xl w-full mx-auto md:px-0 px-5">
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-0 sm:gap-14 items-center sm:py-14 mx-auto">
+          <div className="grid about_tab_align md:grid-cols-2 grid-cols-1 gap-0 sm:gap-14 items-center sm:py-14 mx-auto">
             <div className="space-y-6 sm:mt-0 mt-6 md:pb-0 pb-7 order-2 lg:order-1">
               <h2 className="text-2xl lg:text-[32px] text-black font-light leading-tight">
                 Who We Are
@@ -265,7 +265,7 @@ const page = () => {
         </div>
         <div className="bg-white">
           <div className="md:max-w-6xl w-full mx-auto md:px-0 px-0">
-            <div className="grid md:grid-cols-2 grid-cols-1 gap-2 sm:gap-14 items-center py-6 sm:py-14 md:max-w-6xl mx-auto md:px-0 px-5">
+            <div className="grid md:grid-cols-2 about_tab_align grid-cols-1 gap-2 sm:gap-14 items-center py-6 sm:py-14 md:max-w-6xl mx-auto md:px-0 px-5">
               <div className="order-1 lg:order-1">
                 <img src="/homeAssets/HRC09011222bjhyv22.png" />
                 {/* <Career
@@ -297,7 +297,7 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="bg-[#EEEEEE] pt-5 sm:pt-18 sm:pb-18 xl:px-8 px-5 sm:px-0 pb-5">
+          <div className="bg-[#EEEEEE] about_tab_align pt-5 sm:pt-18 sm:pb-18 xl:px-8 px-5 sm:px-0 pb-5">
             <div className=" md:max-w-6xl w-full mx-auto">
               <h2 className="text-[24px] sm:text-[32px] pb-3 text-black font-light">
                 Career Opportunities

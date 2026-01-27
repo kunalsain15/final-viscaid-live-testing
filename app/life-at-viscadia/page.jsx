@@ -123,22 +123,32 @@ import Link from "next/link";
 const PeopleFirstSection = () => {
   return (
     <div>
-      <div className="h-[400px] md:h-[300px] w-full mb-12 md:mb-16 relative top-[45px] md:top-[65] text-white">
-        <img src="./homeAssets/corevalue_homebanner.png" className="h-[100%] w-[100%] hidden md:block" />
-        <img src="./homeAssets/mobile_homebanner.png" className="h-[100%] w-[100%] block md:hidden" />
-        <div className="h-full w-full absolute top-[-50] md:top-[0] px-5 md:right-53 z-10 flex justify-center items-center flex-col">
-          <div className="leading-snug md:leading-tight">
-            <h2 className="text-[24px] md:text-[32px] text-white/90 font-extralight leading-14">
-              Life at Viscadia
-            </h2>
-            <h3 className="text-[32px] md:text-[40px] lg:text-[40px] text-white sm:leading-14 font-light">
-              Working together towards shared success
-            </h3>
+      <div className="h-[400px] md:h-[300px] w-full mb-12 md:mb-16 flex justify-start items-center relative top-[45px] md:top-[65px] text-white">
+        <img
+          src="../homeAssets/corevalue_homebanner.png"
+          className="h-full w-full hidden md:block"
+          alt="Banner"
+        />
+        <img
+          src="../homeAssets/mobile_homebanner.png"
+          className="h-full w-full block md:hidden"
+          alt="Mobile Banner"
+        />
+        <div className="absolute inset-0 flex justify-center md:items-center items-start mt-12 md:mt-0">
+          <div className="w-full max-w-6xl mx-auto md:px-0 px-5 flex justify-start items-center">
+            <div className="leading-[35px] md:leading-tight about_tab_align">
+              <h2 className="text-[24px] md:text-[32px] text-white/90 font-extralight leading-14">
+                Life at Viscadia
+              </h2>
+              <h3 className="text-[32px] md:text-[40px] lg:text-[40px] text-white sm:leading-14 font-light">
+                Working together towards shared success
+              </h3>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-2 sm:gap-14 items-center py-6 sm:py-14 md:max-w-6xl mx-auto md:px-0 px-5">
+      <div className="grid about_tab_align md:grid-cols-2 grid-cols-1 gap-2 sm:gap-14 items-center py-6 sm:py-14 md:max-w-6xl mx-auto md:px-0 px-5">
         <img
           src="/homeAssets/people-img2.png"
           alt="People First"
@@ -159,7 +169,7 @@ const PeopleFirstSection = () => {
 
       {/* Section 2 - Reverse Layout */}
       <div className="bg-[#EEEEEE] py-6 sm:py-14">
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-2 sm:gap-14 items-center md:max-w-6xl mx-auto md:px-0 px-5">
+        <div className="grid about_tab_align md:grid-cols-2 grid-cols-1 gap-2 sm:gap-14 items-center md:max-w-6xl mx-auto md:px-0 px-5">
           <div className="order-2 md:order-1">
             <h2 className="text-[28px] md:text-[24px] font-light text-black mb-4">
               Serving our Communities
@@ -179,7 +189,7 @@ const PeopleFirstSection = () => {
       </div>
 
       {/* Section 3 */}
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-2 sm:gap-14 items-center py-10 sm:py-14 md:max-w-6xl mx-auto md:px-0 px-5">
+      <div className="grid about_tab_align md:grid-cols-2 grid-cols-1 gap-2 sm:gap-14 items-center py-10 sm:py-14 md:max-w-6xl mx-auto md:px-0 px-5">
         <img
           src="/homeAssets//team-img.png"
           alt="Team Building"

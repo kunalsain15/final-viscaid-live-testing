@@ -4,7 +4,7 @@ const SectionTwo = () => {
   return (
     <div>
       <div className="bg-[#F0F6FB]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-full py-6 sm:py-8 lg:py-12 px-5 md:px-0 md:max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-full py-6 sm:py-8 lg:py-12 px-5 md:px-0 md:max-w-6xl mx-auto about_tab_align">
           {/* LEFT (Text) */}
           <div className="flex flex-col justify-center sm:pt-4 sm:pb-4 xl:min-h-[50px]">
             <h2 className="text-[18px] sm:text-[38px] font-light sm:leading-[35px]">
@@ -33,7 +33,7 @@ const SectionTwo = () => {
         </div>
       </div>
 
-      <div className="md:max-w-6xl sm:px-0 px-5 md:min-h-[100px] mx-auto py-9 ">
+      <div className="md:max-w-6xl sm:px-0 px-5 md:min-h-[100px] mx-auto py-9 about_tab_align">
         <p className="text-base sm:text-xl lg:text-[24px] font-light">
           Viscadia has decades of experience conducting qualitative and
           quantitative market research across key global geographies (North
