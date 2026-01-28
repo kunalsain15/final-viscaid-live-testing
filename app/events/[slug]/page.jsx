@@ -21,7 +21,7 @@ const page = () => {
     const fetchEvent = async () => {
       try {
         const res = await axios.get(
-          `https://api.viscadia.com/api/v1/events/${slug}`
+          `https://api.viscadia.com/api/v1/events/${slug}`,
         );
 
         if (res.data.success) setEvent(res.data.data);
@@ -136,7 +136,11 @@ const page = () => {
               <div className="w-[240px] sm:block hidden">
                 <div className="h-[200px] w-full sm:relative">
                   <div className="absolute aling_evt_text left-0 top-0 h-full w-full  flex justify-center items-center flex-col">
-                    <img src={pageData?.logo} className="w-[100%]" alt="Event Logo" />
+                    <img
+                      src={pageData?.logo}
+                      className="w-[100%]"
+                      alt="Event Logo"
+                    />
                   </div>
                 </div>
               </div>
@@ -205,7 +209,6 @@ const page = () => {
 
           {pageData?.section_two_status === 1 && (
             <div className="sm:h-[250px] h-full w-full relative sm:flex">
-
               <div className="w-full sm:w-[39%] h-[220px] sm:h-[250px] relative hidden md:block">
                 <img
                   src={pageData?.heading_image}
@@ -285,94 +288,95 @@ const page = () => {
                 Speaker
               </h2>
               {/* Speakers */}
-              <div className="flex mt-8 flex-col md:flex-row min-h-[55%] relative justify-center  md:justify-end px-5 md:px-10 gap-5 items-center">
-                <div className="flex flex-col justify-center items-center">
-                  <div className="sm:flex flex-wrap md:flex-nowrap sm:space-y-0  space-y-5 gap-2 h-full items-center justify-center min-w-[180px] md:min-w-[230px]">
-                    {pageData?.speaker?.map(
-                      (sp, index) =>
-                        sp?.image &&
-                        sp.fullName &&
-                        (sp?.url ? (
-                          <Link key={index} href={`/leadership/${sp?.url}`}>
-                            <div className="h-[160px] w-[160px] relative rounded-full overflow-hidden flex justify-center items-center">
+              <div className="mx-auto max-w-6xl flex justify-center items-center">
+                <div className="flex mt-8 flex-col md:flex-row min-h-[55%] relative justify-center px-5 md:px-10 gap-15 items-center">
+                  <div className="flex flex-col justify-center items-center">
+                    <div className="sm:flex flex-wrap md:flex-nowrap sm:space-y-0  space-y-5 gap-2 h-full items-center justify-center min-w-[180px] md:min-w-[230px]">
+                      {pageData?.speaker?.map(
+                        (sp, index) =>
+                          sp?.image &&
+                          sp.fullName &&
+                          (sp?.url ? (
+                            <Link key={index} href={`/leadership/${sp?.url}`}>
+                              <div className="h-[160px] w-[160px] relative rounded-full overflow-hidden flex justify-center items-center">
+                                <img
+                                  src={sp?.image}
+                                  className="h-full w-full object-cover"
+                                  alt={sp?.fullName}
+                                />
+                              </div>
+                            </Link>
+                          ) : (
+                            <div
+                              key={index}
+                              className="h-[160px] w-[160px] relative rounded-full overflow-hidden flex justify-center items-center"
+                            >
                               <img
                                 src={sp?.image}
                                 className="h-full w-full object-cover"
                                 alt={sp?.fullName}
                               />
                             </div>
-                          </Link>
-                        ) : (
-                          <div
-                            key={index}
-                            className="h-[160px] w-[160px] relative rounded-full overflow-hidden flex justify-center items-center"
-                          >
-                            <img
-                              src={sp?.image}
-                              className="h-full w-full object-cover"
-                              alt={sp?.fullName}
-                            />
-                          </div>
-                        ))
-                    )}
-                  </div>
-                </div>
-
-                {/* Speaker Details */}
-                <div className="flex w-full md:w-[45%] flex-col md:justify-between items-start sm:items-center md:items-start text-left">
-                  <div>
-                    <div className="flex flex-col md:flex-row md:items-start">
-                      <h3 className="text-[18px] md:text-[19px] text-[#BD2F2C]">
-                        {pageData?.speaker
-                          ?.map((sp) => sp?.fullName)
-                          .filter(Boolean)
-                          .join(" & ")}
-                      </h3>
-                    </div>
-
-                    <div className="flex flex-col mt-1 md:flex-row md:items-start">
-                      <p className="text-black font-light text-base mb-1">
-                        {pageData?.speaker
-                          ?.map((de) => de?.designation)
-                          .filter(Boolean)
-                          .join(" & ")}
-                      </p>
-                    </div>
-
-                    <div className="flex flex-col md:flex-row mb-1 text-left sm:items-center md:items-start">
-                      <p className="text-black text-sm font-light">
-                        Topic: {pageData?.speaker_topic}
-                      </p>
-                    </div>
-                    <div className="flex flex-col md:flex-row mb-1 text-left sm:items-center md:items-start">
-                      <p className="text-black text-sm font-light">
-                        Date: {pageData?.speaker_date}
-                      </p>
-                    </div>
-                    <div className="flex flex-col md:flex-row mb-1 text-left sm:items-center md:items-start">
-                      <p className="text-black text-sm font-light">
-                        Time: {pageData?.speaker_time}
-                      </p>
+                          )),
+                      )}
                     </div>
                   </div>
-                  <Link
-                    href={
-                      pageData?.extra_stuff
-                        ? JSON.parse(pageData.extra_stuff)?.agenda || "#"
-                        : "#"
-                    }
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-[#BD302b] hover:bg-[#8b0e0a] font-light cursor-pointer text-white p-2 rounded-none px-7 text-[16px] mt-2 inline-block"
-                  >
-                    Agenda
-                  </Link>
+
+                  {/* Speaker Details */}
+                  <div className="flex w-full md:w-[45%] flex-col md:justify-between items-start sm:items-center md:items-start text-left">
+                    <div>
+                      <div className="flex flex-col md:flex-row md:items-start">
+                        <h3 className="text-[18px] md:text-[19px] text-[#BD2F2C]">
+                          {pageData?.speaker
+                            ?.map((sp) => sp?.fullName)
+                            .filter(Boolean)
+                            .join(" & ")}
+                        </h3>
+                      </div>
+
+                      <div className="flex flex-col mt-1 md:flex-row md:items-start">
+                        <p className="text-black font-light text-base mb-1">
+                          {pageData?.speaker
+                            ?.map((de) => de?.designation)
+                            .filter(Boolean)
+                            .join(" & ")}
+                        </p>
+                      </div>
+
+                      <div className="flex flex-col md:flex-row mb-1 text-left sm:items-center md:items-start">
+                        <p className="text-black text-sm font-light">
+                          Topic: {pageData?.speaker_topic}
+                        </p>
+                      </div>
+                      <div className="flex flex-col md:flex-row mb-1 text-left sm:items-center md:items-start">
+                        <p className="text-black text-sm font-light">
+                          Date: {pageData?.speaker_date}
+                        </p>
+                      </div>
+                      <div className="flex flex-col md:flex-row mb-1 text-left sm:items-center md:items-start">
+                        <p className="text-black text-sm font-light">
+                          Time: {pageData?.speaker_time}
+                        </p>
+                      </div>
+                    </div>
+                    <Link
+                      href={
+                        pageData?.extra_stuff
+                          ? JSON.parse(pageData.extra_stuff)?.agenda || "#"
+                          : "#"
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#BD302b] hover:bg-[#8b0e0a] font-light cursor-pointer text-white p-2 rounded-none px-7 text-[16px] mt-2 inline-block"
+                    >
+                      AGENDA
+                    </Link>
+                  </div>
                 </div>
               </div>
-
               {/* Description */}
-              <div className="max-w-6xl m-auto flex justify-center items-center mt-10">
-                <p className="w-[95%] md:w-[84%] 2xl:max-w-[70%] text-left  text-[14px] md:text-[16px] text-[#63666A] font-light leading-relaxed">
+              <div className="max-w-6xl m-auto flex justify-center items-center mt-10 px-5 sm:px-0 about_tab_align">
+                <p className="w-[100%] text-left text-[14px] md:text-[16px] text-[#63666A] font-light leading-relaxed">
                   {pageData?.description}
                 </p>
               </div>
@@ -554,7 +558,7 @@ const page = () => {
                   // slidesPerGroup={1}
                   // pagination={{
                   //   clickable: true,
-                  //   el: ".forecasting-pagination"  
+                  //   el: ".forecasting-pagination"
                   // }}
                   modules={[Pagination, Autoplay]}
                   spaceBetween={30}
@@ -562,25 +566,24 @@ const page = () => {
                   slidesPerGroup={1}
                   pagination={{
                     clickable: true,
-                    el: ".section-four-pagination"
+                    el: ".section-four-pagination",
                   }}
                   breakpoints={{
                     640: {
                       slidesPerView: 1,
-                      slidesPerGroup: 1
+                      slidesPerGroup: 1,
                     },
                     768: {
                       slidesPerView: 2,
-                      slidesPerGroup: 2
+                      slidesPerGroup: 2,
                     },
                     1024: {
                       slidesPerView: 4,
-                      slidesPerGroup: 4
+                      slidesPerGroup: 4,
                     },
                   }}
                   className="pb-12 md:pb-16 lg:!px-[65px] lg:!py-[18px] swipper_slider_align"
                 >
-
                   {pageData?.forecasting_specialists?.map((person) => {
                     if (!person?.image || !person.fullName) return null;
 
@@ -594,10 +597,9 @@ const page = () => {
                             alt={person.fullName}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                           />
-                          <div className={`absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100 flex flex-col justify-between p-5 text-white
-            ${hasLink
-                              ? 'bg-[#BD302BB3]'
-                              : 'bg-[#BD302BB3]'}`}
+                          <div
+                            className={`absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100 flex flex-col justify-between p-5 text-white
+            ${hasLink ? "bg-[#BD302BB3]" : "bg-[#BD302BB3]"}`}
                           >
                             <p className="text-[14px] leading-5 line-clamp-6">
                               {person?.introduction}
@@ -645,29 +647,29 @@ const page = () => {
                 <div className="section-four-pagination"></div>
 
                 <style jsx>{`
-        .section-four-pagination {
-          position: relative !important;
-          margin-top: 30px !important;
-          margin-bottom: 30px !important;
-          display: flex !important;
-          justify-content: center !important;
-          gap: 6px !important;
-        }
+                  .section-four-pagination {
+                    position: relative !important;
+                    margin-top: 30px !important;
+                    margin-bottom: 30px !important;
+                    display: flex !important;
+                    justify-content: center !important;
+                    gap: 6px !important;
+                  }
 
-        .section-four-pagination .swiper-pagination-bullet {
-          background: #333 !important;
-          opacity: 0.7 !important;
-          height: 10px !important;
-          width: 10px !important;
-        }
+                  .section-four-pagination .swiper-pagination-bullet {
+                    background: #333 !important;
+                    opacity: 0.7 !important;
+                    height: 10px !important;
+                    width: 10px !important;
+                  }
 
-        /* Mobile fix – dots aur arrows overlap na karein */
-        @media (max-width: 640px) {
-          .section-four-pagination {
-            margin-top: 30px !important;
-          }
-        }
-      `}</style>
+                  /* Mobile fix – dots aur arrows overlap na karein */
+                  @media (max-width: 640px) {
+                    .section-four-pagination {
+                      margin-top: 30px !important;
+                    }
+                  }
+                `}</style>
               </div>
             </div>
           )}
@@ -679,124 +681,6 @@ const page = () => {
 };
 
 export default page;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //  "use client";
 // import React, { useState, useEffect } from "react";
@@ -910,9 +794,6 @@ export default page;
 //           </div>
 //           </div>
 
-
-
-
 //           <div className="sm:h-[300px] block sm:hidden w-full sm:relative sm:flex">
 //             <div className="EventPagesectionOne left-[56%] sm:block hidden w-full h-[300px] object-cover absolute z-10">
 //               <img
@@ -994,9 +875,6 @@ export default page;
 //               </div>
 //             </div>
 //           </div>
-
-
-
 
 //           <div className="relative  w-full block sm:hidden overflow-hidden">
 //             <img
