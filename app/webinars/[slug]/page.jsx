@@ -146,9 +146,7 @@ const page = () => {
               />
             </div>
 
-            <div className="w-[60%] h-full event_tab_alignt2 p-4 pt-[40px] justify-center flex flex-col gap-4 relative z-20 ps-[70px]">
-              {/* <div className="md:pl-2.5">
-                <div className="w-full sm:mt-[30px] sm:leading-8 mt-6 flex items-center"> */}
+              <div className="w-[60%] h-full justify-center event_tab_alignt2 p-4 flex flex-col gap-4 relative z-20">
               <div className="h-auto w-full relative">
                 <div className="absolute aling_evt_text left-0 top-0 h-full w-full flex justify-center items-start flex-col">
                   <h1 className="text-black text-[20px] md:max-w-[500px] sm:text-[22px] lg:text-[30px] xl:text-[30px] font-light leading-[1.1] xl:whitespace-pre-line">
@@ -572,7 +570,7 @@ const page = () => {
                           className="flex flex-col items-center gap-3
                         shadow-[0_4px_20px_rgba(0,0,0,0.15)]
                         hover:shadow-[0_6px_25px_rgba(0,0,0,0.25)] transition-shadow
-                        duration-300 rounded-md bg-white overflow-hidden sm:w-[350px] sm:h-[300px]"
+                        duration-300 bg-white overflow-hidden sm:w-[350px] sm:h-[300px]"
                         >
                           <div className="relative w-full h-[260px] overflow-hidden bg-[#FFF5F5] flex items-center justify-center group">
                             <img
@@ -613,7 +611,7 @@ const page = () => {
                           className="flex flex-col items-center gap-3
                         shadow-[0_4px_20px_rgba(0,0,0,0.15)]
                         hover:shadow-[0_6px_25px_rgba(0,0,0,0.25)] transition-shadow
-                        duration-300 rounded-md bg-white overflow-hidden sm:w-[350px] sm:h-[300px]"
+                        duration-300 bg-white overflow-hidden sm:w-[350px] sm:h-[300px]"
                         >
                           <div className="relative w-full h-[260px] overflow-hidden bg-[#FFF5F5] flex items-center justify-center group">
                             <img

@@ -56,18 +56,14 @@ const page = () => {
                   alt="Background"
                 />
               </div>
-              {/* ps-[70px] */}
-              <div className="w-[60%] h-full event_tab_alignt2 p-4 pt-[40px] flex flex-col gap-4 relative z-20">
-                <div className="w-[100%]">
-                  <div className="h-[180px] w-full relative">
-                    <div className="absolute aling_evt_text left-0 top-0 h-full w-full flex justify-center items-start flex-col">
-                      <img
-                        src={pageData?.logo}
-                        className="max-w-full max-h-full object-contain event_imgae_tab"
-                        alt="Event Logo"
-                      />
-                    </div>
-                  </div>
+
+              <div className="w-[60%] h-full justify-center event_tab_alignt2 p-4 flex flex-col gap-4 relative z-20">
+                <div className="aling_evt_text">
+                  <img
+                    src={pageData?.logo}
+                    className="max-w-full w-[60%] max-h-full object-contain event_imgae_tab"
+                    alt="Event Logo"
+                  />
                 </div>
 
                 <div>
@@ -575,7 +571,7 @@ const page = () => {
                       slidesPerGroup: 4,
                     },
                   }}
-                  // lg:!px-[65px] 
+                  // lg:!px-[65px]
                   className="pb-12 md:pb-16 lg:!px-[10px] lg:!py-[18px] swipper_slider_align"
                 >
                   {pageData?.forecasting_specialists?.map((person) => {

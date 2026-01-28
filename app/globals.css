@@ -3726,7 +3726,8 @@ body {
   .event_tab_alignt2 {
     padding-top: 0px !important;
     padding-left: 0px !important;
-        padding-right: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
   }
 
   .event_imgae_tab {
@@ -3899,7 +3900,7 @@ body {
 }
 
 @media (min-width: 2200px) {
-    .aling_evt_text {
+  .aling_evt_text {
     padding-left: 760px;
   }
   .tabalignment {
