@@ -1,5 +1,3 @@
-
-
 "use client";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
@@ -55,7 +53,7 @@ const page = () => {
     const fetchWebinar = async () => {
       try {
         const res = await axios.get(
-          `https://api.viscadia.com/api/v1/webinar/${slug}`
+          `https://api.viscadia.com/api/v1/webinar/${slug}`,
         );
         if (res.data.success) {
           setWebinarData(res.data.webinar);
@@ -76,7 +74,7 @@ const page = () => {
     e.preventDefault();
 
     Object.keys(formData).forEach((field) =>
-      validateField(field, formData[field])
+      validateField(field, formData[field]),
     );
     if (!formData.firstName || !formData.lastName || !formData.email) {
       console.log("Required fields missing");
@@ -90,7 +88,7 @@ const page = () => {
         "https://api.viscadia.com/api/forms/common-form/webinar",
         {
           ...formData,
-        }
+        },
       );
       setAdd(response.data);
       toast.success("Form submitted successfully!");
@@ -100,7 +98,7 @@ const page = () => {
     } catch (err) {
       console.error(
         "Submission error:",
-        err?.response?.data || err.message || err
+        err?.response?.data || err.message || err,
       );
       toast.error("Submission failed. Please try again.");
     } finally {
@@ -126,18 +124,19 @@ const page = () => {
           />
         </div>
       ) : (
-        <div className="md:mt-17 bg-white">
+        <div className="mt-11 md:mt-17 event_tab_alignt bg-white">
+          
           <div className="sm:h-[300px] w-full sm:relative sm:flex">
-            <div className="EventPagesectionOne left-[55.5%] sm:block hidden w-full h-[300px] object-cover absolute z-10">
+            <div className="EventPagesectionOne left-[56%] sm:block hidden w-full h-[300px] object-cover absolute z-10">
               <img
                 className="h-[100%] w-[20%]"
                 src="/homeAssets/SectionOneBg2.png"
                 alt="Background"
               />
             </div>
-            <div className="relative sm:hidden block w-full h-[200px] overflow-hidden">
+           <div className="relative sm:hidden block w-full h-[200px]">
               <img
-                className="absolute top-0 left-[-40%] w-full h-full z-10"
+                className="absolute top-0 left-[-40%] w-full !h-[202px] z-10"
                 src="/events/SectionOneBg.png"
                 alt="Background"
               />
@@ -148,7 +147,7 @@ const page = () => {
               />
             </div>
 
-            <div className="sm:w-[90%] h-full px-4 flex flex-col sm:relative z-20 sm:ps-[85px]">
+            <div className="md:pl-[100px] sm:w-[90%] h-full px-4 flex flex-col sm:relative z-20 sm:ps-[70px]">
               <div className="md:pl-2.5">
                 <div className="w-full sm:mt-[30px] sm:leading-8 mt-6 flex items-center">
                   <h1 className="text-black text-[20px] md:max-w-[500px] sm:text-[22px] lg:text-[30px] xl:text-[30px] font-light leading-[1.1] xl:whitespace-pre-line">
@@ -184,9 +183,8 @@ const page = () => {
             </div>
           </div>
 
-
-          <div className="w-full flex flex-col sm:flex-row relative overflow-hidden">
-            <div className="w-full sm:w-[39%] h-[220px] sm:h-[250px] relative">
+          <div className="sm:h-[250px] h-full w-full relative sm:flex">
+            <div className="w-full sm:w-[39%] h-[220px] sm:h-[250px] relative hidden md:block">
               <img
                 src={webinarData?.image_two}
                 alt="heading"
@@ -201,8 +199,8 @@ const page = () => {
             </div>
 
             <div className="w-full sm:w-[65%] min-h-[250px] sm:h-[250px] bg-[#BD302B] flex items-center">
-              <div className="w-full px-4 sm:px-0 flex justify-center sm:justify-end">
-                <div className="sm:w-[90%] py-6 sm:py-[80px] space-y-3">
+              <div className="w-full px-5 sm:px-0 flex justify-center event_text_align">
+                <div className="sm:w-[98%] py-6 sm:py-[0px] space-y-3">
                   <h1 className="text-white font-light text-xl sm:text-[22px] lg:text-[32px]">
                     {webinarData?.heading_two || "Test"}
                   </h1>
@@ -225,9 +223,6 @@ const page = () => {
               </div>
             </div>
           </div>
-
-
-      
 
           {extraStuff?.webinarVideoStatus && (
             <div className="sm:min-h-[300px] mt-3 mb-2  sm:mt-9 sm:mb-0 w-full   p-5">
@@ -260,14 +255,14 @@ const page = () => {
                       <div className="w-full h-full fixed top-0 left-0 z-50 flex justify-center items-center ">
                         <div className="h-[600px] max-h-[96vh] overflow-y-auto scrollbar-hide relative w-[90%] max-w-[560px] bg-white shadow-lg rounded-lg p-4 sm:p-8 flex flex-col items-center mx-4">
                           <style jsx>{`
-                              .scrollbar-hide {
-                                -ms-overflow-style: none;
-                                scrollbar-width: none;
-                              }
-                              .scrollbar-hide::-webkit-scrollbar {
-                                display: none;
-                              }
-                            `}</style>
+                            .scrollbar-hide {
+                              -ms-overflow-style: none;
+                              scrollbar-width: none;
+                            }
+                            .scrollbar-hide::-webkit-scrollbar {
+                              display: none;
+                            }
+                          `}</style>
                           <i
                             onClick={() => setIsOpen(false)}
                             className="ri-close-line absolute top-0 right-0 bg-black text-md text-white h-[25px] m-2 cursor-pointer w-[25px] flex justify-center items-center rounded-full"
@@ -297,13 +292,14 @@ const page = () => {
                                       onBlur={(e) =>
                                         validateField(
                                           e.target.name,
-                                          e.target.value
+                                          e.target.value,
                                         )
                                       }
-                                      className={`w-full border px-3 py-2 focus:outline-none ${errors.firstName
-                                        ? "border-red-500"
-                                        : "border-gray-300"
-                                        }`}
+                                      className={`w-full border px-3 py-2 focus:outline-none ${
+                                        errors.firstName
+                                          ? "border-red-500"
+                                          : "border-gray-300"
+                                      }`}
                                     />
                                     <div className="flex justify-start">
                                       <span className="text-gray-500 mt-1 text-sm">
@@ -335,13 +331,14 @@ const page = () => {
                                       onBlur={(e) =>
                                         validateField(
                                           e.target.name,
-                                          e.target.value
+                                          e.target.value,
                                         )
                                       }
-                                      className={`w-full border px-3 py-2 focus:outline-none ${errors.lastName
-                                        ? "border-red-500"
-                                        : "border-gray-300"
-                                        }`}
+                                      className={`w-full border px-3 py-2 focus:outline-none ${
+                                        errors.lastName
+                                          ? "border-red-500"
+                                          : "border-gray-300"
+                                      }`}
                                     />
                                     <div className="flex mt-1 justify-start">
                                       <span className="text-gray-500 text-sm">
@@ -381,10 +378,11 @@ const page = () => {
                                 onBlur={(e) =>
                                   validateField(e.target.name, e.target.value)
                                 }
-                                className={`w-full border px-3 py-2 focus:outline-none ${errors.email
-                                  ? "border-red-500"
-                                  : "border-gray-300"
-                                  }`}
+                                className={`w-full border px-3 py-2 focus:outline-none ${
+                                  errors.email
+                                    ? "border-red-500"
+                                    : "border-gray-300"
+                                }`}
                               />
                               {errors.email && (
                                 <div className="flex items-center gap-2 mt-1 text-red-600 text-sm">
@@ -412,10 +410,11 @@ const page = () => {
                                 onBlur={(e) =>
                                   validateField(e.target.name, e.target.value)
                                 }
-                                className={`w-full border px-3 py-2 focus:outline-none ${errors.company
-                                  ? "border-red-500"
-                                  : "border-gray-300"
-                                  }`}
+                                className={`w-full border px-3 py-2 focus:outline-none ${
+                                  errors.company
+                                    ? "border-red-500"
+                                    : "border-gray-300"
+                                }`}
                               />
                               {errors.company && (
                                 <div className="flex items-center gap-2 mt-1 text-red-600 text-sm">
@@ -443,10 +442,11 @@ const page = () => {
                                 onBlur={(e) =>
                                   validateField(e.target.name, e.target.value)
                                 }
-                                className={`w-full border px-3 py-2 focus:outline-none ${errors.phoneNumber
-                                  ? "border-red-500"
-                                  : "border-gray-300"
-                                  }`}
+                                className={`w-full border px-3 py-2 focus:outline-none ${
+                                  errors.phoneNumber
+                                    ? "border-red-500"
+                                    : "border-gray-300"
+                                }`}
                               />
                               {errors.phoneNumber && (
                                 <div className="flex items-center gap-2 mt-1 text-red-600 text-sm">

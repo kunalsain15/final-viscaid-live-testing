@@ -477,7 +477,7 @@ const page = () => {
               </h2>
               {/* <div className="flex items-start overflow-x-auto pb-6 md:pb-0 px-5 sm:px-0 mb-8 sm:mb-10 gap-10 md:gap-5 max-w-6xl mx-auto custom-scrollbar */}
               {/* flex items-start pb-6 md:pb-0 px-5 sm:px-0 mb-8 sm:mb-10 gap-10 md:gap-5 max-w-6xl mx-auto */}
-              <div className="max-w-7xl mx-auto slider_alignt_tabs">
+              <div className="max-w-6xl mx-auto slider_alignt_tabs">
                 {/* {pageData?.forecasting_specialists?.map((person) => (
                   <React.Fragment key={person.id}>
                     {person?.image && person.fullName && (
@@ -552,14 +552,6 @@ const page = () => {
                 ))} */}
 
                 <Swiper
-                  // modules={[Pagination, Autoplay]}
-                  // spaceBetween={20}
-                  // slidesPerView={1}
-                  // slidesPerGroup={1}
-                  // pagination={{
-                  //   clickable: true,
-                  //   el: ".forecasting-pagination"
-                  // }}
                   modules={[Pagination, Autoplay]}
                   spaceBetween={30}
                   slidesPerView={1}
@@ -582,7 +574,8 @@ const page = () => {
                       slidesPerGroup: 4,
                     },
                   }}
-                  className="pb-12 md:pb-16 lg:!px-[65px] lg:!py-[18px] swipper_slider_align"
+                  // lg:!px-[65px] 
+                  className="pb-12 md:pb-16 lg:!py-[18px] swipper_slider_align"
                 >
                   {pageData?.forecasting_specialists?.map((person) => {
                     if (!person?.image || !person.fullName) return null;

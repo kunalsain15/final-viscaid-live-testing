@@ -24,14 +24,24 @@ const page = () => {
 
   return (
     <>
-      <div className="h-[400px] md:h-[300px] w-full mb-12 md:mb-16 relative top-[45px] md:top-[65] text-white">
-        <img src="./homeAssets/corevalue_homebanner.png" className="h-[100%] w-[100%] hidden md:block" />
-        <img src="./homeAssets/mobile_homebanner.png" className="h-[100%] w-[100%] block md:hidden" />
-         <div className="h-full w-full absolute top-[-50] md:top-[0] px-5 md:right-125 z-10 flex justify-center items-start sm:items-center flex-col">
-          <div className="leading-snug md:leading-tight about_tab_align">
+    <div className="h-[400px] md:h-[300px] w-full mb-12 md:mb-16 flex justify-start items-center relative top-[45px] md:top-[65px] text-white">
+      <img
+        src="../homeAssets/corevalue_homebanner.png"
+        className="h-full w-full hidden md:block"
+        alt="Banner"
+      />
+      <img
+        src="../homeAssets/mobile_homebanner.png"
+        className="h-full w-full block md:hidden"
+        alt="Mobile Banner"
+      />
+      <div className="absolute inset-0 flex justify-center md:items-center items-start mt-12 md:mt-0">
+        <div className="w-full max-w-6xl mx-auto md:px-0 px-5 flex justify-start items-center">
+          <div className="leading-[35px] md:leading-tight about_tab_align">
             <h2 className="text-[32px] md:text-[40px] lg:text-[40px] text-white sm:leading-14 font-light">
               Webinars
             </h2>
+          </div>
           </div>
         </div>
       </div>
@@ -49,7 +59,7 @@ const page = () => {
           ) : (
             <>
               {/* <div className="grid grid-cols-1 px-1 eventshomepage gap-y-8 sm:gap-y-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4   gap-6 2xl:max-w-[1430px] max-w-[90%] sm:max-w-[81%] mx-auto"> */}
-              <div className="grid grid-cols-1 px-1 eventshomepage gap-y-8 sm:gap-y-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4   gap-6 2xl:max-w-[1150px] max-w-[90%] sm:max-w-[87%] mx-auto">
+              <div className="grid grid-cols-1 px-1 eventshomepage gap-y-8 sm:gap-y-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-[90%] sm:max-w-6xl about_tab_align mx-auto">
                 {showwebinar?.map((webinar) => (
                   <div
                     key={`dynamic-${webinar?.slug}`}
