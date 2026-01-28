@@ -125,16 +125,15 @@ const page = () => {
         </div>
       ) : (
         <div className="mt-11 md:mt-17 event_tab_alignt bg-white">
-          
-          <div className="sm:h-[300px] w-full sm:relative sm:flex">
-            <div className="EventPagesectionOne left-[56%] sm:block hidden w-full h-[300px] object-cover absolute z-10">
+          <div className="h-[400px] w-full relative flex flex_event_tab_res">
+            <div className="EventPagesectionOne w-full  h-[400px] object-cover flex_event_tab_res absolute z-10">
               <img
-                className="h-[100%] w-[20%]"
-                src="/homeAssets/SectionOneBg2.png"
+                className="h-full w-full object-fill flex_event_tab_res"
+                src="/events/SectionOneBg.png"
                 alt="Background"
               />
             </div>
-           <div className="relative sm:hidden block w-full h-[200px]">
+            <div className="relative sm:hidden block w-full h-[200px]">
               <img
                 className="absolute top-0 left-[-40%] w-full !h-[202px] z-10"
                 src="/events/SectionOneBg.png"
@@ -147,15 +146,31 @@ const page = () => {
               />
             </div>
 
-            <div className="md:pl-[100px] sm:w-[90%] h-full px-4 flex flex-col sm:relative z-20 sm:ps-[70px]">
-              <div className="md:pl-2.5">
-                <div className="w-full sm:mt-[30px] sm:leading-8 mt-6 flex items-center">
+            <div className="w-[60%] h-full event_tab_alignt2 p-4 pt-[40px] justify-center flex flex-col gap-4 relative z-20 ps-[70px]">
+              {/* <div className="md:pl-2.5">
+                <div className="w-full sm:mt-[30px] sm:leading-8 mt-6 flex items-center"> */}
+              <div className="h-auto w-full relative">
+                <div className="absolute aling_evt_text left-0 top-0 h-full w-full flex justify-center items-start flex-col">
                   <h1 className="text-black text-[20px] md:max-w-[500px] sm:text-[22px] lg:text-[30px] xl:text-[30px] font-light leading-[1.1] xl:whitespace-pre-line">
                     {webinarData.sub_heading}
                   </h1>
+                  <div className="mt-3 mb-3 sm:space-y-0 md:max-w-[530px] space-y-2 sm:flex gap-10">
+                    {extraStuff?.sections?.map((section, index) => (
+                      <div key={index} className="mb-6">
+                        <p className=" text-[18px] md:text-[24px] text-black font-light leading-7 mb-3 sm:mb-0">
+                          {section.subHeading}
+                        </p>
+                        <ul className=" text-base text-[#63666A]  font-light leading-tight">
+                          {section.keyPoints?.map((point, i) => (
+                            <li key={i}>{point}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="mt-3 mb-3 sm:space-y-0 md:max-w-[530px] space-y-2 sm:flex gap-10">
+                {/* <div className="mt-3 mb-3 sm:space-y-0 md:max-w-[530px] space-y-2 sm:flex gap-10">
                   {extraStuff?.sections?.map((section, index) => (
                     <div key={index} className="mb-6">
                       <p className=" text-[18px] md:text-[24px] text-black font-light leading-7 mb-3 sm:mb-0">
@@ -168,16 +183,16 @@ const page = () => {
                       </ul>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
             </div>
 
-            <div className="sm:block hidden  sm:w-[50%] h-full rightSide z-0  justify-end relative">
-              <div className="absolute rightimagewebinar top-0 left-0 h-full w-full">
+            <div className="w-[42%] h-full rightSide z-0 flex justify-end relative">
+              <div className="absolute left-0 top-0 h-full w-full bg-[#FFF8F8] flex justify-center items-center flex-col">
                 <img
                   src={webinarData?.image_one}
                   alt="Event"
-                  className=" w-full h-full"
+                  className="h-full w-full object-cover"
                 />
               </div>
             </div>
