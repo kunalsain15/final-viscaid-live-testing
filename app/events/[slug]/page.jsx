@@ -56,7 +56,8 @@ const page = () => {
                   alt="Background"
                 />
               </div>
-              <div className="w-[60%] h-full event_tab_alignt2 p-4 pt-[40px] flex flex-col gap-4 relative z-20 ps-[70px]">
+              {/* ps-[70px] */}
+              <div className="w-[60%] h-full event_tab_alignt2 p-4 pt-[40px] flex flex-col gap-4 relative z-20">
                 <div className="w-[100%]">
                   <div className="h-[180px] w-full relative">
                     <div className="absolute aling_evt_text left-0 top-0 h-full w-full flex justify-center items-start flex-col">

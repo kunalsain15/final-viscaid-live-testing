@@ -3725,7 +3725,8 @@ body {
 
   .event_tab_alignt2 {
     padding-top: 0px !important;
-    padding-left: 60px !important;
+    padding-left: 0px !important;
+        padding-right: 0px !important;
   }
 
   .event_imgae_tab {
@@ -3786,9 +3787,10 @@ body {
 
 /* kunal_css */
 @media (min-width: 768px) {
-  /* .aling_evt_text {
-    margin-left: -15px;
-  } */
+  .aling_evt_text {
+    /* border:1px solid red; */
+    padding-left: 37px;
+  }
 
   .tabalignment2 {
     display: flex;
@@ -3798,7 +3800,7 @@ body {
 
 @media (min-width: 1280px) {
   .aling_evt_text {
-    margin-left: 30px;
+    padding-left: 83px;
   }
 
   .aling_home_text {
@@ -3823,7 +3825,7 @@ body {
 
 @media (min-width: 1440px) {
   .aling_evt_text {
-    margin-left: 105px;
+    padding-left: 158px;
   }
 
   .aling_home_text {
@@ -3850,7 +3852,7 @@ body {
 
 @media (min-width: 1536px) {
   .aling_evt_text {
-    margin-left: 202px;
+    padding-left: 250px;
   }
 
   .aling_home_text {
@@ -3871,7 +3873,7 @@ body {
 
 @media (min-width: 1800px) {
   .aling_evt_text {
-    margin-left: 255px;
+    padding-left: 308px;
   }
 
   .aling_home_text {
@@ -3892,11 +3894,14 @@ body {
 
 @media (min-width: 1900px) {
   .aling_evt_text {
-    margin-left: 368px;
+    padding-left: 420px;
   }
 }
 
 @media (min-width: 2200px) {
+    .aling_evt_text {
+    padding-left: 760px;
+  }
   .tabalignment {
     margin: auto;
     max-width: 72rem;
