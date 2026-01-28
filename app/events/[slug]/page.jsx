@@ -575,7 +575,7 @@ const page = () => {
                     },
                   }}
                   // lg:!px-[65px] 
-                  className="pb-12 md:pb-16 lg:!py-[18px] swipper_slider_align"
+                  className="pb-12 md:pb-16 lg:!px-[10px] lg:!py-[18px] swipper_slider_align"
                 >
                   {pageData?.forecasting_specialists?.map((person) => {
                     if (!person?.image || !person.fullName) return null;
