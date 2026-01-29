@@ -116,7 +116,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/view"
+                    href="/events/"
                     className="text-white/70 md:text-white/80 text-[16px] md:text-[18px] font-light"
                   >
                     Events

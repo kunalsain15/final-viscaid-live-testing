@@ -3601,6 +3601,9 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .webiner_tab_heading {
+    width: 80% !important;
+  }
   .about_tab_align {
     gap: 20px !important;
     padding-left: 1.25rem !important;
@@ -3716,7 +3719,7 @@ body {
   }
 
   .flex_event_tab_res {
-    height: 300px;
+    height: 350px;
   }
 
   .event_tab_alignt {
@@ -3790,7 +3793,7 @@ body {
 @media (min-width: 768px) {
   .aling_evt_text {
     /* border:1px solid red; */
-    padding-left: 37px;
+    padding-left: 39px;
   }
 
   .tabalignment2 {
@@ -3801,7 +3804,7 @@ body {
 
 @media (min-width: 1280px) {
   .aling_evt_text {
-    padding-left: 83px;
+    padding-left: 85px;
   }
 
   .aling_home_text {
@@ -3826,12 +3829,11 @@ body {
 
 @media (min-width: 1440px) {
   .aling_evt_text {
-    padding-left: 158px;
+    padding-left: 160px;
   }
 
   .aling_home_text {
     margin-left: 165px;
-    /* border: 1px solid red; */
     width: 79%;
   }
 
@@ -3853,7 +3855,7 @@ body {
 
 @media (min-width: 1536px) {
   .aling_evt_text {
-    padding-left: 250px;
+    padding-left: 254px;
   }
 
   .aling_home_text {
@@ -3874,7 +3876,7 @@ body {
 
 @media (min-width: 1800px) {
   .aling_evt_text {
-    padding-left: 308px;
+    padding-left: 309px;
   }
 
   .aling_home_text {
@@ -3894,35 +3896,33 @@ body {
 }
 
 @media (min-width: 1900px) {
+  .aling_home_text {
+    margin-left: 20px;
+    width: 100%;
+  }
+  .event_text_align {
+    width: 68%;
+  }
   .aling_evt_text {
-    padding-left: 420px;
+    padding-left: 422px;
+  }
+
+  .tabalignment2 {
+    display: flex;
+    align-items: center;
+    max-width: 72rem;
   }
 }
 
 @media (min-width: 2200px) {
   .aling_evt_text {
-    padding-left: 760px;
+    padding-left: 761px;
+  }
+  .event_text_align {
+    width: 55%;
   }
   .tabalignment {
     margin: auto;
-    max-width: 72rem;
-  }
-}
-
-@media (min-width: 1900px) {
-  .aling_home_text {
-    margin-left: 20px;
-    width: 100%;
-  }
-
-  /* .tabalignment {
-    margin: auto;
-    max-width: 72rem;
-  } */
-
-  .tabalignment2 {
-    display: flex;
-    align-items: center;
     max-width: 72rem;
   }
 }
