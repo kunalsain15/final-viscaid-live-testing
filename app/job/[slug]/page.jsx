@@ -2112,7 +2112,8 @@ const page = () => {
                       }
                     >
                       <ReCAPTCHA
-                        sitekey="6LdPQM4rAAAAAEUTL_n_6rLyV_OiDkZolZh5FaXn"
+                        // sitekey="6LdPQM4rAAAAAEUTL_n_6rLyV_OiDkZolZh5FaXn"
+                        sitekey="6LdGaG0sAAAAAHLvXHhr87pPbrdNIoLezkHwzPeX"
                         // sitekey="6LfhcugrAAAAAHFf6n_fF4hWJELvYjkT2NcCodo5"
                         onChange={() => {
                           setVerified(true);
