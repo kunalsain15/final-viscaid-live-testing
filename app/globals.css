@@ -3895,6 +3895,13 @@ body {
   }
 }
 
+/* @media (min-width: 1920px){
+    .aling_evt_text {
+      border: 2px solid green;
+    padding-left: 422px;
+  }
+} */
+
 @media (min-width: 1900px) {
   .aling_home_text {
     margin-left: 20px;
@@ -3904,6 +3911,7 @@ body {
     width: 68%;
   }
   .aling_evt_text {
+    border: 2px solid green;
     padding-left: 422px;
   }
 
