@@ -28,7 +28,7 @@ export default function ViscadiaPressRelease({ imageSrc = IMAGE_SRC }) {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `https://api.viscadia.com/api/v1/article/${slug}`
+          `http://192.168.0.191:4005/api/v1/article/${slug}`
         );
         if (res.data?.data) {
           setData(res.data.data);

@@ -9,7 +9,7 @@ const page = () => {
     const showdata = async () => {
       try {
         const showAllevents = await axios.get(
-          "https://api.viscadia.com/api/v1/webinar?limit=1000"
+          "http://192.168.0.191:4005/api/v1/webinar?limit=1000"
         );
         setShowWebinar(showAllevents?.data?.data || []);
         console.log(showAllevents?.data?.data || []);

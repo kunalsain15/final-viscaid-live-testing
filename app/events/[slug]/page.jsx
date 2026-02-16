@@ -21,7 +21,7 @@ const page = () => {
     const fetchEvent = async () => {
       try {
         const res = await axios.get(
-          `https://api.viscadia.com/api/v1/events/${slug}`,
+          `http://192.168.0.191:4005/api/v1/events/${slug}`,
         );
 
         if (res.data.success) setEvent(res.data.data);
@@ -695,7 +695,7 @@ export default page;
 //     const fetchEvent = async () => {
 //       try {
 //         const res = await axios.get(
-//           `https://api.viscadia.com/api/v1/events/${slug}`
+//           `http://192.168.0.191:4005/api/v1/events/${slug}`
 //         );
 
 //         if (res.data.success) setEvent(res.data.data);

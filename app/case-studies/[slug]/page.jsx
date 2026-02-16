@@ -28,7 +28,7 @@ const CaseStudy = () => {
     const getData = async () => {
       try {
         const res = await axios.get(
-          `https://api.viscadia.com/api/v1/casestudy/${id}`,
+          `http://192.168.0.191:4005/api/v1/casestudy/${id}`,
         );
 
         if (res.data?.success) {

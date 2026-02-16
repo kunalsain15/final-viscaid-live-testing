@@ -127,7 +127,7 @@ const CommonNavbar = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await axios.get("https://api.viscadia.com/api/v1/events");
+        const res = await axios.get("http://192.168.0.191:4005/api/v1/events");
         if (res.data?.success) {
           setEvents(res.data.data);
         }
@@ -141,7 +141,7 @@ const CommonNavbar = () => {
   useEffect(() => {
     const fetchWebinars = async () => {
       try {
-        const res = await axios.get("https://api.viscadia.com/api/v1/webinar");
+        const res = await axios.get("http://192.168.0.191:4005/api/v1/webinar");
         if (res.data?.success) {
           setWebinars(res.data.data);
         }

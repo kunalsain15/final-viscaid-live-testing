@@ -12,7 +12,7 @@
 //     const fetchJobs = async () => {
 //       try {
 //         const response = await axios.get(
-//           `https://api.viscadia.com/api/v1/career?limit=1000`
+//           `http://192.168.0.191:4005/api/v1/career?limit=1000`
 //         );
 //         setJobList(response.data.data);
 //         console.log("Fetched jobs:", response.data.data);
@@ -190,7 +190,7 @@ const page = () => {
     const fetchJobs = async () => {
       try {
         const response = await axios.get(
-          `https://api.viscadia.com/api/v1/career?limit=1000`
+          `http://192.168.0.191:4005/api/v1/career?limit=1000`
         );
         setJobList(response.data.data);
         console.log("Fetched jobs:", response.data.data);
@@ -251,15 +251,6 @@ const page = () => {
             </div>
             <div className="order-1 sm:mt-0 mt-6 lg:order-2">
               <img src="/homeAssets/HRC09366222.png" />
-              {/* <Career
-                className="w-full h-full "
-                slides={[
-                  { img: "/careers/HRC09366.webp" },
-                  { img: "/careers/HRC09187.webp" },
-                  { img: "/careers/HRC09366.webp" },
-                  { img: "/homeAssets/HRC09366222.png" },
-                ]}
-              /> */}
             </div>
           </div>
         </div>
@@ -268,15 +259,6 @@ const page = () => {
             <div className="grid md:grid-cols-2 about_tab_align grid-cols-1 gap-2 sm:gap-14 items-center py-6 sm:py-14 md:max-w-6xl mx-auto md:px-0 px-5">
               <div className="order-1 lg:order-1">
                 <img src="/homeAssets/HRC09011222bjhyv22.png" />
-                {/* <Career
-                  className="w-full h-full "
-                  slides={[
-                    { img: "/careers/Sathish_1800x.webp" },
-                    { img: "/careers/HRC09260.webp" },
-                    { img: "/careers/HRC09011.webp" },
-                    { img: "/homeAssets/HRC09011222bjhyv22.png" },
-                  ]}
-                /> */}
               </div>
               <div className="space-y-6 sm:mt-0 mt-6 md:pb-0 pb-7 order-2 lg:order-1">
                 <h2 className="text-2xl lg:text-[32px] text-black font-light leading-tight">
@@ -321,19 +303,20 @@ const page = () => {
                 </div>
               ) : joblist && joblist.length > 0 ? (
                 <div className="mt-8 space-y-4">
-                  {joblist.map((job) => (
+                  {joblist?.map((job) => (
                     <div
                       key={job.id}
                       className="flex items-center justify-between border-b-2 pb-4 border-gray-300"
                     >
-                      <div className="sm:flex">
+                      <div className="sm:flex items-center gap-2">
                         <div className="text-[#BD2F2C] text-[14px] sm:text-[20px] font-light">
                           {job.sub_heading},
                         </div>
                         <span className="text-[#BD2F2C] ml-0 text-[14px] sm:text-[20px] font-light">
-                          {job.country}
+                           {job?.country}
                         </span>
                       </div>
+                      
 
                       <Link href={`/job/${job.slug}`}>
                         <button className="text-white/80 mt-3 md:mt-0 bg-[#bd302b] font-normal text-[16px] md:text-[14px] py-2 w-[130px] h-[48px] md:h-[40px] flex justify-center items-center cursor-pointer">

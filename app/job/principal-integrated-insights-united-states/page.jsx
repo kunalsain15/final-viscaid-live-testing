@@ -29,7 +29,7 @@
 // //     const principal = async () => {
 // //       try {
 // //         const response = await axios.get(
-// //           "https://api.viscadia.com/api/v1/career"
+// //           "http://192.168.0.191:4005/api/v1/career"
 // //         );
 // //         setPrincipal(response.data.data);
 // //         console.log(response.data.data);
@@ -56,7 +56,7 @@
 
 // //     try {
 // //       const uploadResponse = await axios.post(
-// //         "https://api.viscadia.com/api/upload/single",
+// //         "http://192.168.0.191:4005/api/upload/single",
 // //         data,
 // //         {
 // //           headers: { "Content-Type": "multipart/form-data" },
@@ -122,7 +122,7 @@
 // //       console.log("Payload before submit:", payload);
 
 // //       await axios.post(
-// //         "https://api.viscadia.com/api/forms/career-application",
+// //         "http://192.168.0.191:4005/api/forms/career-application",
 // //         payload,
 // //         {
 // //           headers: { "Content-Type": "application/json" },
@@ -791,7 +791,7 @@
 //   //   const fetchData = async () => {
 //   //     try {
 //   //       const response = await axios.get(
-//   //         "https://api.viscadia.com/api/v1/career"
+//   //         "http://192.168.0.191:4005/api/v1/career"
 //   //       );
 //   //       setPrincipal(response.data.data[0]);
 //   //     } catch (err) {
@@ -805,7 +805,7 @@
 //     const fetchData = async () => {
 //       try {
 //         const response = await axios.get(
-//           `https://api.viscadia.com/api/v1/career/${id}`
+//           `http://192.168.0.191:4005/api/v1/career/${id}`
 //         );
 //         setPrincipal(response.data.data);
 //       } catch (err) {
@@ -830,7 +830,7 @@
 
 //     try {
 //       const uploadResponse = await axios.post(
-//         "https://api.viscadia.com/api/upload/single",
+//         "http://192.168.0.191:4005/api/upload/single",
 //         data,
 //         { headers: { "Content-Type": "multipart/form-data" } }
 //       );
@@ -892,7 +892,7 @@
 //       };
 
 //       await axios.post(
-//         "https://api.viscadia.com/api/forms/career-application",
+//         "http://192.168.0.191:4005/api/forms/career-application",
 //         payload,
 //         { headers: { "Content-Type": "application/json" } }
 //       );
@@ -1345,7 +1345,7 @@ const page = () => {
   //   const fetchData = async () => {
   //     try {
   //       const response = await axios.get(
-  //         "https://api.viscadia.com/api/v1/career"
+  //         "http://192.168.0.191:4005/api/v1/career"
   //       );
   //       setPrincipal(response.data.data[0]);
   //     } catch (err) {
@@ -1359,7 +1359,7 @@ const page = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://api.viscadia.com/api/v1/career/${id}`
+          `http://192.168.0.191:4005/api/v1/career/${id}`
         );
         setPrincipal(response.data.data);
       } catch (err) {
@@ -1384,7 +1384,7 @@ const page = () => {
 
     try {
       const uploadResponse = await axios.post(
-        "https://api.viscadia.com/api/upload/single",
+        "http://192.168.0.191:4005/api/upload/single",
         data,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -1447,7 +1447,7 @@ const page = () => {
       };
 
       await axios.post(
-        "https://api.viscadia.com/api/forms/career-application",
+        "http://192.168.0.191:4005/api/forms/career-application",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
