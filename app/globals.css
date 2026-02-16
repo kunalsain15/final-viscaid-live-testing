@@ -3911,7 +3911,7 @@ body {
     width: 68%;
   }
   .aling_evt_text {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     padding-left: 422px;
   }
 

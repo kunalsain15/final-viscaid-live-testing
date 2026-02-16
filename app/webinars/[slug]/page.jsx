@@ -53,7 +53,7 @@ const page = () => {
     const fetchWebinar = async () => {
       try {
         const res = await axios.get(
-          `https://api.viscadia.com/api/v1/webinar/${slug}`,
+          `http://192.168.0.191:4005/api/v1/webinar/${slug}`,
         );
         if (res.data.success) {
           setWebinarData(res.data.webinar);
@@ -85,7 +85,7 @@ const page = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "https://api.viscadia.com/api/forms/common-form/webinar",
+        "http://192.168.0.191:4005/api/forms/common-form/webinar",
         {
           ...formData,
         },

@@ -21,7 +21,7 @@ export default function Unsubscribe() {
     }
 
     try {
-      await axios.post("https://api.viscadia.com/api/v1/subscribe", { email });
+      await axios.post("http://192.168.0.191:4005/api/v1/subscribe", { email });
 
       toast.success("You are subscribed again");
 

@@ -25,7 +25,7 @@ const CaseStudyCards = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios
-      .get("https://api.viscadia.com/api/v1/casestudy?limit=100")
+      .get("http://192.168.0.191:4005/api/v1/casestudy?limit=100")
       .then((res) => {
         setCaseStudyCardsData(res.data?.data || []);
       })
@@ -41,7 +41,7 @@ const CaseStudyCards = () => {
     const fetchWhitePapers = async () => {
       try {
         const response = await fetch(
-          "https://api.viscadia.com/api/v1/whitepaper"
+          "http://192.168.0.191:4005/api/v1/whitepaper"
         );
         const data = await response.json();
         setWhitePapersData(data?.data || []); // ensure correct array
