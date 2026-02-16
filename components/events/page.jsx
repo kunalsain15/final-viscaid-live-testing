@@ -9,7 +9,7 @@
 //     const showdata = async () => {
 //       try {
 //         const showAllevents = await axios.get(
-//           "http://192.168.0.191:4005/api/v1/events?limit=1000"
+//           "https://api.viscadia.com/api/v1/events?limit=1000"
 //         );
 //         setShowEvents(showAllevents?.data?.data || []);
 //         console.log(showAllevents?.data?.data || []);
@@ -103,7 +103,7 @@ const page = () => {
     const showdata = async () => {
       try {
         const showAllevents = await axios.get(
-          "http://192.168.0.191:4005/api/v1/events?limit=1000"
+          "https://api.viscadia.com/api/v1/events?limit=1000"
         );
         setShowEvents(showAllevents?.data?.data || []);
         console.log(showAllevents?.data?.data || []);

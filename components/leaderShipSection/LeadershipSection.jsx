@@ -9,7 +9,7 @@ const LeadershipSection = () => {
 
   useEffect(() => {
     axios
-      .get("http://192.168.0.191:4005/api/v1/leadership?limit=10000")
+      .get("https://api.viscadia.com/api/v1/leadership?limit=10000")
       .then((res) => {
         setLeaders(
           res.data.data.sort((a, b) => a.display_index - b.display_index)

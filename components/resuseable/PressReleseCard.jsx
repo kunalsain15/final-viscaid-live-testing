@@ -11,7 +11,7 @@
 //     const fetchData = async () => {
 //       try {
 //         const res = await axios.get(
-//           "http://192.168.0.191:4005/api/v1/article?limit=1000"
+//           "https://api.viscadia.com/api/v1/article?limit=1000"
 //         );
 //         const apiData = Array.isArray(res.data.data) ? res.data.data : [];
 //         setData(apiData);
@@ -87,7 +87,7 @@ export default function PressReleseCard() {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          "http://192.168.0.191:4005/api/v1/article?limit=1000"
+          "https://api.viscadia.com/api/v1/article?limit=1000"
         );
         const apiData = Array.isArray(res.data.data) ? res.data.data : [];
         setData(apiData);

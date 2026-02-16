@@ -54,7 +54,7 @@ const ContactPage = () => {
     }
 
     try {
-      await axios.post("http://192.168.0.191:4005/api/forms/contact", {
+      await axios.post("https://api.viscadia.com/api/forms/contact", {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,

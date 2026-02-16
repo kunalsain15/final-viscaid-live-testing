@@ -37,7 +37,7 @@ export default function DownloadWhitePaper({
       setIsSubmiting(true);
 
       await axios
-        .post(`http://192.168.0.191:4005/api/forms/documnet-request`, {
+        .post(`https://api.viscadia.com/api/forms/documnet-request`, {
           ...formData,
           request_type,
           document_id,

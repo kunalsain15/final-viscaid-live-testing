@@ -12,7 +12,7 @@
 //     const fetchJobs = async () => {
 //       try {
 //         const response = await axios.get(
-//           `http://192.168.0.191:4005/api/v1/career?limit=1000`
+//           `https://api.viscadia.com/api/v1/career?limit=1000`
 //         );
 //         setJobList(response.data.data);
 //         console.log("Fetched jobs:", response.data.data);
@@ -190,7 +190,7 @@ const page = () => {
     const fetchJobs = async () => {
       try {
         const response = await axios.get(
-          `http://192.168.0.191:4005/api/v1/career?limit=1000`
+          `https://api.viscadia.com/api/v1/career?limit=1000`
         );
         setJobList(response.data.data);
         console.log("Fetched jobs:", response.data.data);

@@ -35,7 +35,7 @@
 // //       setLoading(true);
 // //       try {
 // //         const response = await axios.get(
-// //           `http://192.168.0.191:4005/api/v1/career/${slug}`,
+// //           `https://api.viscadia.com/api/v1/career/${slug}`,
 // //         );
 // //         const data = response?.data?.data;
 // //         if (data?.section_two_sub_heading) {
@@ -69,7 +69,7 @@
 
 // //     try {
 // //       const uploadResponse = await axios.post(
-// //         "http://192.168.0.191:4005/api/upload/single",
+// //         "https://api.viscadia.com/api/upload/single",
 // //         data,
 // //         { headers: { "Content-Type": "multipart/form-data" } },
 // //       );
@@ -133,7 +133,7 @@
 // //       };
 // //       console.log("Submitting form data:", payload);
 // //       await axios.post(
-// //         "http://192.168.0.191:4005/api/forms/career-application",
+// //         "https://api.viscadia.com/api/forms/career-application",
 // //         payload,
 // //         { headers: { "Content-Type": "application/json" } },
 // //       );
@@ -683,8 +683,8 @@
 //       setLoading(true);
 //       try {
 //         const response = await axios.get(
-//           `http://192.168.0.191:4005/api/v1/career/${slug}`,
-//           // `http://192.168.0.191:4005/api/v1/career/${slug}`,
+//           `https://api.viscadia.com/api/v1/career/${slug}`,
+//           // `https://api.viscadia.com/api/v1/career/${slug}`,
 //         );
 //         const data = response?.data?.data;
 //         if (data?.section_two_sub_heading) {
@@ -718,7 +718,7 @@
 
 //     try {
 //       const uploadResponse = await axios.post(
-//         "http://192.168.0.191:4005/api/upload/single",
+//         "https://api.viscadia.com/api/upload/single",
 //         data,
 //         { headers: { "Content-Type": "multipart/form-data" } },
 //       );
@@ -792,7 +792,7 @@
 //       };
 
 //       await axios.post(
-//         "http://192.168.0.191:4005/api/forms/career-application",
+//         "https://api.viscadia.com/api/forms/career-application",
 //         payload,
 //         { headers: { "Content-Type": "application/json" } },
 //       );
@@ -1303,13 +1303,6 @@
 
 // export default page;
 
-
-
-
-
-
-
-
 "use client";
 import React, { useState, useEffect } from "react";
 import { Upload } from "lucide-react";
@@ -1355,7 +1348,6 @@ const page = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          // `http://192.168.0.191:4005/api/v1/career/${slug}`,
           `https://api.viscadia.com/api/v1/career/${slug}`,
         );
         const data = response?.data?.data;
@@ -1390,11 +1382,6 @@ const page = () => {
 
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
-  // const handleInputChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData((prev) => ({ ...prev, [name]: value }));
-  // };
 
   const handleFileChange = async (e) => {
     if (!e.target.files.length) return;
@@ -1561,124 +1548,6 @@ const page = () => {
       setLoading(false);
     }
   };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-  //   setError("");
-  //   setSuccess("");
-  //   setCaptchaError(false);
-
-  //   if (!verified) {
-  //     setCaptchaError(true);
-  //     setLoading(false);
-  //     return;
-  //   }
-
-  //   const requiredFields = [
-  //     "name",
-  //     "email",
-  //     "message",
-  //     "contactNumber",
-  //     "currentEmployer",
-  //     "noticePeriod",
-  //     "noticePeriodBuyout",
-  //     "reasonForLeaving",
-  //     "school",
-  //     "graduation_year",
-  //     "currentCTC",
-  //     "expectedCTC",
-  //     "resumeUrl",
-  //   ];
-
-  //   const emptyFields = requiredFields.filter(
-  //     (field) => !formData[field] || formData[field].toString().trim() === "",
-  //   );
-
-  //   if (emptyFields.length > 0) {
-  //     setError("Please fill in all required fields before submitting.");
-  //     setLoading(false);
-  //     return;
-  //   }
-
-  //   try {
-  //     // const payload = {
-  //     //   name: formData.name,
-  //     //   email: formData.email,
-  //     //   message: formData.message,
-  //     //   contactNumber: formData.contactNumber,
-  //     //   currentEmployer: formData.currentEmployer,
-  //     //   noticePeriod: formData.noticePeriod,
-  //     //   noticePeriodBuyout: formData.noticePeriodBuyout,
-  //     //   reasonForLeaving: formData.reasonForLeaving,
-  //     //   school: formData.school,
-  //     //   graduationYear: formData.graduation_year,
-  //     //   currentCTC: formData.currentCTC,
-  //     //   expectedCTC: formData.expectedCTC,
-  //     //   resume: formData.resumeUrl,
-  //     //   jobID: id,
-  //     // };
-
-  //     const payload = {
-  //       name: formData.name,
-  //       email: formData.email,
-  //       message: formData.message,
-  //       contactNumber: formData.contactNumber,
-  //       currentEmployer: formData.currentEmployer,
-  //       noticePeriod: parseInt(formData.noticePeriod),
-  //       noticePeriodBuyout:
-  //         formData.noticePeriodBuyout.toLowerCase() === "yes" ||
-  //         formData.noticePeriodBuyout.toLowerCase() === "true",
-  //       reasonForLeaving: formData.reasonForLeaving,
-  //       school: formData.school,
-  //       graduationYear: formData.graduation_year,
-  //       currentCTC: formData.currentCTC,
-  //       expectedCTC: formData.expectedCTC,
-  //       resume: formData.resumeUrl,
-  //       jobID: id,
-  //     };
-
-  //     await axios.post(
-  //       "http://192.168.0.191:4005/api/forms/career-application",
-  //       payload,
-  //       { headers: { "Content-Type": "application/json" } },
-  //     );
-
-  //     setSuccess("Your responses were successfully submitted. Thank you!");
-
-  //     setFormData({
-  //       resume: "",
-  //       resumeUrl: "",
-  //       name: "",
-  //       email: "",
-  //       message: "",
-  //       contactNumber: "",
-  //       currentEmployer: "",
-  //       noticePeriod: "",
-  //       noticePeriodBuyout: "",
-  //       reasonForLeaving: "",
-  //       school: "",
-  //       graduation_year: "",
-  //       currentCTC: "",
-  //       expectedCTC: "",
-  //     });
-  //     setVerified(false);
-  //     setCaptchaError(false);
-  //   } catch (err) {
-  //     console.error("Submit failed:", err.response?.data || err.message);
-  //     if (err.response?.data?.errors) {
-  //       setErrors(err.response.data.errors);
-  //     } else if (err.response?.data?.error) {
-  //       setError(err.response.data.error);
-  //     } else {
-  //       setError(
-  //         "Please correct any issues noted below and resubmit the form.",
-  //       );
-  //     }
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
 
   if (loading || !principal) {
     return (
@@ -1878,16 +1747,6 @@ const page = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {/* <input
-                        type="number"
-                        name="contactNumber"
-                        placeholder="Contact Number*"
-                        value={formData.contactNumber}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-[15px] border-2 font-normal placeholder:text-[#63666A] border-[#717073] text-base"
-                        minLength={7}
-                        maxLength={15}
-                      /> */}
                       <input
                         type="number"
                         name="contactNumber"
@@ -1963,26 +1822,8 @@ const page = () => {
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 border-2 font-normal placeholder:text-[#63666A] border-[#717073] text-base"
                         />
-                        {/* {error && !formData.noticePeriod && (
-                          <p className="text-[#444444] font-medium  pt-3 text-[12px]">
-                            Enter a value for this field.
-                          </p>
-                        )} */}
                       </div>
-                      <div>
-                        {/* <input
-                          type="text"
-                          name="noticePeriodBuyout"
-                          placeholder="Notice Period Buyout Available*"
-                          value={formData.noticePeriodBuyout}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 border-2 font-normal placeholder:text-[#63666A] border-[#717073] text-base"
-                        />
-                        {error && !formData.noticePeriodBuyout && (
-                          <p className="text-[#444444] font-medium pt-3 text-[12px]">
-                            Enter a value for this field.
-                          </p>
-                        )} */}
+                      {/* <div>
                         <input
                           type="text"
                           name="noticePeriodBuyout"
@@ -1995,6 +1836,29 @@ const page = () => {
                               : "border-[#717073]"
                           } text-base`}
                         />
+                        {fieldErrors.noticePeriodBuyout && (
+                          <p className="text-red-600 font-medium pt-2 text-[12px]">
+                            {fieldErrors.noticePeriodBuyout[0]}
+                          </p>
+                        )}
+                      </div> */}
+                      <div>
+                        <select
+                          name="noticePeriodBuyout"
+                          value={formData.noticePeriodBuyout}
+                          onChange={handleInputChange}
+                          className={`w-full px-4 py-3 border-2 font-normal text-[#63666A] ${
+                            fieldErrors.noticePeriodBuyout
+                              ? "border-red-500"
+                              : "border-[#717073]"
+                          } text-base`}
+                        >
+                          <option value="" disabled>
+                            Notice Period Buyout Available*
+                          </option>
+                          <option value="yes">Yes</option>
+                          <option value="no">No</option>
+                        </select>
                         {fieldErrors.noticePeriodBuyout && (
                           <p className="text-red-600 font-medium pt-2 text-[12px]">
                             {fieldErrors.noticePeriodBuyout[0]}
@@ -2024,26 +1888,8 @@ const page = () => {
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 border-2 font-normal placeholder:text-[#63666A] border-[#717073] text-base"
                         />
-                        {/* {error && !formData.school && (
-                          <p className="text-[#444444] font-medium  pt-3 text-[12px]">
-                            Enter a value for this field.
-                          </p>
-                        )} */}
                       </div>
                       <div>
-                        {/* <input
-                          type="number"
-                          name="graduation_year"
-                          placeholder="Year of Graduation*"
-                          value={formData.graduation_year}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 border-2 font-normal placeholder:text-[#63666A] border-[#717073] text-base"
-                        />
-                        {error && !formData.graduation_year && (
-                          <p className="text-[#444444] font-medium pt-3 text-[12px]">
-                            Enter a value for this field.
-                          </p>
-                        )} */}
                         <input
                           type="number"
                           name="graduation_year"
@@ -2112,9 +1958,8 @@ const page = () => {
                       }
                     >
                       <ReCAPTCHA
-                        // sitekey="6LdPQM4rAAAAAEUTL_n_6rLyV_OiDkZolZh5FaXn"
-                        sitekey="6LdhaW0sAAAAAJqfXdfO8dV9bImkpMQpgiV-nBJW"
-                        // sitekey="6LfhcugrAAAAAHFf6n_fF4hWJELvYjkT2NcCodo5"
+                        // sitekey="6LdhaW0sAAAAAJqfXdfO8dV9bImkpMQpgiV-nBJW"
+                        sitekey="6LfhcugrAAAAAHFf6n_fF4hWJELvYjkT2NcCodo5"
                         onChange={() => {
                           setVerified(true);
                           setCaptchaError(false);

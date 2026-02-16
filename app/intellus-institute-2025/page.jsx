@@ -100,7 +100,7 @@ const page = () => {
 
     try {
       const response = await axios.post(
-        "http://192.168.0.191:4005/api/forms/common-form/events",
+        "https://api.viscadia.com/api/forms/common-form/events",
         payload
       );
       setIsSubmitted(true);
