@@ -1130,8 +1130,8 @@ const page = () => {
                       }
                     >
                       <ReCAPTCHA
-                        sitekey="6LdPQM4rAAAAAEUTL_n_6rLyV_OiDkZolZh5FaXn"
-                        // sitekey="6LfhcugrAAAAAHFf6n_fF4hWJELvYjkT2NcCodo5"
+                        // sitekey="6LdPQM4rAAAAAEUTL_n_6rLyV_OiDkZolZh5FaXn"
+                        sitekey="6LfhcugrAAAAAHFf6n_fF4hWJELvYjkT2NcCodo5"
                         onChange={() => {
                           setVerified(true);
                           setCaptchaError(false);
