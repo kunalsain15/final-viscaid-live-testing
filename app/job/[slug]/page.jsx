@@ -938,11 +938,9 @@ const page = () => {
                 <h1 className="text-[28px] md:text-4xl font-light text-gray-900 leading-tight">
                   CONTACT INFORMATION
                 </h1>
-                <p className="text-[#63666A] font-light text-[16px] leading-relaxed">
-                  If you think you are the right person for this job please{" "}
-                  <br className="hidden sm:inline" />
-                  send us your name, contact information and a copy of{" "}
-                  <br className="hidden sm:inline" />
+                <p className="text-[#63666A] font-light text-[15.5px] leading-relaxed">
+                  If you think you are the right person for this job please
+                  send us your name, contact information and a copy of
                   your resumé.
                 </p>
               </div>
