@@ -935,10 +935,10 @@ const page = () => {
           <div className=" mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8">
               <div className="space-y-6 md:col-span-6 lg:col-span-4">
-                <h1 className="text-[28px] md:text-4xl font-light text-gray-900 leading-tight">
+                <h1 className="mt-8 md:mt-0 text-[28px] md:text-4xl font-light text-gray-900 leading-tight">
                   CONTACT INFORMATION
                 </h1>
-                <p className="text-[#63666A] font-light text-[15.5px] leading-relaxed">
+                <p className="text-[#63666A] font-light text-[10px] md:text-[15.5px] leading-relaxed">
                   If you think you are the right person for this job please send
                   us your name, contact information and a copy of your resumé.
                 </p>
@@ -1240,7 +1240,7 @@ const page = () => {
                       </div>
                     </div>
                   </div>
-                  <p className="text-[12px] font-normal leading-[1.5] pt-5">
+                  <p className="text-[10px] md:text-[12px] font-normal leading-[1.5] pt-5">
                     Note : Fields such as Notice Period, Current CTC, Expected
                     CTC, and Notice Buyout Availability are required only when
                     applying for  India-based open positions. These fields are
@@ -1279,7 +1279,7 @@ const page = () => {
                       </p>
                     ) : (
                       <button
-                        className="frm_button_submit sm:mb-12 mb-7 sm:mt-0 mt-7 cursor-pointer bg-[#BD302B] text-white font-sans text-[20px] px-[30px] py-[10px] rounded-sm frm_final_submit flex items-center justify-center"
+                        className="w-full md:w-auto frm_button_submit sm:mb-12 mb-7 sm:mt-0 mt-7 cursor-pointer bg-[#BD302B] text-white font-sans text-[20px] px-[30px] py-[10px] md:rounded-sm frm_final_submit flex items-center justify-center"
                         type="submit"
                         disabled={loading}
                       >
