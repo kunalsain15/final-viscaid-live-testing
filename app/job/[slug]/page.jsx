@@ -1020,7 +1020,7 @@ const page = () => {
                               : "border-[#717073] bg-white"
                           } rounded-[3px] flex items-center justify-center cursor-pointer`}
                         >
-                          <div className="flex flex-col items-center space-y-1">
+                          <div className="flex items-center space-y-1 gap-1">
                             <Upload
                               size={16}
                               className={
@@ -1029,10 +1029,10 @@ const page = () => {
                                   : "text-black"
                               }
                             />
-                            <span className="text-[10px] text-gray-500">
+                            <span className="text-[15px] text-gray-400 font-medium">
                               {isFile(formData.resume)
                                 ? `Selected: ${formData.resume.name}`
-                                : "Upload Résumé"}
+                                : "Upload Resume*"}
                             </span>
                           </div>
                         </label>
