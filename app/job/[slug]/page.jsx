@@ -939,9 +939,8 @@ const page = () => {
                   CONTACT INFORMATION
                 </h1>
                 <p className="text-[#63666A] font-light text-[15.5px] leading-relaxed">
-                  If you think you are the right person for this job please
-                  send us your name, contact information and a copy of
-                  your resumé.
+                  If you think you are the right person for this job please send
+                  us your name, contact information and a copy of your resumé.
                 </p>
               </div>
               <div className="md:col-span-6 lg:col-span-8">
@@ -1111,17 +1110,6 @@ const page = () => {
                     </div>
 
                     <div className="relative w-full">
-                      {/* <input
-                        type="text"
-                        name="reasonForLeaving"
-                        placeholder=""
-                        value={formData.reasonForLeaving}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 placeholder:text-[#63666A] font-medium border-2 border-[#63666A] text-[14px]"
-                        minLength={2}
-                        maxLength={200}
-                        min-height={500}
-                      /> */}
                       <textarea
                         name="reasonForLeaving"
                         placeholder=""
@@ -1132,16 +1120,31 @@ const page = () => {
                         maxLength={200}
                       />
 
-                      {!formData.reasonForLeaving && (
-                        <div className="absolute left-4 top-5 -translate-y-1/2 pointer-events-none">
-                          <span className="text-gray-600 text-[14px] font-medium">
-                            Reason for Leaving/Exploring Opportunities
-                          </span>
-                          <span className="ml-1 text-[10px] text-gray-400 font-light">
-                            (Only for India-based roles)
-                          </span>
-                        </div>
-                      )}
+                      <div className="block md:hidden">
+                        {!formData.reasonForLeaving && (
+                          <div className="absolute left-4 w-full top-8 md:top-5 -translate-y-1/2 pointer-events-none">
+                            <span className="text-gray-600 absolute top-[-10px] text-[14px] font-medium">
+                              Reason for Leaving/Exploring Opportunities
+                            </span>
+                            <br className="md:hidden" />
+                            <span className="md:ml-1 absolute top-[10px] text-[10px] text-gray-400 font-light">
+                              (Only for India-based roles)
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                      <div className="hidden md:block">
+                        {!formData.reasonForLeaving && (
+                          <div className="absolute left-4 top-8 md:top-5 -translate-y-1/2 pointer-events-none">
+                            <span className="text-gray-600 text-[14px] font-medium">
+                              Reason for Leaving/Exploring Opportunities
+                            </span>
+                            <span className="md:ml-1 text-[10px] text-gray-400 font-light">
+                              (Only for India-based roles)
+                            </span>
+                          </div>
+                        )}
+                      </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
