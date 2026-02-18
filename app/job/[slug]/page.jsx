@@ -934,7 +934,7 @@ const page = () => {
         <div className="sm:py-18 mx-auto sm:max-w-6xl px-5 md:px-0 about_tab_align">
           <div className=" mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8">
-              <div className="space-y-6 md:col-span-6 lg:col-span-5">
+              <div className="space-y-6 md:col-span-6 lg:col-span-4">
                 <h1 className="text-[28px] md:text-4xl font-light text-gray-900 leading-tight">
                   CONTACT INFORMATION
                 </h1>
@@ -946,7 +946,7 @@ const page = () => {
                   your resumé.
                 </p>
               </div>
-              <div className="md:col-span-6 lg:col-span-7">
+              <div className="md:col-span-6 lg:col-span-8">
                 <form onSubmit={handleSubmit}>
                   {success && (
                     <p className="bg-[#DFF0D8] text-[#3C763D] p-3 text-sm rounded">
@@ -968,7 +968,7 @@ const page = () => {
                           placeholder="Name*"
                           value={formData.name}
                           onChange={handleInputChange}
-                          className="w-full  border-2 placeholder:text-[#63666A] font-normal border-[#717073] px-4 py-2 text-base"
+                          className="w-full  border-2 placeholder:text-[#63666A] font-mediumborder-[#63666A] px-4 py-2 text-[14px]"
                         />
 
                         <input
@@ -977,7 +977,7 @@ const page = () => {
                           placeholder="Email*"
                           value={formData.email}
                           onChange={handleInputChange}
-                          className="w-full font-normal mt-1 border-2 placeholder:text-[#63666A] border-[#717073] px-4 py-2 text-base"
+                          className="w-full  border-2 placeholder:text-[#63666A] font-medium border-[#63666A] px-4 py-2 text-[14px]"
                         />
                       </div>
 
@@ -987,18 +987,18 @@ const page = () => {
                         rows={2}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="w-full  border-2 placeholder:text-[#63666A] font-normal border-[#717073] px-4 py-2 text-base"
+                        className="w-full  border-2 placeholder:text-[#63666A] font-medium border-[#63666A] px-4 py-2 text-[14px]"
                       />
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       <input
-                        type="number"
+                        type="text"
                         name="contactNumber"
                         placeholder="Contact Number*"
                         value={formData.contactNumber}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-[15px] border-2 font-normal placeholder:text-[#63666A] border-[#717073] text-base"
+                        className="w-full  border-2 placeholder:text-[#63666A] font-medium border-[#63666A] px-4 py-2 text-[14px]"
                         minLength={7}
                         maxLength={15}
                       />
@@ -1045,7 +1045,7 @@ const page = () => {
                       placeholder="Current Employer"
                       value={formData.currentEmployer}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border-2 border-[#717073] font-normal placeholder:text-[#63666A] text-base"
+                      className="w-full  border-2 placeholder:text-[#63666A] font-medium border-[#63666A] px-4 py-2 text-[14px]"
                       minLength={2}
                       maxLength={100}
                     />
@@ -1058,14 +1058,14 @@ const page = () => {
                           placeholder=""
                           value={formData.noticePeriod}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border-2 font-normal placeholder:text-[#63666A] border-[#717073] text-base"
+                          className="w-full px-4 py-3 placeholder:text-[#63666A] font-medium border-2 border-[#63666A] text-[14px]"
                         />
                         {!formData.noticePeriod && (
                           <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
                             <span className="text-gray-600 text-[14px] font-medium">
                               Notice Period
                             </span>
-                            <span className="ml-1 text-[12px] text-gray-400 font-light">
+                            <span className="ml-1 text-[10px] text-gray-400 font-light">
                               (Only for India-based roles)
                             </span>
                           </div>
@@ -1081,13 +1081,9 @@ const page = () => {
                           name="noticePeriodBuyout"
                           value={formData.noticePeriodBuyout}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border-2 font-normal border-[#717073] text-base bg-white appearance-none"
+                          className="w-full px-4 py-3 font-medium border-2 border-[#63666A] text-[14px] appearance-none"
                           style={{
-                            color:
-                              formData.noticePeriodBuyout === ""
-                                ? "#63666A"
-                                : "inherit",
-                            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2363666A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E")`,
+                            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2363666A' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E")`,
                             backgroundRepeat: "no-repeat",
                             backgroundPosition: "right 12px center",
                             paddingRight: "40px",
@@ -1099,9 +1095,9 @@ const page = () => {
                                 <span className="text-gray-600 text-[14px] font-medium">
                                   Notice Period Buyout Available
                                 </span>
-                                <span className="ml-1 text-[12px] text-gray-400 font-light">
+                                {/* <span className="ml-1 text-[10px] text-gray-400 font-light">
                                   (Only for India-based roles)
-                                </span>
+                                </span> */}
                               </div>
                             )}
                           </option>
@@ -1117,23 +1113,33 @@ const page = () => {
                     </div>
 
                     <div className="relative w-full">
-                      <input
+                      {/* <input
                         type="text"
                         name="reasonForLeaving"
                         placeholder=""
                         value={formData.reasonForLeaving}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border-2 border-[#717073] font-normal placeholder:text-[#63666A] text-base"
+                        className="w-full px-4 py-3 placeholder:text-[#63666A] font-medium border-2 border-[#63666A] text-[14px]"
+                        minLength={2}
+                        maxLength={200}
+                        min-height={500}
+                      /> */}
+                      <textarea
+                        name="reasonForLeaving"
+                        placeholder=""
+                        value={formData.reasonForLeaving}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 placeholder:text-[#63666A] font-medium border-2 border-[#63666A] text-[14px] min-h-[100px] resize-none"
                         minLength={2}
                         maxLength={200}
                       />
 
                       {!formData.reasonForLeaving && (
-                        <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                        <div className="absolute left-4 top-5 -translate-y-1/2 pointer-events-none">
                           <span className="text-gray-600 text-[14px] font-medium">
                             Reason for Leaving/Exploring Opportunities
                           </span>
-                          <span className="ml-1 text-[12px] text-gray-400 font-light">
+                          <span className="ml-1 text-[10px] text-gray-400 font-light">
                             (Only for India-based roles)
                           </span>
                         </div>
@@ -1147,7 +1153,7 @@ const page = () => {
                           placeholder="Undergraduate / Graduate School"
                           value={formData.school}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border-2 font-normal placeholder:text-[#63666A] border-[#717073] text-base"
+                          className="w-full px-4 py-3 placeholder:text-[#63666A] font-medium border-2 border-[#63666A] text-[14px]"
                         />
                         {error && !formData.school && (
                           <p className="text-[#444444] font-medium  pt-3 text-[12px]">
@@ -1162,7 +1168,7 @@ const page = () => {
                           placeholder="Year of Graduation"
                           value={formData.graduation_year}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border-2 font-normal placeholder:text-[#63666A] border-[#717073] text-base"
+                          className="w-full px-4 py-3 placeholder:text-[#63666A] font-medium border-2 border-[#63666A] text-[14px]"
                         />
                         {error === "Graduation year must be a valid year" && (
                           <p className="text-[#444444] font-medium pt-3 text-[12px]">
@@ -1187,7 +1193,7 @@ const page = () => {
                           placeholder=""
                           value={formData.currentCTC}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border-2 font-normal placeholder:text-[#63666A] border-[#717073] text-base"
+                          className="w-full px-4 py-3 placeholder:text-[#63666A] font-medium border-2 border-[#63666A] text-[14px]"
                         />
 
                         {!formData.currentCTC && (
@@ -1195,7 +1201,7 @@ const page = () => {
                             <span className="text-gray-600 text-[14px] font-medium">
                               Current CTC
                             </span>
-                            <span className="ml-1 text-[12px] text-gray-400 font-light">
+                            <span className="ml-1 text-[10px] text-gray-400 font-light">
                               (Only for India-based roles)
                             </span>
                           </div>
@@ -1213,14 +1219,14 @@ const page = () => {
                           placeholder=""
                           value={formData.expectedCTC}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border-2 font-normal placeholder:text-[#63666A] border-[#717073] text-base"
+                          className="w-full px-4 py-3 placeholder:text-[#63666A] font-medium border-2 border-[#63666A] text-[14px]"
                         />
                         {!formData.expectedCTC && (
                           <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
                             <span className="text-gray-600 text-[14px] font-medium">
                               Expected CTC
                             </span>
-                            <span className="ml-1 text-[12px] text-gray-400 font-light">
+                            <span className="ml-1 text-[10px] text-gray-400 font-light">
                               (Only for India-based roles)
                             </span>
                           </div>
