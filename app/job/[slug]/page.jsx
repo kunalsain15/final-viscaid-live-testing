@@ -601,7 +601,6 @@ const page = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [verified, setVerified] = useState(false);
-  const [errors, setErrors] = useState("");
   const [principal, setPrincipal] = useState(null);
   const { slug } = useParams();
   const id = principal?.id;
@@ -651,6 +650,7 @@ const page = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    if (error) setError("");
   };
 
   const handleFileChange = async (e) => {
@@ -658,6 +658,7 @@ const page = () => {
 
     const selectedFile = e.target.files[0];
     setFormData((prev) => ({ ...prev, resume: selectedFile }));
+    if (error) setError("");
 
     const data = new FormData();
     data.append("file", selectedFile);
@@ -676,62 +677,79 @@ const page = () => {
     } catch (error) {
       console.error("File upload failed:", error);
       setError("File upload failed. Please try again.");
-      setFormData((prev) => ({ ...prev, resume: "" }));
+      setFormData((prev) => ({ ...prev, resume: "", resumeUrl: "" }));
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
     setError("");
     setSuccess("");
     setCaptchaError(false);
 
+    // reCAPTCHA check
     if (!verified) {
       setCaptchaError(true);
-      setLoading(false);
+      setError("Please complete the captcha verification before submitting.");
       return;
     }
 
-    // Validate graduation year
+    // Check blank fields
+    const fieldLabels = {
+      name: "Name",
+      email: "Email",
+      message: "Message",
+      contactNumber: "Contact Number",
+      resumeUrl: "Resume",
+      currentEmployer: "Current Employer",
+      noticePeriod: "Notice Period",
+      noticePeriodBuyout: "Notice Period Buyout",
+      reasonForLeaving: "Reason for Leaving",
+      school: "Undergraduate / Graduate School",
+      graduation_year: "Year of Graduation",
+      currentCTC: "Current CTC",
+      expectedCTC: "Expected CTC",
+    };
+
+    const blankFields = Object.entries(fieldLabels)
+      .filter(
+        ([key]) => !formData[key] || formData[key].toString().trim() === "",
+      )
+      .map(([, label]) => label);
+
+    if (blankFields.length > 0) {
+      setError(
+        `Please fill in the following required fields: ${blankFields.join(", ")}.`,
+      );
+      return;
+    }
+
+    // Email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email.trim())) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+
+    // Contact number length
+    if (
+      formData.contactNumber.trim().length < 7 ||
+      formData.contactNumber.trim().length > 10
+    ) {
+      setError("Contact number must be between 7 and 10 digits.");
+      return;
+    }
+
     const gradYear = parseInt(formData.graduation_year, 10);
     const currentYear = new Date().getFullYear();
-    if (
-      !formData.graduation_year ||
-      isNaN(gradYear) ||
-      gradYear < 1950 ||
-      gradYear > currentYear + 5
-    ) {
-      setError("Graduation year must be a valid year");
-      setLoading(false);
+    if (isNaN(gradYear) || gradYear < 1950 || gradYear > currentYear + 5) {
+      setError(
+        `Graduation year must be a valid year between 1950 and ${currentYear + 5}.`,
+      );
       return;
     }
 
-    const requiredFields = [
-      "name",
-      "email",
-      "message",
-      "contactNumber",
-      "currentEmployer",
-      "noticePeriod",
-      "noticePeriodBuyout",
-      "reasonForLeaving",
-      "school",
-      "graduation_year",
-      "currentCTC",
-      "expectedCTC",
-      "resumeUrl",
-    ];
-
-    const emptyFields = requiredFields.filter(
-      (field) => !formData[field] || formData[field].toString().trim() === "",
-    );
-
-    if (emptyFields.length > 0) {
-      setError("Please fill in all required fields before submitting.");
-      setLoading(false);
-      return;
-    }
+    setLoading(true);
 
     try {
       const payload = {
@@ -780,9 +798,7 @@ const page = () => {
       setCaptchaError(false);
     } catch (err) {
       console.error("Submit failed:", err.response?.data || err.message);
-      if (err.response?.data?.errors) {
-        setErrors(err.response.data.errors);
-      } else if (err.response?.data?.error) {
+      if (err.response?.data?.error) {
         setError(err.response.data.error);
       } else {
         setError(
@@ -944,14 +960,14 @@ const page = () => {
                 </p>
               </div>
               <div className="md:col-span-6 lg:col-span-8">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} noValidate>
                   {success && (
-                    <p className="bg-[#DFF0D8] text-[#3C763D] p-3 text-sm rounded">
+                    <p className="bg-[#DFF0D8] text-[#3C763D] p-3 text-sm rounded mb-4">
                       {success}
                     </p>
                   )}
                   {error && (
-                    <p className="bg-[#f2DEDE] text-[#B94A48] font-light p-3 text-sm rounded">
+                    <p className="bg-[#f2DEDE] text-[#B94A48] font-light p-3 text-sm rounded mb-4">
                       {error}
                     </p>
                   )}
@@ -1067,11 +1083,6 @@ const page = () => {
                             </span>
                           </div>
                         )}
-                        {error && !formData.noticePeriod && (
-                          <p className="text-[#444444] font-medium pt-3 text-[12px]">
-                            Enter a value for this field.
-                          </p>
-                        )}
                       </div>
                       <div className="relative w-full">
                         <select
@@ -1087,25 +1098,11 @@ const page = () => {
                           }}
                         >
                           <option value="" disabled hidden>
-                            {!formData.noticePeriodBuyout && (
-                              <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                                <span className="text-gray-600 text-[14px] font-medium">
-                                  Notice Period Buyout Available
-                                </span>
-                                {/* <span className="ml-1 text-[10px] text-gray-400 font-light">
-                                  (Only for India-based roles)
-                                </span> */}
-                              </div>
-                            )}
+                            Notice Period Buyout Available
                           </option>
                           <option value="true">Yes</option>
                           <option value="false">No</option>
                         </select>
-                        {error && !formData.noticePeriodBuyout && (
-                          <p className="text-[#444444] font-medium pt-3 text-[12px]">
-                            Enter a value for this field.
-                          </p>
-                        )}
                       </div>
                     </div>
 
@@ -1146,6 +1143,7 @@ const page = () => {
                         )}
                       </div>
                     </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <input
@@ -1156,11 +1154,6 @@ const page = () => {
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 placeholder:text-[#63666A] font-medium border-2 border-[#63666A] text-[14px]"
                         />
-                        {error && !formData.school && (
-                          <p className="text-[#444444] font-medium  pt-3 text-[12px]">
-                            Enter a value for this field.
-                          </p>
-                        )}
                       </div>
                       <div>
                         <input
@@ -1171,18 +1164,6 @@ const page = () => {
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 placeholder:text-[#63666A] font-medium border-2 border-[#63666A] text-[14px]"
                         />
-                        {error === "Graduation year must be a valid year" && (
-                          <p className="text-[#444444] font-medium pt-3 text-[12px]">
-                            Graduation year must be a valid year.
-                          </p>
-                        )}
-                        {error &&
-                          error !== "Graduation year must be a valid year" &&
-                          !formData.graduation_year && (
-                            <p className="text-[#444444] font-medium pt-3 text-[12px]">
-                              Enter a value for this field.
-                            </p>
-                          )}
                       </div>
                     </div>
 
@@ -1196,7 +1177,6 @@ const page = () => {
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 placeholder:text-[#63666A] font-medium border-2 border-[#63666A] text-[14px]"
                         />
-
                         {!formData.currentCTC && (
                           <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
                             <span className="text-gray-600 text-[14px] font-medium">
@@ -1206,11 +1186,6 @@ const page = () => {
                               (Only for India-based roles)
                             </span>
                           </div>
-                        )}
-                        {error && !formData.currentCTC && (
-                          <p className="text-[#444444] font-medium  pt-3 text-[12px]">
-                            Enter a value for this field.
-                          </p>
                         )}
                       </div>
                       <div className="relative w-full">
@@ -1232,18 +1207,14 @@ const page = () => {
                             </span>
                           </div>
                         )}
-                        {error && !formData.expectedCTC && (
-                          <p className="text-[#444444] font-medium pt-3 text-[12px]">
-                            Enter a value for this field.
-                          </p>
-                        )}
                       </div>
                     </div>
                   </div>
+
                   <p className="text-[10px] md:text-[12px] font-normal leading-[1.5] pt-5">
                     Note : Fields such as Notice Period, Current CTC, Expected
                     CTC, and Notice Buyout Availability are required only when
-                    applying for  India-based open positions. These fields are
+                    applying for India-based open positions. These fields are
                     not applicable/required for positions open in the US.
                   </p>
 
@@ -1256,11 +1227,17 @@ const page = () => {
                       }
                     >
                       <ReCAPTCHA
-                        // sitekey="6LdPQM4rAAAAAEUTL_n_6rLyV_OiDkZolZh5FaXn"
+                        //  sitekey="6LdPQM4rAAAAAEUTL_n_6rLyV_OiDkZolZh5FaXn"
                         sitekey="6LfhcugrAAAAAHFf6n_fF4hWJELvYjkT2NcCodo5"
                         onChange={() => {
                           setVerified(true);
                           setCaptchaError(false);
+                          if (
+                            error ===
+                            "Please complete the captcha verification before submitting."
+                          ) {
+                            setError("");
+                          }
                         }}
                       />
                     </div>
