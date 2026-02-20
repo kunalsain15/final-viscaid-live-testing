@@ -1051,11 +1051,6 @@ const page = () => {
                                   : "text-black"
                               }
                             />
-                            {/* <span className="text-[15px] text-gray-400 font-medium">
-                              {isFile(formData.resume)
-                                ? `Selected: ${formData.resume.name}`
-                                : "Upload Resume*"}
-                            </span> */}
                             <span className="text-[15px] text-gray-400 font-medium">
                               {isFile(formData.resume) ? (
                                 `Selected: ${formData.resume.name}`
@@ -1103,35 +1098,6 @@ const page = () => {
                           </div>
                         )}
                       </div>
-
-                      {/* <div className="relative w-full">
-                        <select
-                          name="noticePeriodBuyout"
-                          value={formData.noticePeriodBuyout}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 font-medium border-2 border-[#63666A] text-[14px] appearance-none"
-                          style={{
-                            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2363666A' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E")`,
-                            backgroundRepeat: "no-repeat",
-                            backgroundPosition: "right 12px center",
-                            paddingRight: "40px",
-                          }}>
-                          <option
-                            value=""
-                            disabled
-                            hidden
-                            className="text-gray-600 text-[14px] font-medium"
-                          >
-                            Notice Period Buyout Available
-                          </option>
-                          <span className="ml-1 text-[10px] text-gray-400 font-light">
-                            (Only for India-based roles)
-                          </span>
-                          <option value="true">Yes</option>
-                          <option value="false">No</option>
-                        </select>
-                      </div> */}
-
                       <div className="relative w-full">
                         <button
                           type="button"
@@ -1145,7 +1111,7 @@ const page = () => {
                               </span>
                             ) : (
                               <>
-                                <span className="text-[#63666A] placeholder:text-[#63666A] text-[15px] md:text-[14px] font-medium">
+                                <span className="text-[#63666A] placeholder:text-[#63666A] text-[15px] md:text-[14px] font-normal">
                                   Notice Period Buyout Available
                                 </span>
                                 <span className="ml-1 text-[10px] text-gray-400 font-light">
@@ -1308,6 +1274,33 @@ const page = () => {
                     applying for India-based open positions. These fields are
                     not applicable/required for positions open in the US.
                   </p>
+                  <div className="flex items-center gap-2 pt-3">
+                    <input
+                      type="checkbox"
+                      id="captcha"
+                      // className="w-10 h-10"
+                      checked={verified}
+                      onChange={(e) => {
+                        const isChecked = e.target.checked;
+                        setVerified(isChecked);
+                        setCaptchaError(!isChecked);
+
+                        if (
+                          error ===
+                          "Please complete the captcha verification before submitting."
+                        ) {
+                          setError("");
+                        }
+                      }}
+                      className="mt-0 h-5 w-5 accent-[#4168FF] cursor-pointer"
+                    />
+
+                    <p className="text-[10px] md:text-[12px] font-normal leading-[1.5]">
+                      I consent to the collection, use, storage and processing
+                      of my personal data for recruitment and employment related
+                      purposes.
+                    </p>
+                  </div>
 
                   <div className="col-span-2 mt-5 relative w-max">
                     <div
@@ -1346,64 +1339,97 @@ const page = () => {
                         No job openings available at the moment.
                       </p>
                     ) : (
-                      <button
-                        className="w-full md:w-auto frm_button_submit sm:mb-12 mb-7 sm:mt-0 mt-7 cursor-pointer bg-[#BD302B] text-white font-sans text-[20px] px-[30px] py-[10px] md:rounded-sm frm_final_submit flex items-center justify-center"
-                        type="submit"
-                        disabled={loading}
-                      >
-                        {loading ? (
-                          <div
-                            role="status"
-                            className="flex px-[20px] items-center justify-center"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              className="w-6 h-6 spin-slow"
-                              viewBox="0 0 100 101"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M100 50.5908C100 78.2051 77.6142
-              100.591 50 100.591C22.3858 100.591
-              0 78.2051 0 50.5908C0 22.9766 22.3858
-              0.59082 50 0.59082C77.6142 0.59082
-              100 22.9766 100 50.5908ZM9.08144
-              50.5908C9.08144 73.1895 27.4013
-              91.5094 50 91.5094C72.5987 91.5094
-              90.9186 73.1895 90.9186
-              50.5908C90.9186 27.9921 72.5987
-              9.67226 50 9.67226C27.4013
-              9.67226 9.08144 27.9921 9.08144 50.5908Z"
-                                fill="#E5E7EB"
-                              />
-                              <path
-                                d="M93.9676 39.0409C96.393
-              38.4038 97.8624 35.9116 97.0079
-              33.5539C95.2932 28.8227 92.871
-              24.3692 89.8167 20.348C85.8452
-              15.1192 80.8826 10.7238 75.2124
-              7.41289C69.5422 4.10194 63.2754
-              1.94025 56.7698 1.05124C51.7666
-              0.367541 46.6976 0.446843 41.7345
-              1.27873C39.2613 1.69328 37.813
-              4.19778 38.4501 6.62326C39.0873
-              9.04874 41.5694 10.4717 44.0505
-              10.1071C47.8511 9.54855 51.7191
-              9.52689 55.5402 10.0491C60.8642
-              10.7766 65.9928 12.5457 70.6331
-              15.2552C75.2735 17.9648 79.3347
-              21.5619 82.5849 25.841C84.9175
-              28.9121 86.7997 32.2913 88.1811
-              35.8758C89.083 38.2158 91.5421
-              39.6781 93.9676 39.0409Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        ) : (
-                          "Submit"
-                        )}
-                      </button>
+              //         <button
+              //           className="w-full md:w-auto frm_button_submit sm:mb-12 mb-7 sm:mt-0 mt-7 cursor-pointer bg-[#BD302B] text-white font-sans text-[20px] px-[30px] py-[10px] md:rounded-sm frm_final_submit flex items-center justify-center"
+              //           type="submit"
+              //           disabled={loading}
+              //         >
+              //           {loading ? (
+              //             <div
+              //               role="status"
+              //               className="flex px-[20px] items-center justify-center"
+              //             >
+              //               <svg
+              //                 aria-hidden="true"
+              //                 className="w-6 h-6 spin-slow"
+              //                 viewBox="0 0 100 101"
+              //                 xmlns="http://www.w3.org/2000/svg"
+              //               >
+              //                 <path
+              //                   d="M100 50.5908C100 78.2051 77.6142
+              // 100.591 50 100.591C22.3858 100.591
+              // 0 78.2051 0 50.5908C0 22.9766 22.3858
+              // 0.59082 50 0.59082C77.6142 0.59082
+              // 100 22.9766 100 50.5908ZM9.08144
+              // 50.5908C9.08144 73.1895 27.4013
+              // 91.5094 50 91.5094C72.5987 91.5094
+              // 90.9186 73.1895 90.9186
+              // 50.5908C90.9186 27.9921 72.5987
+              // 9.67226 50 9.67226C27.4013
+              // 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+              //                   fill="#E5E7EB"
+              //                 />
+              //                 <path
+              //                   d="M93.9676 39.0409C96.393
+              // 38.4038 97.8624 35.9116 97.0079
+              // 33.5539C95.2932 28.8227 92.871
+              // 24.3692 89.8167 20.348C85.8452
+              // 15.1192 80.8826 10.7238 75.2124
+              // 7.41289C69.5422 4.10194 63.2754
+              // 1.94025 56.7698 1.05124C51.7666
+              // 0.367541 46.6976 0.446843 41.7345
+              // 1.27873C39.2613 1.69328 37.813
+              // 4.19778 38.4501 6.62326C39.0873
+              // 9.04874 41.5694 10.4717 44.0505
+              // 10.1071C47.8511 9.54855 51.7191
+              // 9.52689 55.5402 10.0491C60.8642
+              // 10.7766 65.9928 12.5457 70.6331
+              // 15.2552C75.2735 17.9648 79.3347
+              // 21.5619 82.5849 25.841C84.9175
+              // 28.9121 86.7997 32.2913 88.1811
+              // 35.8758C89.083 38.2158 91.5421
+              // 39.6781 93.9676 39.0409Z"
+              //                   fill="currentColor"
+              //                 />
+              //               </svg>
+              //             </div>
+              //           ) : (
+              //             "Submit"
+              //           )}
+              //         </button>
+              <button
+  className={`w-full md:w-auto frm_button_submit sm:mb-12 mb-7 sm:mt-0 mt-7 
+    font-sans text-[20px] px-[30px] py-[10px] md:rounded-sm frm_final_submit 
+    flex items-center justify-center text-white transition-all duration-200
+    ${loading || !verified 
+      ? "bg-[#BD302B]/50 cursor-not-allowed opacity-60 shadow-none" 
+      : "bg-[#BD302B] cursor-pointer opacity-100 shadow-md hover:shadow-lg hover:bg-[#a02824]"}
+  `}
+  type="submit"
+  disabled={loading || !verified}
+>
+  {loading ? (
+    <div role="status" className="flex px-[20px] items-center justify-center">
+      <svg
+        aria-hidden="true"
+        className="w-6 h-6 animate-spin text-white"
+        viewBox="0 0 100 101"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+          fill="currentColor"
+        />
+        <path
+          d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+          fill="#E5E7EB"
+        />
+      </svg>
+    </div>
+  ) : (
+    "Submit"
+  )}
+</button>
                     )}
                   </div>
                 </form>
