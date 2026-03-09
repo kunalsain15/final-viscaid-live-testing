@@ -1,4 +1,158 @@
-<div className="fixed sm:h-auto sm:pt-0 pt-1 top-0 left-0 right-0 bg-white z-82 shadow-[0_2px_6.6px_0_#00000014]">
+"use client";
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import axios from "axios";
+
+const CommonNavbar = () => {
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeTab, setActiveTab] = useState("");
+  const [activeMenu, setActiveMenu] = useState("");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+  const [mobileSocialOpen, setMobileSocialOpen] = useState(false);
+  const [mobileForecastingOpen, setMobileForecastingOpen] = useState(false);
+  const [mobileCustomOpen, setMobileCustomOpen] = useState(false);
+  const [mobileMarketOpen, setMobileMarketOpen] = useState(false);
+  const [mobileCaseStudiesOpen, setMobileCaseStudiesOpen] = useState(false);
+  const [isBold, setIsBold] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [events, setEvents] = useState([]);
+  const [webinars, setWebinars] = useState([]);
+  const [mobileEventsWebinarsOpen, setMobileEventsWebinarsOpen] =
+    useState(false);
+  const [isDropdownItemClickedcasestudy, setIsDropdownItemClickedcasestudy] =
+    useState(false);
+  const [isDropdownItemClickedviscadia, setIsDropdownItemClickedviscadia] =
+    useState(false);
+  const [isDropdownItemClicked, setIsDropdownItemClicked] = useState("");
+
+  const [
+    isDropdownItemClickedforecasting,
+    setIsDropdownItemClickedforecasting,
+  ] = useState("");
+  const [isSocialImpact, setIsSocialImpact] = useState(false);
+  const [mobileEventsOpen, setMobileEventsOpen] = useState(false);
+  const [mobileWebinarsOpen, setMobileWebinarsOpen] = useState(false);
+  const [mobileJoinOpen, setMobileJoinOpen] = useState(false);
+
+  const pathname = usePathname();
+
+  const handleMouseEnter = (dropdown) => {
+    setActiveDropdown(dropdown);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveDropdown(null);
+  };
+  useEffect(() => {
+    if (
+      pathname === "/expertise" ||
+      pathname === "/forecasting-solutions" ||
+      pathname === "/market-research" ||
+      pathname === "/demand-studies" ||
+      pathname === "/models-and-platforms" ||
+      pathname === "/cycle-support" ||
+      pathname === "/therapeutic-areas" ||
+      pathname === "/who-we-serve"
+    ) {
+      setActiveTab("Forecasting Expertise");
+    } else if (
+      pathname === "/case-studies" ||
+      pathname === "/case-studies#case-study" ||
+      pathname === "/case-studies#white-paper"
+    ) {
+      setActiveTab("Case Studies & White Papers");
+    } else if (
+      pathname === "/events" ||
+      pathname.startsWith("/events/") ||
+      pathname === "/webinars" ||
+      pathname.startsWith("/webinars/")
+    ) {
+      setActiveTab("Events & Webinars");
+    } else if (
+      pathname === "/about-us" ||
+      pathname === "/core-values" ||
+      pathname === "/social-impact" ||
+      pathname === "/charity-water" ||
+      pathname === "/viscadia-volunteers" ||
+      pathname === "/news-press-releases"
+    ) {
+      setActiveTab("About Viscadia");
+    } else if (pathname === "/leadership") {
+      setActiveTab("Leadership");
+    } else if (
+      pathname === "/life-at-viscadia" ||
+      pathname === "/careers" ||
+      pathname === "/join-viscadia"
+    ) {
+      setActiveTab("Join Viscadia");
+    } else {
+      setActiveTab("");
+    }
+  }, [pathname]);
+
+  const handleTabClick = (tabName) => {
+    setActiveTab(tabName);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const eventsItems = [
+    "Events",
+    "INTELLUS INSTITUTE 2025",
+    "FPW 2025",
+    "BIO 2025",
+    "PMSA USA 2025",
+    "PMRC EU 2025",
+    "INTELLUS SUMMIT 2025",
+    "PMRC USA 2025",
+    "NPP 2024",
+  ];
+  const webinarsItems = [
+    "Webinars",
+    "Unpacking Vaccine Forecasting",
+    "EU Pharma and MedTech Forecasts",
+    "Global MedTech Forecasts",
+    "Cervical Cancer Forecasts",
+    "Early-Stage Risk Forecasts",
+    "Begin With The End",
+    "Estimating Bolus Patients",
+    "Breast Cancer Forecasting",
+  ];
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const res = await axios.get("https://api.viscadia.com/api/v1/events");
+        if (res.data?.success) {
+          setEvents(res.data.data);
+        }
+      } catch (error) {
+        console.error("Error fetching events:", error);
+      }
+    };
+    fetchEvents();
+  }, []);
+
+  useEffect(() => {
+    const fetchWebinars = async () => {
+      try {
+        const res = await axios.get("https://api.viscadia.com/api/v1/webinar");
+        if (res.data?.success) {
+          setWebinars(res.data.data);
+        }
+      } catch (error) {
+        console.error("Error fetching webinars:", error);
+      }
+    };
+    fetchWebinars();
+  }, []);
+  return (
+   <div className="fixed sm:h-auto sm:pt-0 pt-1 top-0 left-0 right-0 bg-white z-82 shadow-[0_2px_6.6px_0_#00000014]">
       <div className="container max-w-7xl px-2 md:px-2 mx-auto navbarmain items-center justify-center">
         <div className="relative">
           <nav className="navbarsight relative z-50">
@@ -1183,3 +1337,7 @@
         </div>
       </div>
     </div>
+  );
+};
+
+export default CommonNavbar;
