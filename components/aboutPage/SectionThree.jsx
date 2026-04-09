@@ -92,7 +92,7 @@ const SectionThree = () => {
           <div className="flex flex-col items-center justify-between sm:w-[30%] mt-6 md:mt-0 h-full text-center">
             <div className="justify-center flex w-full">
               <img
-                src="./homeAssets/GPTW-All-Badges-681x385.png"
+                src="/awardsgreat.png"
                 alt=""
                 className="w-full md:w-[90%] md:h-[210px] 2xl:h-[200px] section_home_sixth"
               />
