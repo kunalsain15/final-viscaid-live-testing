@@ -152,17 +152,18 @@ const CommonNavbar = () => {
     fetchWebinars();
   }, []);
   return (
-    <div className="fixed sm:h-auto sm:pt-0 pt-[6px] top-0 left-0 right-0 bg-white z-82 shadow-[0_2px_6.6px_0_#00000014]">
+   <div className="fixed sm:h-auto sm:pt-0 pt-1 top-0 left-0 right-0 bg-white z-82 shadow-[0_2px_6.6px_0_#00000014]">
       <div className="container max-w-7xl px-2 md:px-2 mx-auto navbarmain items-center justify-center">
         <div className="relative">
           <nav className="navbarsight relative z-50">
             <div className="mx-auto">
               <div className="flex justify-between mx-auto cursor-pointer items-center">
+                <div className="w-[20px] opacity-0 md:hidden block"></div>
                 <div className="flex items-center">
                   <Link href={"/"}>
                     <img
-                      src="/commonnavbar/Viscadia_logo_with-tagline_red-gray_PANTONE.svg"
-                      className="logonavbar cursor-pointer"
+                      src="/lifeAtViscadia/ViscadiaLogo.png"
+                      className="logonavbar object-contain cursor-pointer"
                       alt="Flowbite Logo"
                     />
                   </Link>
